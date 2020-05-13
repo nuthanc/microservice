@@ -35,3 +35,16 @@
 * D 2-data: Sync comm
   * Request coming to service D, which in turn make direct requests to Services A,C and B instead of their db
 * D 5-down, 6-web: Downsides of Sync Comm
+
+### Event-Based Communication
+* Asynchronous communication introduces *Event Bus* which is accessible from all the different services
+* D 12-event:
+  * Each service can emit events(notifications or objects) to or receive events from the Event Bus
+  * Single point of failure but we make it very resilient
+* D 13-events:
+  * Service D emits an event to the Event Bus
+  * Event Bus sends it to Service A
+  * Service A emits another event to Event Bus responding to the received event
+  * Event Bus to Service D
+* D 5-down: Same downsides with Sync along with additional Downsides
+  * Replace Request with Events
