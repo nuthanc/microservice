@@ -18,3 +18,12 @@
   * D 18-te:
   * D 19-st:
   * D 20-st:
+
+### Big Problems with Data
+* D 14-db:
+* D 4-c:
+* D 5-c: *App*
+* D 8-fe, 9-m, 10-new: Monolithic Approach
+* D 11-ms, 12-new: Microservices Approach
+  * How Service D will access data as in microservices we don't touch other services db
+
