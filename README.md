@@ -76,3 +76,9 @@
 * D 3-design: **One service for one resource**
   * 2 resources: Posts and Comments
 * D 5-do: Comments tied to Posts
+
+### Project Setup
+* D 6-tech: No db this time
+* D 7-steps:
+* mkdir blog
+* Rest of README in blog dir
