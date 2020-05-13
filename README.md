@@ -63,3 +63,8 @@
   * Event Bus sends that to interested services, service D in our case
   * Service D will record that event in its db
   * Similarly the same process with Service A and Service C, which gets communicated to interested services via the Event Bus
+
+### Pros and Cons of Async Communication
+* D 13-async:
+  * D 10-refine: Not 100% duplication due to this Requirement Refinement
+  * D 14-pricing: Price is not a cause for concern
