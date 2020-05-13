@@ -27,3 +27,11 @@
 * D 11-ms, 12-new: Microservices Approach
   * How Service D will access data as in microservices we don't touch other services db
 
+### Sync Communication between Services
+* Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F01%2F03.drawio
+* D 1-data:
+* D 3-data:
+* D 4-sync:
+* D 2-data: Sync comm
+  * Request coming to service D, which in turn make direct requests to Services A,C and B instead of their db
+* D 5-down, 6-web: Downsides of Sync Comm
