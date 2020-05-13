@@ -48,3 +48,18 @@
   * Event Bus to Service D
 * D 5-down: Same downsides with Sync along with additional Downsides
   * Replace Request with Events
+
+### A Crazy Way of Storing Data
+* D 8-async:
+* D 1-data:
+* D 9-async:
+* D 10-refine: 
+* D 11-db: Table containing only required Fields or Columns
+  * Question is how to create the db and stick in the relevant info
+* D 12-reqs: Hard to get info to the db as the info is not directly communicated to Service D
+* D 12-async:
+  * Request to Create a Product to Service B
+  * Service B updates its DB along with simultaneously emitting an event to Event Bus or Broker
+  * Event Bus sends that to interested services, service D in our case
+  * Service D will record that event in its db
+  * Similarly the same process with Service A and Service C, which gets communicated to interested services via the Event Bus
