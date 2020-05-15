@@ -8,3 +8,17 @@
 * Delete everything inside src directory
 * Create index.js and App.js inside src
 * Import react and export 
+
+### Building Post Submission
+* Create PostCreate.js inside src
+* Import PostCreate in App.js
+* Add Bootstrap from getbootstrap.com
+* Copy the first link and script tag and paste it in public/index.html
+* The script is not required, so can be deleted
+* In PostCreate, import useState hook and axios
+* New state of title using useState hook and initialize to empty string
+* input's value to come from title
+* Add onSubmit to form element and helper function of onSubmit
+* Use async-await syntax
+* setTitle of empty string after successful to empty out the input
+* Note: Make sure to have posts, comments and client npm started
