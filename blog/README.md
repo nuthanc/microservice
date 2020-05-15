@@ -12,7 +12,7 @@
 ### Posts Service Creation
 * Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.drawio
 * D 5-do:
-* D 8-design:
+* D 8-design: What the Posts Service exactly needs to do
 * Create index.js in posts
 * posts object which is in-memory
 * The above implementation is not good as data gets lost when the App is restarted
@@ -20,3 +20,17 @@
 * Import randomBytes to generate new id
 * Require and use bodyParser to parse any json data send to req body
 * Add nodemon index.js in start scripts of package.json
+
+### Testing the Posts Service
+* To test the above, we are using Postman App
+* Use request method to POST and make a request to localhost:4000/posts
+* In header tab, Add Content-type as Key and application/json as Value
+* Then in body tab, select raw and select json
+* Send the json code below
+```json
+{
+  "title": "First Post"
+}
+```
+* Then test GET request to localhost:4000/posts
+* In Headers, Content-Type as Key and application/json as Value
