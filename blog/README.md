@@ -34,3 +34,10 @@
 ```
 * Then test GET request to localhost:4000/posts
 * In Headers, Content-Type as Key and application/json as Value
+
+### Implementing a Comments Service
+* D 9-comments: What the Comments Service exactly needs to do
+* In comments dir, require same as posts index.js
+* commentsByPostId is a complicated data structure
+* D 10-comments: DS of commentsByPostId
+* In package.json, enter start script with nodemon
