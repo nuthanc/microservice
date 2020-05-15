@@ -41,3 +41,7 @@
 * commentsByPostId is a complicated data structure
 * D 10-comments: DS of commentsByPostId
 * In package.json, enter start script with nodemon
+
+### Quick Comments Test
+* npm start both Posts and Comments
+* Use similar requests as before in Postman
