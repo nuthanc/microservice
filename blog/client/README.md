@@ -63,3 +63,12 @@
 * In the Chrome Network tab, filter by XHR and refresh the page
 * **We are making one separate request for each post's comments we have fetched**
 
+### Request Minimization Strategies
+* *D 13-r:*
+* Ideally, we want to make only one request and get all the posts and comments
+* D 14-s: Monolithic solution
+* D 15-s: Microservices
+* D 16-s: Sync Communication
+* D 17-s: Downsides to this approach
+  * If comments goes down, then our application won't properly function
+  
