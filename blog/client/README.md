@@ -33,3 +33,14 @@
 * Then try creating posts again in the browser and click Submit
 * You can see the 201 status in the Network tab
 
+### Fetching and Rendering Posts
+* Create PostList in src dir
+* Import PostList in App 
+* Import useState and useEffect
+* useState to store the list of posts
+* useEffect to fetch a post only one time when our component is first created
+* Call fetchPosts only when the component is first displayed to the screen
+* Second argument to useEffect is an empty array to tell React to run this function only one time
+* Object.values returns an array of posts objects
+
+
