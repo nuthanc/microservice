@@ -47,7 +47,19 @@
 * Inside src, create CommentCreate.js
 * D 9-comments:
 * D 12-react:
-* CommentCreate to get post id as prop
+* CommentCreate to get post id as property(Prop destructured)
 * Import useState hook and axios
 * In PostList.js, import CommentCreate and pass it post id
 * npm start to check
+
+### Displaying Comments
+* Create CommentList.js inside src
+* D 9-comments:
+* Receives postId as property
+* API returns a list of arrays, so default value of array in useState
+* In PostList, import CommentList and render befor CommentCreate
+* npm start
+* But there is some problem
+* In the Chrome Network tab, filter by XHR and refresh the page
+* **We are making one separate request for each post's comments we have fetched**
+
