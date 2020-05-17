@@ -22,3 +22,14 @@
 * Use async-await syntax
 * setTitle of empty string after successful to empty out the input
 * Note: Make sure to have posts, comments and client npm started
+
+### Handling CORS Errors
+* CORS Error occurs when we are making request to another port, for e.g. from localhost:3000 to localhost:4000
+* To make this go away, need to make additional configuration on ther server side which is posts
+* Stop posts and comments servers
+* In both posts and comments, npm i cors
+* Start back both posts and comments services
+* In posts index.js and comments index.js, require cors and wire it up as middleware
+* Then try creating posts again in the browser and click Submit
+* You can see the 201 status in the Network tab
+
