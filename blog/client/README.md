@@ -43,4 +43,11 @@
 * Second argument to useEffect is an empty array to tell React to run this function only one time
 * Object.values returns an array of posts objects
 
-
+### Creating Comments
+* Inside src, create CommentCreate.js
+* D 9-comments:
+* D 12-react:
+* CommentCreate to get post id as prop
+* Import useState hook and axios
+* In PostList.js, import CommentCreate and pass it post id
+* npm start to check
