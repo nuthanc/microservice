@@ -81,3 +81,7 @@
 * D 22-q,23-q:
 * D 24-p:
 * D 24-c:
+
+### Event Bus Overview
+* Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F02%2F02.drawio
+* Checkout in blog's README for rest of the contents

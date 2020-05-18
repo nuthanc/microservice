@@ -55,3 +55,29 @@
 * In posts index.js and comments index.js, require cors and wire it up as middleware
 * Then try creating posts again in the browser and click Submit
 * You can see the 201 status in the Network tab
+
+### Request Minimization Strategies
+* *D 13-r:*
+* Ideally, we want to make only one request and get all the posts and comments
+* D 14-s: Monolithic solution
+* D 15-s: Microservices
+* D 16-s: Sync Communication
+* D 17-s: Downsides to this approach
+  * If comments goes down, then our application won't properly function
+
+### An Async Solution
+* Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F02%2Fdiagrams.drawio
+* D 18:
+* D 19:
+* D 20:
+* D 21:
+* D 22-q,23-q:
+* D 24-p:
+* D 24-c:
+
+### Event Bus Overview
+* Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F02%2F02.drawio
+* D 1-bus:
+* D 2-bus:
+* D 3-bus: Behind the scenes
+
