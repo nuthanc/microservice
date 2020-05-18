@@ -81,3 +81,13 @@
 * D 2-bus:
 * D 3-bus: Behind the scenes
 
+### A Basic Event Bus Implementation
+* mkdir event-bus in blog and cd into it
+* npm init -y
+* npm i express nodemon axios
+* Create index.js and import express, body-parser and axios
+* Create an express app
+* D 3-bus:
+* A series of post requests to other running services
+* In package.json, use start script
+* npm start on 4 services client, comments, posts, event-bus
