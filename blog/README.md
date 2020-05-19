@@ -101,5 +101,10 @@
 * Craete a new post and refresh the page
 * D 3-bus:
 * If we check the event-bus server logs, we see some errors
-* We are getting 404 error as comments and query service doesn't have the /events endpoint
+* We are getting 404 error as posts, comments and query service doesn't have the /events endpoint
 
+### Emitting Comment Creation Events
+* In comments index.js, require axios
+* In post method of comments, make a Network request
+* Make it async on the wrapping function and await on the request
+* npm start of the all the services
