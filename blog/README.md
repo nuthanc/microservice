@@ -108,3 +108,9 @@
 * In post method of comments, make a Network request
 * Make it async on the wrapping function and await on the request
 * npm start of the all the services
+
+### Receiving Events
+* In posts index.js, add a new Post request handler
+* Log the event type and send back a empty object response
+* Repeat the same in comments index.js
+* npm start and check the logs of creating Post and Comment
