@@ -91,3 +91,15 @@
 * A series of post requests to other running services
 * In package.json, use start script
 * npm start on 4 services client, comments, posts, event-bus
+
+### Emitting Events
+* In posts index.js, require axios
+* In posts endpoint, use axios to make a Network request
+* Event object consists of Type and Data
+* Add async and await as we are making a Network request
+* npm start of 4 services to check
+* Craete a new post and refresh the page
+* D 3-bus:
+* If we check the event-bus server logs, we see some errors
+* We are getting 404 error as comments and query service doesn't have the /events endpoint
+
