@@ -124,3 +124,7 @@
 * Create index.js inside query
 * Set start script in package.json
 * npm start
+
+### Parsing Incoming Events
+* Simple object to store all the posts and comments
+* Console log posts in events and npm start
