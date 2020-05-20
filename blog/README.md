@@ -114,3 +114,13 @@
 * Log the event type and send back a empty object response
 * Repeat the same in comments index.js
 * npm start and check the logs of creating Post and Comment
+
+### Creating the Data Query Service
+* D 4-qs:
+* mkdir query in blog and cd into it
+* npm init -y
+* npm i express cors nodemon
+* No axios because query service is not emitting any events
+* Create index.js inside query
+* Set start script in package.json
+* npm start
