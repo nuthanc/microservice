@@ -140,3 +140,9 @@
 * Flip back to the browser to check the details
 * Now we are making one request in the Network tab
 * We can kill comments and posts service
+
+### Adding a Simple Feature
+* D 6-filter:
+* D 7-rules:
+* D 8-mock:
+* D 9-comment:
