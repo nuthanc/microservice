@@ -146,3 +146,17 @@
 * D 7-rules:
 * D 8-mock:
 * D 9-comment:
+
+### Issues with Comment Filtering
+* D 14-design: Current design
+* D 15-one: Option 1-Moderation service
+  * Posts is removed as there is no enough space
+* Flow
+  * Comment created and persisted in comments
+  * Event emitted by comments
+  * Event bus forwards only to Moderation service
+  * Moderates and adds status and emits event to Event bus
+  * Event bus forwards to all the services
+  * Query service, then takes that data and stores it
+* If Moderation service is Human for e.g, then it will take a long time
+* All other services are waiting
