@@ -128,3 +128,15 @@
 ### Parsing Incoming Events
 * Simple object to store all the posts and comments
 * Console log posts in events and npm start
+
+### Using the Query Service
+* D 5-data:
+* In client src dir, go to PostList and change the axios request to 4002
+* Console log the res.data in fetchPosts to check it out
+* Check the Network requests tab 
+* We see that we are still making request to comments endpoint
+* Replace postId prop in CommentList to comments
+* In CommentList, delete useState, useEffect and fetchData
+* Flip back to the browser to check the details
+* Now we are making one request in the Network tab
+* We can kill comments and posts service
