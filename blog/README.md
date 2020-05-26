@@ -184,5 +184,13 @@
   * Comments service will process that event and then will emit a generic CommentUpdated Event
   * This event will go to Event bus and then to Query Service
   * The Query Service will take all the attributes instead of specific attribute
-  
 
+### Creating the Moderation Service
+* mkdir moderation and cd into it
+* npm init -y
+* npm i axios express nodemon
+* Cors module not required cause the frontend doesn't make a direct request to this
+* Create index.js inside this
+* Requires only one route
+* Add start scripts in package.json
+ 
