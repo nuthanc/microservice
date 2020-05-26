@@ -160,3 +160,16 @@
   * Query service, then takes that data and stores it
 * If Moderation service is Human for e.g, then it will take a long time
 * All other services are waiting
+
+### A Second Approach
+* D 16-d:
+  * Comment event from Event bus goes to both Moderation and Query Services
+  * Query Service updates the data and set status as pending by default
+  * D 8-mock: Show this while waiting for Moderation Service
+  * Moderation Service will eventually send some Event
+* D 20-q: Issue
+  * D 21-u: Okay with simple logic
+  * D 22-u:
+  * D 23-d:
+  * D 24:
+  
