@@ -193,4 +193,8 @@
 * Create index.js inside this
 * Requires only one route
 * Add start scripts in package.json
- 
+
+### Adding Comment Moderation
+* D 17:
+* In comments index.js, inside comments post handler add status of pending to both comments push and axios post
+* In query index.js, in events post handler, pull status while destructuring in CommentCreated event and push status in post.comments
