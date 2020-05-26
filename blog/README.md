@@ -198,3 +198,8 @@
 * D 17:
 * In comments index.js, inside comments post handler add status of pending to both comments push and axios post
 * In query index.js, in events post handler, pull status while destructuring in CommentCreated event and push status in post.comments
+
+### Handling Moderation
+* In moderation service index.js, check for the content and moderate it
+* Network request to event bus
+* In event-bus index.js, add axios post to moderation service as well
