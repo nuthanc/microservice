@@ -172,4 +172,17 @@
   * D 22-u:
   * D 23-d:
   * D 24:
+
+### How to Handle Resources
+* Previous issue solved by CommentModerated event processed by Comments service instead of Query Service
+* D 18-res:
+* D 17:
+  * Comment Service knows the status of the comment as well
+  * Comment Service CommentCreated event to Event bus which in turn will go to Moderation Service and Query Service
+  * Moderation Service will process that event, moderates it and will emit an Event
+  * This Event now will go to only Comments service
+  * Comments service will process that event and then will emit a generic CommentUpdated Event
+  * This event will go to Event bus and then to Query Service
+  * The Query Service will take all the attributes instead of specific attribute
   
+
