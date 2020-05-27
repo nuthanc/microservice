@@ -203,3 +203,11 @@
 * In moderation service index.js, check for the content and moderate it
 * Network request to event bus
 * In event-bus index.js, add axios post to moderation service as well
+
+### Updating Comment Content
+* D 19:
+* In comments index.js, make changes in the events post endpoint
+* We don't have to insert back the comment as it is the same object in memory
+* D 20: CommentUpdated details
+* Send axios request to event bus with the CommentUpdated event
+
