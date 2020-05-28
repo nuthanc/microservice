@@ -211,3 +211,10 @@
 * D 20: CommentUpdated details
 * Send axios request to event bus with the CommentUpdated event
 
+### A Quick Test
+* In query index.js, watch for CommentUpdated in post request of events endpoint
+* npm start of all the services 
+* Check the Network requests in chrome
+* Create New Post
+* Check the post contents after creating some random comment and orange
+* Check the status of the comments
