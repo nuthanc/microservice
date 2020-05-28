@@ -218,3 +218,13 @@
 * Create New Post
 * Check the post contents after creating some random comment and orange
 * Check the status of the comments
+
+### Rendering Comments by Status
+* In CommentList.js of client's src, put condition for rendering
+* If statements can be refactored to switch statement
+* To simulate human moderation, we can shut down moderation service
+* Now create a new Comment
+* If we start back the moderation service again, we have a problem
+* Because the event-bus sent an event when the moderation service was down
+* Our application is out of sync
+ 
