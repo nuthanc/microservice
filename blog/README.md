@@ -239,3 +239,11 @@
 * D 5-solution: Direct DB access
   * Extra code if they are of different dbs
 * D 3-solutions: Event bus storing events
+
+### Implementing Event Sync
+* In event-bus index.js, create a new array called events
+* Push the event to the array in post requests of events endpoint
+* get request for events endpoint
+* Real implementation of event-bus are even more complicated
+* Then, in query index.js, extract all the if conditions in events endpoint and place them in handleEvent helper function
+* Whenever our query service comes online, i.e. in app.listen, make a request to event-bus to get all the events
