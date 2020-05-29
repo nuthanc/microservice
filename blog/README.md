@@ -227,4 +227,15 @@
 * If we start back the moderation service again, we have a problem
 * Because the event-bus sent an event when the moderation service was down
 * Our application is out of sync
- 
+
+### Dealing with Missing Events
+* Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F03%2F03.drawio
+* D 1-missing: Time sequence diagram
+  * Moderation was down during event 2 and 3
+* D 2-missing: Creating a Service sometime in the future
+* D 4-solution: Sync Requests: Service communicating via direct requests to other services
+  * Creating endpoints on both posts and comments to handle async requests is a down-side
+  * Production environment wouldn't have such bulk endpoints
+* D 5-solution: Direct DB access
+  * Extra code if they are of different dbs
+* D 3-solutions: Event bus storing events
