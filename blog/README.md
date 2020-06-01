@@ -260,6 +260,7 @@
 * When it comes back again
 
 ### Deployment Issues
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F04%2F01.drawio
 * D 6-local:
 * D 7-deploy: Deploy using a VM
 * D 8-scale:
@@ -268,4 +269,7 @@
 * D 9-scale: 2nd virtual machine
   * Event-bus requiring knowledge of how to send events to 2nd virtual machine
   * When the 2nd VM is dead, event-bus needs to know that and modify code accordingly
-  
+
+### Why Docker?
+* D 10-docker:
+* D 3-why:
