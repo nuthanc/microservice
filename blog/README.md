@@ -247,3 +247,14 @@
 * Real implementation of event-bus are even more complicated
 * Then, in query index.js, extract all the if conditions in events endpoint and place them in handleEvent helper function
 * Whenever our query service comes online, i.e. in app.listen, make a request to event-bus to get all the events
+
+### Event Syncing in Action
+* Require and install axios in query service
+* npm start all the services
+* Stop query service server
+* Create new posts
+* Refresh and you will see error in Network requests
+* npm start query service
+* After comment is seen, you can kill it again
+* The benefit of this approach is that you can still enter comments even when the query service is down
+* When it comes back again
