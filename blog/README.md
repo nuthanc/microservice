@@ -258,3 +258,14 @@
 * After comment is seen, you can kill it again
 * The benefit of this approach is that you can still enter comments even when the query service is down
 * When it comes back again
+
+### Deployment Issues
+* D 6-local:
+* D 7-deploy: Deploy using a VM
+* D 8-scale:
+  * Heavy load on Comments, so creating 2 more at 4006 and 4007
+  * Thereby, changes required on Event-bus too
+* D 9-scale: 2nd virtual machine
+  * Event-bus requiring knowledge of how to send events to 2nd virtual machine
+  * When the 2nd VM is dead, event-bus needs to know that and modify code accordingly
+  
