@@ -279,3 +279,12 @@
 * D 11-k:
 * D 13-k:
 * D 14-ser:
+
+### Dockerizing the Posts Service
+* D 5-docker: Dockerfile
+* Inside posts, create Dockerfile
+* Create .dockerignore to ignore copying node_modules
+* cd posts
+* docker build .
+* Id of the image built: 125fb3809b4a
+* docker run 125fb3809b4a
