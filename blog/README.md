@@ -273,3 +273,9 @@
 ### Why Docker?
 * D 10-docker:
 * D 3-why:
+
+### Why Kubernetes?
+* D 12-k:
+* D 11-k:
+* D 13-k:
+* D 14-ser:
