@@ -298,3 +298,7 @@
 * docker exec -it <id> sh
 * docker logs <id>
   * Logs of the primary process(Not overriding the default cmd)
+
+### Dockering Other Services
+* Copy the same Dockerfile and dockerignore to other services as they have the same commands
+* docker build -t nuthanc/event-bus .
