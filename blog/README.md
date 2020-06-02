@@ -305,4 +305,9 @@
 
 ### Installing Kubernetes
 * Docker Preferences -> Kubernetes -> Enable -> Apply & Restart
-* 
+
+### A Kubernetes Tour
+* New terminal window
+* kubectl version
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F04%2F02.drawio
+* D 4-k:
