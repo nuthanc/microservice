@@ -314,3 +314,7 @@
 
 ### Important Kubernetes Terminology
 * D 5-terms:
+
+### Notes on Config Files
+* D 5-config:
+
