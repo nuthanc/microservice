@@ -288,3 +288,13 @@
 * docker build .
 * Id of the image built: 125fb3809b4a
 * docker run 125fb3809b4a
+
+### Review Some Basic Docker Commands
+* D 16-com:
+* docker build -t nuthanc/posts .
+* docker run nuthanc/posts
+* Other than default cmd by specifying -it and the default cmd at the end
+* docker run -it nuthanc/posts sh
+* docker exec -it <id> sh
+* docker logs <id>
+  * Logs of the primary process(Not overriding the default cmd)
