@@ -302,3 +302,7 @@
 ### Dockering Other Services
 * Copy the same Dockerfile and dockerignore to other services as they have the same commands
 * docker build -t nuthanc/event-bus .
+
+### Installing Kubernetes
+* Docker Preferences -> Kubernetes -> Enable -> Apply & Restart
+* 
