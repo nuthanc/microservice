@@ -333,3 +333,5 @@
 * If docker version is not mentioned, docker will default to latest
 * If the spec containers image has latest or doesn't have any version, it will try to get it from **DockerHub by default**
 
+### Common Kubectl Commands
+* D 8-pods:
