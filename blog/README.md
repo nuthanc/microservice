@@ -327,3 +327,9 @@
 * cd infra/k8s
 * kubectl apply -f posts.yaml
 * kubectl get pods
+
+### Understanding a Pod Spec
+* D 7-config:
+* If docker version is not mentioned, docker will default to latest
+* If the spec containers image has latest or doesn't have any version, it will try to get it from **DockerHub by default**
+
