@@ -335,3 +335,6 @@
 
 ### Common Kubectl Commands
 * D 8-pods:
+
+### A Time-Saving Alias
+* alias k="kubectl"
