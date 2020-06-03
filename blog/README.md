@@ -301,6 +301,7 @@
 
 ### Dockering Other Services
 * Copy the same Dockerfile and dockerignore to other services as they have the same commands
+* Give docker id to build then the service
 * docker build -t nuthanc/event-bus .
 
 ### Installing Kubernetes
@@ -318,3 +319,11 @@
 ### Notes on Config Files
 * D 5-config:
 
+### Creating a Pod
+* In posts dir, rebuild the Dockerfile with tag and version number
+* docker build -t nuthanc/posts:0.0.1 .
+* Go back to blog dir and create infra dir
+* Inside infra dir, create k8s dir and inside there posts.yaml
+* cd infra/k8s
+* kubectl apply -f posts.yaml
+* kubectl get pods
