@@ -386,3 +386,12 @@
 ### Creating a NodePort Service
 * Create posts-srv.yaml in k8s infra
 * D 18-ser:
+
+### Accessing NodePort Services
+* kubectl apply -f posts-srv.yaml
+* kubectl get svc
+  * You'll see 4000:30349
+* That 30K port no is how we access inside our Browser
+* D 19-add:
+* minikube ip since I am using minikube else localhost if Docker for Mac is used for Kubernetes
+* Go to 192.168.64.2:30349/posts
