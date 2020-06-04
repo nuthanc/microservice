@@ -382,3 +382,7 @@
   * Important: Cluster IP and Loadbalancer
 * D 16-cluster:
 * D 17-lb:
+
+### Creating a NodePort Service
+* Create posts-srv.yaml in k8s infra
+* D 18-ser:
