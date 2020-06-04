@@ -375,3 +375,10 @@
 * kubectl rollout restart deployment posts-depl
 * kubectl get pods
 * kubectl logs <pod-name>
+
+### Networking with Services
+* D 13-service:
+* D 15-serv: Different types
+  * Important: Cluster IP and Loadbalancer
+* D 16-cluster:
+* D 17-lb:
