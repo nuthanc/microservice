@@ -364,3 +364,14 @@
 * kubectl apply -f posts-depl.yaml
 * kubectl logs <pod-name>
 * This method is not used frequently
+
+### Preferred Method for Updating Deployments
+* D 12-update:
+* Remove the version in image of posts-depl.yaml
+* kubectl apply -f posts-depl.yaml
+* Make an update to the code in posts index.js
+* Rebuild using docker build -t nuthanc/posts .
+* docker push nuthanc/posts
+* kubectl rollout restart deployment posts-depl
+* kubectl get pods
+* kubectl logs <pod-name>
