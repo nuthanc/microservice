@@ -419,3 +419,15 @@
 * D 21-clu:
 * k get svc
 * http://<service-name>:<port>
+
+### Updating Service Addresses
+* In posts, update the request to event-bus-srv
+* Double check the name of the svc and port from command
+* Do the same in event-bus
+* Comment out the other services for now
+* docker build -t nuthanc/event-bus .
+* docker push nuthanc/event-bus
+* docker build -t nuthanc/posts .
+* docker push nuthanc/posts
+* kubectl rollout restart deployment posts-depl
+* kubectl rollout restart deployment event-bus-depl 
