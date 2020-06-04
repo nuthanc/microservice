@@ -398,3 +398,11 @@
 
 ### Setting Up Cluster IP Services
 * D 21-clus:
+
+### Building a Deployment for the Event Bus
+* D 20-goals:
+* cd event-bus
+* docker build -t nuthanc/event-bus .
+* docker push nuthanc/event-bus
+* Create event-bus-depl.yaml in k8s infra
+* kubectl apply -f event-bus-depl.yaml
