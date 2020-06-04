@@ -338,3 +338,11 @@
 
 ### A Time-Saving Alias
 * alias k="kubectl"
+
+### Introducing Deployments
+* D 9-dep:
+* D 10-dep: Deployment automatically takes care of upgrading
+* minikube start
+* eval $(minikube docker-env)
+* docker build -t nuthanc/posts:0.0.1 .
+
