@@ -414,3 +414,8 @@
 * kubectl apply -f event-bus-depl.yaml
 * Similarly do the same for posts-depl.yaml
 * kubectl apply -f posts-depl.yaml
+
+### How to Communicate Between Services
+* D 21-clu:
+* k get svc
+* http://<service-name>:<port>
