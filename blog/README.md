@@ -350,3 +350,8 @@
 ### Creating a Deployment
 * Create posts-depl.yaml in k8s of infra dir
 * kubectl apply -f posts-depl.yaml
+
+### Common Commands Around Deployments
+* D 11-cmd:
+* kubectl get deployments
+* 
