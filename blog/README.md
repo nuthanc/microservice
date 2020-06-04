@@ -354,4 +354,13 @@
 ### Common Commands Around Deployments
 * D 11-cmd:
 * kubectl get deployments
-* 
+
+### Updating Deployments
+* D 11-update:
+* Make some changes in posts index.js file
+* Rebuild the image
+* docker build -t nuthanc/posts:0.0.5 .
+* Update the image tag in deployment file
+* kubectl apply -f posts-depl.yaml
+* kubectl logs <pod-name>
+* This method is not used frequently
