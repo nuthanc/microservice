@@ -406,3 +406,11 @@
 * docker push nuthanc/event-bus
 * Create event-bus-depl.yaml in k8s infra
 * kubectl apply -f event-bus-depl.yaml
+
+### Adding ClusterIP Services
+* Add clusterip service of event-bus in the same file as deployment
+* ClusterIP is default service
+* targetPort of 4005 as event-bus is listening on that port
+* kubectl apply -f event-bus-depl.yaml
+* Similarly do the same for posts-depl.yaml
+* kubectl apply -f posts-depl.yaml
