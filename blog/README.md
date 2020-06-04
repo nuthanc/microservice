@@ -326,6 +326,7 @@
 * Inside infra dir, create k8s dir and inside there posts.yaml
 * cd infra/k8s
 * kubectl apply -f posts.yaml
+* Now renamed to oldposts.yaml.old
 * kubectl get pods
 
 ### Understanding a Pod Spec
@@ -346,3 +347,6 @@
 * eval $(minikube docker-env)
 * docker build -t nuthanc/posts:0.0.1 .
 
+### Creating a Deployment
+* Create posts-depl.yaml in k8s of infra dir
+* kubectl apply -f posts-depl.yaml
