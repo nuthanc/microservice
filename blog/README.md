@@ -395,3 +395,6 @@
 * D 19-add:
 * minikube ip since I am using minikube else localhost if Docker for Mac is used for Kubernetes
 * Go to 192.168.64.2:30349/posts
+
+### Setting Up Cluster IP Services
+* D 21-clus:
