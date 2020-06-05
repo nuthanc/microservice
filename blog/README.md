@@ -460,3 +460,17 @@ kubectl apply -f .
 kubectl get pods
 kubectl get services
 ```
+
+### Testing Communication
+* Update event-bus
+* cd event-bus and rebuild the image and push to dockerhub
+* After image is successfully pushed, rollout restart deployment
+```sh
+kubectl rollout restart deployment event-bus-depl
+```
+* Open Postman and send data like last time
+* Now check logs
+```sh
+kubectl logs <comment-pod>
+# Similarly on other pods
+```
