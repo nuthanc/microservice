@@ -440,3 +440,23 @@
 * Need to get status of 201
 * Print logs from event-bus and posts pods
 * Received Event: PostCreated
+
+### Adding Query, Moderation and Comments
+* D 23-final:
+* Replace localhost with event-bus-srv in comments,moderation and query
+* Build image and push to Dockerhub
+```sh
+docker build -t nuthanc/query .
+docker push nuthanc/query
+docker build -t nuthanc/moderation .
+docker push nuthanc/moderation
+docker build -t nuthanc/comments .
+docker push nuthanc/comments
+```
+* Create comments-depl.yaml, moderation-depl.yaml and query-depl.yaml in k8s infra
+* Apply them all at once
+```sh
+kubectl apply -f .
+kubectl get pods
+kubectl get services
+```
