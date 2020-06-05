@@ -431,3 +431,12 @@
 * docker push nuthanc/posts
 * kubectl rollout restart deployment posts-depl
 * kubectl rollout restart deployment event-bus-depl 
+
+### Verifying Communication
+* Open Postman and send requests to posts service
+* Post request to http://192.168.64.2:30349/posts
+* Go to Headers: Content type: application/json
+* Body->Raw: {"title":"POST"}, json selected
+* Need to get status of 201
+* Print logs from event-bus and posts pods
+* Received Event: PostCreated
