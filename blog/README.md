@@ -474,3 +474,14 @@ kubectl rollout restart deployment event-bus-depl
 kubectl logs <comment-pod>
 # Similarly on other pods
 ```
+
+### Load Balancer Services
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F04%2F03.drawio
+* D 1:
+* D 2-init: Only during initial request to app, React Dev Server returning HTML,CSS and JS
+  * React dev server is not making any requests to Posts, comments or other services
+  * The actual requests are made from the User's browser
+* D 3-app:
+* D 4-option: Not good
+* D 5-option:
+
