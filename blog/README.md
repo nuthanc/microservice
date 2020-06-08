@@ -485,3 +485,9 @@ kubectl logs <comment-pod>
 * D 4-option: Not good
 * D 5-option:
 
+### Load Balancers and Ingress
+* D 7-term:
+* D 6-lb: LB service reaches out to Cloud provider and tells it to provision a LoadBalancer
+  * This loadbalancer exists outside of our cluster
+  * LB: **to bring traffic into our cluster from Outside**
+* D 7-lb: **Ingress Controller for routing to appropriate service**
