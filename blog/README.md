@@ -491,3 +491,10 @@ kubectl logs <comment-pod>
   * This loadbalancer exists outside of our cluster
   * LB: **to bring traffic into our cluster from Outside**
 * D 7-lb: **Ingress Controller for routing to appropriate service**
+
+### Installing Ingress-Nginx
+* D 8-ing:
+* D 9-note:
+  * It's **ingress-nginx** github repo
+* Go to Getting started of the above Github repo
+
