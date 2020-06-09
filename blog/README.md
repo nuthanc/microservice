@@ -497,4 +497,14 @@ kubectl logs <comment-pod>
 * D 9-note:
   * It's **ingress-nginx** github repo
 * Go to Getting started of the above Github repo
+```sh
+minikube addons enable ingress
+```
 
+### Writing Ingress Config Files
+* Create ingress-srv.yaml in k8s infra dir
+* Annotations of ingress class of nginx is important as this is gonna help Ingress controller understand that we are gonna feed some Routing rules
+* Incoming route of /posts
+```sh
+kubectl apply -f ingress-srv.yaml
+```
