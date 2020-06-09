@@ -508,3 +508,14 @@ minikube addons enable ingress
 ```sh
 kubectl apply -f ingress-srv.yaml
 ```
+
+### Hosts File Tweak
+* D 11-host: Many different apps in many different domains in a single k8s cluster
+* D 12-host: Now to trick posts.com to localhost
+* In /etc/hosts file
+```sh
+127.0.0.1 posts.com # For docker for mac
+# For minikube, get minikube ip
+192.168.64.2 posts.com
+```
+* Now navigate to posts.com/posts in Browser
