@@ -64,4 +64,3 @@ ts-node index.ts
 * Mess up the order of the arguments and run ts-node
 * Type annotation to function arguments
 * Red wiggly line after adding annotation
-* 
