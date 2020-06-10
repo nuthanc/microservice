@@ -17,3 +17,8 @@
 
 ### Syntax and Design pattern
 * Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Ftypescriptcasts%2Fmaster%2Fdiagrams%2F07%2Fdiagrams.xml
+* D 4-plain, 5-def, 9-string, 7-string, 11-ex, 06-two, 10-why
+* mkdir features
+
+### Second App
+* Features
