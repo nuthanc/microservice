@@ -58,3 +58,10 @@ ts-node index.ts
 ```sh
 ts-node index.ts
 ```
+
+### Catching More Errors
+* logTodo helper function
+* Mess up the order of the arguments and run ts-node
+* Type annotation to function arguments
+* Red wiggly line after adding annotation
+* 
