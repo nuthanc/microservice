@@ -88,3 +88,11 @@
 * D 11-react:
 * D 12-react:
 * Rest of the details in blog client README 
+
+## Lessons from App#1
+### Big Ticket Items
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F01.drawio
+* D 1-take: Lessons from App#1
+* D 2-pain: Painful Things
+* D 3-note:
+* D 3-solutions: **Solutions**
