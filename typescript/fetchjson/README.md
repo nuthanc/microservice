@@ -48,3 +48,13 @@ ts-node index.ts
 * Make deliberate mistakes
 * Run ts-node index.ts
 * Undefined
+
+### Catching Errors with TypeScript
+* interface Todo
+* Inside an interface, properties can be ignored
+* Add **as Todo** to response.data
+* Error lines in vs code
+* Hover over it to get suggestions
+```sh
+ts-node index.ts
+```
