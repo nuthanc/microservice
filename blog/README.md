@@ -542,7 +542,7 @@ kubectl apply -f client-depl.yaml
 * The **get for /posts in posts index.js** is only for **testing purposes**
 * Go to client and posts and build and push the image
 * Also restart the deployments
-```
+```sh
 docker build -t nuthanc/client .
 docker push nuthanc/client
 
@@ -553,3 +553,17 @@ kubectl rollout restart deployment client-depl
 kubectl rollout restart deployment posts-depl
 ```
 * **Anytime we make change to the code, we need to build and push the image manually and restart the deployment, but in the upcoming videos, we will have a tool to do this**
+
+### Final Route Config
+* In ingress-srv.yaml, add additional paths
+* D 13-req: All request to microservices
+* Regular expression instead of Wildcards(:id)
+* For this, we need to add *annotation*
+* The paths are **ordered from Greatest importance to Least**
+* Reapply ingress-src
+```sh
+kubectl apply -f ingress-srv.yaml
+# Check all pods are running
+k get pods
+```
+* Visit posts.com and check creating Posts and Comments
