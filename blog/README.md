@@ -519,3 +519,9 @@ kubectl apply -f ingress-srv.yaml
 192.168.64.2 posts.com
 ```
 * Now navigate to posts.com/posts in Browser
+
+### Deploying the React App
+* Change localhost:port to posts.com in React client src code
+* Go to client and build an image and push to Docker hub
+```sh
+docker build -t nuthanc/client .
