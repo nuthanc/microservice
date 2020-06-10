@@ -101,3 +101,7 @@
 * stubhub.com
 * D 6-tick: Ticketing App
 * D 5-browser: Mockups
+
+### Resource Types
+* D 7-resources:
+* Order object is the intent to purchase the ticket(When clicked on Purchase button)
