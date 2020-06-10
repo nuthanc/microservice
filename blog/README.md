@@ -567,3 +567,25 @@ kubectl apply -f ingress-srv.yaml
 k get pods
 ```
 * Visit posts.com and check creating Posts and Comments
+
+### Introducing Skaffold
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F04%2F02.drawio
+* D 12-update:
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F04%2F03.drawio
+* D 14-sk:
+* Go to skaffold.dev
+```sh
+brew install skaffold
+```
+* Create skaffold.yaml in the root dir
+* Skaffold is a tool that runs outside our cluster
+* Manifests: Watch all the yaml files mentioned here
+* Skaffold automatically re-applies kubectl when the files change in manifest
+* Start Skaffold: We apply the config, when something changes config is applied 
+* Stop Skaffold: Delete all the objects that are created by it
+* Default behavior of pushing to Dockerhub is disabled using the build local push false setting
+* Artifacts: Things to maintain
+  * Pod running code w.r.t client dir
+  * Whenever something changes, Skaffold takes those changes and updates the pod
+  * If there is a change to js file, directly copy to pod
+  * Else rebuild the entire image(E.g. any package added to our project)
