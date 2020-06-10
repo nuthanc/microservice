@@ -525,3 +525,10 @@ kubectl apply -f ingress-srv.yaml
 * Go to client and build an image and push to Docker hub
 ```sh
 docker build -t nuthanc/client .
+docker push nuthanc/client
+```
+* Create client-depl.yaml inside k8s of infra 
+* Copy paste from comments-depl.yaml
+```sh
+kubectl apply -f client-depl.yaml
+```
