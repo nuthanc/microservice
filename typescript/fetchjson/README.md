@@ -42,3 +42,9 @@ node index.js
 # Combining both in one command
 ts-node index.ts
 ```
+
+### One Quick Change
+* todo has response.data
+* Make deliberate mistakes
+* Run ts-node index.ts
+* Undefined
