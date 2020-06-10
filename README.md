@@ -112,4 +112,9 @@
   * Ticket and Order can be one service
   * Payment and Expiraton can be one service
   * It really depends on the Applications how tightly or loosely coupled they are
-  
+
+### Events and Architecture Design
+* D 10-events:
+* D 11-design:
+  * common is a npm module which acts as Shared library
+  * Event bus: NATS Streaming Server
