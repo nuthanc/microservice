@@ -595,3 +595,11 @@ brew install skaffold
 ```sh
 skaffold dev
 ```
+
+### A Few Notes on Skaffold
+* Run skaffold dev again if there are any Manifest not found issues
+* Go to posts.com and check
+* Then go to any sub-project and make change for E.g in client src App.js and h1
+* **Skaffold throws updated file into the pod but you need to have some tool within the pod to restart like nodemon or create-react-app which does it automatically for you**
+* Some Challenges detecting changes within the container
+* Stopping Skaffold with Ctrl+C
