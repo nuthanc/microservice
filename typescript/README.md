@@ -10,3 +10,11 @@
 * D 6-playground:
   * typescriptlang.org/play
 * D 7-summary:
+
+### Environment Setup
+```sh
+npm install -g typescript ts-node
+tsc --help
+# TypeScript compiler
+```
+* D 8-optional: VS code
