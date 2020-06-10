@@ -96,3 +96,8 @@
 * D 2-pain: Painful Things
 * D 3-note:
 * D 3-solutions: **Solutions**
+
+### App Overview
+* stubhub.com
+* D 6-tick: Ticketing App
+* D 5-browser: Mockups
