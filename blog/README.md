@@ -532,3 +532,24 @@ docker push nuthanc/client
 ```sh
 kubectl apply -f client-depl.yaml
 ```
+
+### Unique Route Paths
+* In ingress-srv.yaml, add additional paths
+* D 13-req: All request to microservices
+* Ingress Controller only knows Route path, it doesn't have idea about the Request Method(Like get or post)
+* So need to modify POST request to **/posts to /posts/create**
+* So inside PostCreate of client and index.js of posts, change /posts to /posts/create
+* The **get for /posts in posts index.js** is only for **testing purposes**
+* Go to client and posts and build and push the image
+* Also restart the deployments
+```
+docker build -t nuthanc/client .
+docker push nuthanc/client
+
+docker build -t nuthanc/posts .
+docker push nuthanc/posts
+
+kubectl rollout restart deployment client-depl
+kubectl rollout restart deployment posts-depl
+```
+* **Anytime we make change to the code, we need to build and push the image manually and restart the deployment, but in the upcoming videos, we will have a tool to do this**
