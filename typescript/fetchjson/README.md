@@ -30,3 +30,15 @@ cd fetchjson
 npm init -y
 npm i axios
 ```
+
+### Executing TypeScript Code
+* Create index.ts
+* Compile
+```sh
+tsc index.ts
+# This will create index.js
+node index.js
+
+# Combining both in one command
+ts-node index.ts
+```
