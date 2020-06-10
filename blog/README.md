@@ -589,3 +589,9 @@ brew install skaffold
   * Whenever something changes, Skaffold takes those changes and updates the pod
   * If there is a change to js file, directly copy to pod
   * Else rebuild the entire image(E.g. any package added to our project)
+
+### First Time Skaffold Startup
+* To startup skaffold
+```sh
+skaffold dev
+```
