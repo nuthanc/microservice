@@ -57,3 +57,11 @@ skaffold dev
 ```json
 "start": "ts-node-dev --poll src/index.ts"
 ```
+
+### Ingress-Nginx Setup
+* D 12-auth:
+* Add get request handler in index.ts of auth
+* In order to access auth pod, need to setup ingress or nodePort
+* No need to reinstall ingress-nginx, use from **blog's** app
+* Create ingress-srv.yaml in infra k8s dir
+* Observe the changes in skaffold log
