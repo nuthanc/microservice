@@ -38,7 +38,13 @@ touch index.ts
 * Create Dockerfile and .dockerignore in auth
 ```sh
 docker build -t nuthanc/auth .
-docker push nuthanc/auth
 ```
 * Create infra folder and k8s subfolder in ticketing
 * Create auth-depl.yaml
+
+### Adding Skaffold
+* Create skaffold.yaml in root dir
+* Dest of . is corresponding path in the container
+```sh
+skaffold dev
+```
