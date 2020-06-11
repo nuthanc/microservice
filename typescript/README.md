@@ -57,3 +57,9 @@ const json = '{"x": 10, "y": 20}';
 const coordinates: { x: number, y: number} = JSON.parse(json); //coordinates is any when hovered
 console.log(coordintaes); // {x: 10, y: 20}
 ```
+* D 11-func
+```ts
+const add = (a: number, b: number): number => {
+  return a+b;
+}
+```
