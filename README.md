@@ -118,3 +118,7 @@
 * D 11-design:
   * common is a npm module which acts as Shared library
   * Event bus: NATS Streaming Server
+
+### Auth Service Setup
+* D 12-auth:
+* mkdir ticketing and cd into it
