@@ -48,3 +48,12 @@ docker build -t nuthanc/auth .
 ```sh
 skaffold dev
 ```
+* Change index.ts and observe the change in the console log
+
+### Note on Code Reloading
+* If server didn't restart after change in index.ts, do the following
+* Open package.json in auth dir
+* Find the start script and add the below
+```json
+"start": "ts-node-dev --poll src/index.ts"
+```
