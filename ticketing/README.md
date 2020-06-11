@@ -33,3 +33,12 @@ touch index.ts
 ```
 * Add start script in package.json
 * npm start inside auth
+
+### Auth K8s Setup
+* Create Dockerfile and .dockerignore in auth
+```sh
+docker build -t nuthanc/auth .
+docker push nuthanc/auth
+```
+* Create infra folder and k8s subfolder in ticketing
+* Create auth-depl.yaml
