@@ -76,3 +76,6 @@ const add = (a: number, b: number): number => {
 
 ### Void and Never
 * functions.ts
+
+### Destructuring with Annotations
+* functions.ts
