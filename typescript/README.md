@@ -93,3 +93,11 @@ const add = (a: number, b: number): number => {
 * D 2-tuples, 8-def, 5-tuples, 7-pos
 * tuples.ts in features
 * Type alias
+
+### Interfaces
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Ftypescriptcasts%2Fmaster%2Fdiagrams%2F10%2Fdiagrams.xml
+* D 1-inter, 3-imp, 2-def
+* interfaces.ts in features
+* Interfaces helps in code reuse by helping us write Generic functions or types
+* **D 6-inter, 7-reuse, 8-imp**
+  * Interfaces as Gatekeeper
