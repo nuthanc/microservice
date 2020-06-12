@@ -165,3 +165,12 @@ gcloud init
 # Select the project, if you don't find your project Go to console in browser and check the id for your project
 # Yes for Compute region and select the region you selected for the k8s cluster
 ```
+
+### Installing the GCloud Context
+* D 10-options:
+  * Cluster name is whatever was entered in k8s clusters in Console
+```sh
+# ex for with Docker
+gcloud container clusters get-credentials ticketing-dev
+# Check for additional entry in Context of Docker for Mac Kubernetes Option
+```
