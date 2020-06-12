@@ -174,3 +174,9 @@ gcloud init
 gcloud container clusters get-credentials ticketing-dev
 # Check for additional entry in Context of Docker for Mac Kubernetes Option
 ```
+
+### Updating the Skaffold Config
+* D 7-process:
+* Go to Google Cloud Console and select Cloud Build and click on Enable
+* Check on skaffold.yaml in the root dir of microservice for the Google cloud changes
+* Changes in build key(googleCloudBuild)
