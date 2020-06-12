@@ -73,3 +73,6 @@ const add = (a: number, b: number): number => {
 
 ### Annotations to Anonymous Functions
 * functions.ts
+
+### Void and Never
+* functions.ts
