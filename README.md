@@ -185,3 +185,12 @@ gcloud container clusters get-credentials ticketing-dev
 * D 7-process:
 * Comment local push
 * Check the image name in the deployment files
+
+### Creating a Load Balancer
+* D 7-process:
+* ingress-nginx documentation and check whether you are connected to the right context in Docker for Mac
+* Execute Installation instructions for Google cloud
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F04%2F03.drawio
+* D 7-lb: Need to connect to lb
+* Go to Google Cloud Console and in Network Services select Load Balancing
+* Check the ip and enter that in /etc/hosts 
