@@ -1,7 +1,7 @@
 # TypeScript
 
 ### TypeScript Overview
-
+* Github link: https://github.com/nuthanc/typescriptcasts
 - Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Ftypescriptcasts%2Fmaster%2Fdiagrams%2F01%2Fdiagrams.xml
 - D 00-what:
 - D 1-int:
@@ -63,3 +63,9 @@ const add = (a: number, b: number): number => {
   return a+b;
 }
 ```
+
+### Inference around Functions
+* Github link: https://github.com/nuthanc/typescriptcasts
+* features directory annotations functions.ts
+* D 9-functions,copy-of-9
+* **We add annotations for return type** also even though inference can be used because when we forget to return something, inference will make it void
