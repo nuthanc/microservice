@@ -194,3 +194,17 @@ gcloud container clusters get-credentials ticketing-dev
 * D 7-lb: Need to connect to lb
 * Go to Google Cloud Console and in Network Services select Load Balancing
 * Check the ip and enter that in /etc/hosts 
+
+### Final Config and Test
+* D 7-process:
+* With correct context selected, run 
+```sh
+skaffold dev
+# In root project dir, e.g ticketing
+# Check build process in Cloud Build of Google Cloud console
+# History in Cloud Build
+```
+* **Changes for remote dev**
+  * skaffold.yaml googleCloudBuild, image
+  * Deployment files image
+* **Delete** the cluster if you are not using
