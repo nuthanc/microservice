@@ -101,3 +101,9 @@ const add = (a: number, b: number): number => {
 * Interfaces helps in code reuse by helping us write Generic functions or types
 * **D 6-inter, 7-reuse, 8-imp**
   * Interfaces as Gatekeeper
+
+### Classes
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Ftypescriptcasts%2Fmaster%2Fdiagrams%2F11%2Fdiagrams.xml
+* D 1, 2-def, 3-diff
+* classes.ts in features
+* D 5-modifiers
