@@ -137,3 +137,15 @@
 * cloud.google.com/free
 * Click on Go to Console
 * Create New Project
+
+### Kubernetes Cluster Creation
+* Go to Kubernetes Engine from the Sidebar
+* Select Clusters and Create Cluster
+  * Change the Name according to your requirements
+  * Select the zone which is closer to you
+  * At least 1.15 k8s master version Static version
+* Go to Node pools on the Sidebar
+  * Size: no. of nodes
+  * Nodes
+    * Machine type: g1-small
+* Create on the bottom left hand side
