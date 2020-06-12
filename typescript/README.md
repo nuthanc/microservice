@@ -82,3 +82,9 @@ const add = (a: number, b: number): number => {
 
 ### Annotations Around Objects
 * objects.ts
+
+### Arrays in Typescript
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Ftypescriptcasts%2Fmaster%2Fdiagrams%2F09%2Fdiagrams.xml
+* D 1-arr, 2-def
+* arrays.ts in features
+* D 3-why, 4-where
