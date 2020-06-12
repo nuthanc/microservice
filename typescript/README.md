@@ -88,3 +88,8 @@ const add = (a: number, b: number): number => {
 * D 1-arr, 2-def
 * arrays.ts in features
 * D 3-why, 4-where
+
+### Tuples in Typescript
+* D 2-tuples, 8-def, 5-tuples, 7-pos
+* tuples.ts in features
+* Type alias
