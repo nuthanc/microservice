@@ -149,3 +149,8 @@
   * Nodes
     * Machine type: g1-small
 * Create on the bottom left hand side
+
+### Kubectl Contexts
+* D 9-context: Context are connection settings like auth credentials, users, ip addresses etc
+* Install Google Cloud SDK: cloud.google.com/sdk/docs/quickstarts
+* Do every installations execpet Initialize the SDK
