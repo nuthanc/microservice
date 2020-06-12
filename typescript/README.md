@@ -69,3 +69,7 @@ const add = (a: number, b: number): number => {
 * features directory annotations functions.ts
 * D 9-functions,copy-of-9
 * **We add annotations for return type** also even though inference can be used because when we forget to return something, inference will make it void
+
+
+### Annotations to Anonymous Functions
+* functions.ts
