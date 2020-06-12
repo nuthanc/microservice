@@ -154,3 +154,14 @@
 * D 9-context: Context are connection settings like auth credentials, users, ip addresses etc
 * Install Google Cloud SDK: cloud.google.com/sdk/docs/quickstarts
 * Do every installations execpet Initialize the SDK
+
+### Initialzing the GCloud SDK
+```sh
+gcloud
+# The above for checking 
+gcloud auth login
+gcloud init
+# Select the account
+# Select the project, if you don't find your project Go to console in browser and check the id for your project
+# Yes for Compute region and select the region you selected for the k8s cluster
+```
