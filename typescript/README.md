@@ -79,3 +79,6 @@ const add = (a: number, b: number): number => {
 
 ### Destructuring with Annotations
 * functions.ts
+
+### Annotations Around Objects
+* objects.ts
