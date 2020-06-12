@@ -122,3 +122,8 @@
 ### Auth Service Setup
 * D 12-auth:
 * mkdir ticketing and cd into it
+
+## Leveraging a Cloud Environment for Development
+### Note on Remote Development
+* Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F02.drawio
+* D 1, 6-note

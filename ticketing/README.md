@@ -65,3 +65,12 @@ skaffold dev
 * No need to reinstall ingress-nginx, use from **blog's** app
 * Create ingress-srv.yaml in infra k8s dir
 * Observe the changes in skaffold log
+
+### Hosts File and Security Warning
+* In /etc/hosts make the changes for the domain as done previously in **blog**
+```sh
+<minikube-ip> ticketing.dev
+```
+* In browser, go to ticketing.dev/api/users/currentuser
+* Ingress-nginx uses self-signed certificate so giving Your connection is not private
+* Type Diagram 14-unsafe:
