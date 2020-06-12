@@ -127,3 +127,8 @@
 ### Note on Remote Development
 * Diagram link: https://app.diagrams.net/?mode=github#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F02.drawio
 * D 1, 6-note
+
+### Remote Dev with Skaffold
+* D 2-local:
+* D 3-remote, 4-sk
+* D 5-sk: Unsynced file rebuild the image(E.g: package.json)
