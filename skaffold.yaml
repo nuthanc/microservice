@@ -5,8 +5,8 @@ deploy:
     manifests:
       - ./infra/k8s/*
 build:
-  local:
-    push: false
+  # local:
+  #   push: false
   googleCloudBuild:
     projectId: #Enter the Project id and not the Project name
   artifacts:

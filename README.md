@@ -180,3 +180,8 @@ gcloud container clusters get-credentials ticketing-dev
 * Go to Google Cloud Console and select Cloud Build and click on Enable
 * Check on skaffold.yaml in the root dir of microservice for the Google cloud changes
 * Changes in build key(googleCloudBuild)
+
+### More Skaffold Updates
+* D 7-process:
+* Comment local push
+* Check the image name in the deployment files
