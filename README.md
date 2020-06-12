@@ -132,3 +132,8 @@
 * D 2-local:
 * D 3-remote, 4-sk
 * D 5-sk: Unsynced file rebuild the image(E.g: package.json)
+
+### Google Cloud Initial Setup
+* cloud.google.com/free
+* Click on Go to Console
+* Create New Project
