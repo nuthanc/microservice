@@ -63,6 +63,9 @@ skaffold dev
 * Add get request handler in index.ts of auth
 * In order to access auth pod, need to setup ingress or nodePort
 * No need to reinstall ingress-nginx, use from **blog's** app
+```sh
+minikube addons enable ingress
+```
 * Create ingress-srv.yaml in infra k8s dir
 * Observe the changes in skaffold log
 
@@ -74,3 +77,6 @@ skaffold dev
 * In browser, go to ticketing.dev/api/users/currentuser
 * Ingress-nginx uses self-signed certificate so giving Your connection is not private
 * Type Diagram 14-unsafe:
+
+### Skaffold dev error
+* Solved by changing the apiVersion in ingress-srv.yaml
