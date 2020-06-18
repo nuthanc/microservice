@@ -91,3 +91,17 @@ minikube addons enable ingress
 ### Scaffolding Routes
 * Copy current-user to sigin, signout and signup and make the necessary changes
 * Import and use them in index.ts
+
+### Adding Validation
+* D 1-ser:
+* Using express-validator instead of manually validating it
+```js
+const { email, password } = req.body; 
+```
+* Docs in npmjs.com and Search for express-validator
+```sh
+npm install express-validator
+```
+* Import body from express-validator in signup.ts
+* Add body as a middleware in the post request
+* Annotate request and response
