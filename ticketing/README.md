@@ -87,3 +87,7 @@ minikube addons enable ingress
 * Create routes inside auth src dir corresponding to the above diagram
 * Use expressRouter in the routes
 * Import and use that router in index.ts
+
+### Scaffolding Routes
+* Copy current-user to sigin, signout and signup and make the necessary changes
+* Import and use them in index.ts
