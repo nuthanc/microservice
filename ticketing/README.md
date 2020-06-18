@@ -80,3 +80,10 @@ minikube addons enable ingress
 
 ### Skaffold dev error
 * Solved by changing the apiVersion in ingress-srv.yaml
+
+### Creating Route Handlers
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F03.drawio
+* D 1-ser:
+* Create routes inside auth src dir corresponding to the above diagram
+* Use expressRouter in the routes
+* Import and use that router in index.ts
