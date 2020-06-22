@@ -155,3 +155,8 @@ Body: Raw and json selected
 * D 4-serv: Different languages and frameworks
 * D 5-react:
 * D 6-structure:
+
+### Other Sources of Errors
+* D 8-errors: Scenarios
+  * No idea where something might go wrong in our application
+  * Capture the error and send an identical looking error data structure
