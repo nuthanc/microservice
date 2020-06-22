@@ -105,3 +105,45 @@ npm install express-validator
 * Import body from express-validator in signup.ts
 * Add body as a middleware in the post request
 * Annotate request and response
+
+### Handling Validation Errors
+* validationResult is used to pull the validation information from the request body added by the middleware
+* Errors object to array using array method
+* Now send request via Postman
+* Send the request with skaffold dev running
+* Make a POST request to 
+```txt
+ticketing.dev/api/users/signup
+Headers: Application/json
+Body: Raw and json selected
+{
+  "email": "aalkdsfjlad",
+  "password": "1"
+}
+```
+* Response obtained
+```json
+[
+    {
+        "value": "adadsklfjasd",
+        "msg": "Email must be valid",
+        "param": "email",
+        "location": "body"
+    },
+    {
+        "value": "1",
+        "msg": "Password must be between 4 and 20 characters",
+        "param": "password",
+        "location": "body"
+    }
+]
+```
+* Provide the below with the above Headers
+```json
+{
+    "email": "test@test.com",
+    "password": "password"
+}
+# Response obtained is 
+{}
+```
