@@ -147,3 +147,11 @@ Body: Raw and json selected
 # Response obtained is 
 {}
 ```
+
+### Surprising Complexity Around Errors
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F03.drawio
+* D 2-err:
+* D 3-serv:
+* D 4-serv: Different languages and frameworks
+* D 5-react:
+* D 6-structure:
