@@ -191,3 +191,28 @@ Body: Raw and json selected
 * D 8-errors: Scenario 2
 * Next provide valid email, but then again same Response due to throwing error after creating a user message
 * We get a consistent Error response
+
+### Communicating More Info to the Error Handler
+* Replace Something went wrong with err.message in error-handler
+* First argument to constructor of Error class is assigned to the message property of the Error
+* Test again in Postman
+```json
+{
+    "email": "test@test.com",
+    "password": "2343242332432"
+}
+
+//Response
+{
+    "message": "Error connecting to database"
+}
+```
+* D 16-err:
+* D 17-err:
+* If we were in js land, we could have written this in signup.ts
+```js
+const error = new Error('Invalid username or password');
+error.reasons = errors.array()
+//reasons a made-up property and errors is the validationResult
+throw error;
+```
