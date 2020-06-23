@@ -224,3 +224,42 @@ throw error;
   * When custom properties needed to be added, then it's a **sign to use Subclasses**
   * js land code can be made as a *subclass* of Error
 * D 20-err: **Entire big picture**
+
+### Subclassing for Custom Errors
+* Create errors dir in src which holds different custom subclasses of Error
+* ValidationError is a type like the below error
+```js
+[
+  {msg: 'Bad email', 
+   param: 'email'
+  }
+]
+```
+* Here in request-validation-error.ts constructor argument is *private* because we want to take the errors property and assign it as a property to the overall class
+```js
+//i.e. without private in constructor
+errors: ValidationError[]
+constructor( errors: ValidationError[] ) {
+  this.errors = errors;
+}
+
+//Equivalent to
+constructor(private errors: ValidationError[]){
+
+}
+```
+* List of ValidationErrors, so the ValidationError[]
+* If we are extending a built-in class
+```js
+Object.setPrototypeOf(this, RequestValidationError.prototype)
+```
+* To use this class
+```js
+throw new RequestValidationError(errors);
+// errors is a list of errors
+```
+* We will use public for errors for now, later we will switch back to private
+* We are hardcoding reason in database-connection-error.ts
+* Do we need to extends Error in database-connection-error.ts to make it a subclass
+  * Here just an example for other type of Errors
+* Import both of these in signup.ts
