@@ -216,3 +216,11 @@ error.reasons = errors.array()
 //reasons a made-up property and errors is the validationResult
 throw error;
 ```
+
+### Encoding More Information In an Error
+* D 17-err:
+* D 19-issue:
+* D 18-err:
+  * When custom properties needed to be added, then it's a **sign to use Subclasses**
+  * js land code can be made as a *subclass* of Error
+* D 20-err: **Entire big picture**
