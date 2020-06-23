@@ -167,3 +167,27 @@ Body: Raw and json selected
 * Express error handling documentation
   * Sync and Async Route handler scenarios
   * Directions on writing Error handler
+
+### Building an Error Handling Middleware
+* Create middlewares folder in src dir
+* Create error-handler.ts inside
+* Only requirement for being error-handling middleware is having **4 arguments with the correct order**
+* Very important goal: **Consistent error message**
+* Wire error-handler to index.ts
+* Then in signup.ts, throw an Error instead of sending the error as response(**For consistent structured error response**)
+* When Error is thrown, it's automatically picked up by that error-handler middleware
+* Then to test this, go to Postman and send
+```json
+{
+    "email": "test",
+    "password": "32234324235"
+}
+
+//Response
+{
+    "message": "Something went wrong"
+}
+```
+* D 8-errors: Scenario 2
+* Next provide valid email, but then again same Response due to throwing error after creating a user message
+* We get a consistent Error response
