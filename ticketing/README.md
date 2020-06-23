@@ -160,3 +160,10 @@ Body: Raw and json selected
 * D 8-errors: Scenarios
   * No idea where something might go wrong in our application
   * Capture the error and send an identical looking error data structure
+
+### Solution for Error Handling
+* D 14-err:
+* D 15-solve:
+* Express error handling documentation
+  * Sync and Async Route handler scenarios
+  * Directions on writing Error handler
