@@ -292,3 +292,43 @@ Handling this error as a RequestValidationError
 // IN the terminal
 Handling this error as a DatabaseConnectionError
 ```
+
+### Converting Errors to Responses
+* D 20-err:
+* D 22-co: **Common Response Structure**
+  * Send back an *object* that has an errors property
+  * This errors in an array of objects
+* In request-validation-error.ts, Hover over ValidationError and see the different properties 
+* Then back in error-handler.ts, build formattedErrors
+* Go to Postman and make a quick test
+```json
+{
+    "email": "test",
+    "password": "2343242332432"
+}
+//Response
+{
+    "errors": [
+        {
+            "message": "Email must be valid",
+            "field": "email"
+        }
+    ]
+}
+```
+* Lookup Http status codes
+  * 400 is for bad request(User sent bad data)
+  * 500 Internal server error
+```json
+{
+    "email": "test@gmail.com",
+    "password": "2343242332432"
+}
+//Response
+{
+    "errors": [
+        {
+            "message": "Error connecting to database"
+        }
+    ]
+}
