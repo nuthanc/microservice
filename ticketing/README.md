@@ -263,3 +263,32 @@ throw new RequestValidationError(errors);
 * Do we need to extends Error in database-connection-error.ts to make it a subclass
   * Here just an example for other type of Errors
 * Import both of these in signup.ts
+
+### Determining Error Type
+* In error-handler.ts, import the 2 subclasses of Error
+* Open Postman and send
+```json
+{
+    "email": "test",
+    "password": "2343242332432"
+}
+//Response
+{
+    "message": ""
+}
+// IN the terminal
+Handling this error as a RequestValidationError
+```
+* Next test db connection error
+```json
+{
+    "email": "test@gmail.com",
+    "password": "2343242332432"
+}
+//Response
+{
+    "message": ""
+}
+// IN the terminal
+Handling this error as a DatabaseConnectionError
+```
