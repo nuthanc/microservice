@@ -363,4 +363,20 @@ Handling this error as a DatabaseConnectionError
   2. D 28: Option no 2
     * Abstract Class
     * Interfaces fall away in the world of JS, but Abstract classes translate to class definitions in JS
-    
+
+### Final Error Related Code
+* Create custom-error.ts in errors dir
+* Create new Abstract class in there
+* abstract property to make it as compulsory property in subclass
+* abstract serializeErrors is a **method signature**
+* Import this abstract class in both the Subclasses of errors
+```js
+throw new Error('something went wrong')
+// For logging behavior
+```
+* So CustomError constructor takes an argument and because of that RequestValidationError and DatabaseConnectionError constructors also take an argument
+* The above is only for logging purposes and is not sent to the user
+* Now we can delete two if statements to just one if statement(Smart Refactor)
+* Make a quick test in Postman
+
+
