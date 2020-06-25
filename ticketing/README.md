@@ -332,3 +332,12 @@ Handling this error as a DatabaseConnectionError
         }
     ]
 }
+```
+
+### Moving Logic Into Errors
+* D 23-err: Custom errors for every kind(Intricate knowledge on every kind of error is not feasible as the middleware's complexity increases)
+  * D 22-c: To make sure they follow common structure
+* D 24-re: Solution to the above problem
+* Add serializeErrors method and statusCode to both the subclasses of Error
+* Check with Postman whether these refactor doesn't have any mistakes
+* Need to get the same response as above
