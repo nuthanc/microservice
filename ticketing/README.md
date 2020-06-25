@@ -341,3 +341,26 @@ Handling this error as a DatabaseConnectionError
 * Add serializeErrors method and statusCode to both the subclasses of Error
 * Check with Postman whether these refactor doesn't have any mistakes
 * Need to get the same response as above
+
+### Verifying our Custom Errors
+* There is nothing in our code to check whether serializeErrors is put together correctly
+* D 25:
+* D 26-ce:
+* Two possible approaches:
+  1. D 27: Option no 1
+  ```ts
+  interface CustomError {
+    statusCode: number;
+    serializeErrors(): {
+      message: string;
+      field?: string; //? meaning Optional
+    }[];// Return type: array of objects
+  }
+
+  // Then we can do something like
+  class RequestValidationError extends Error implements CustomError
+  ```
+  2. D 28: Option no 2
+    * Abstract Class
+    * Interfaces fall away in the world of JS, but Abstract classes translate to class definitions in JS
+    
