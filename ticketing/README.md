@@ -410,3 +410,55 @@ throw new Error('something went wrong')
     ]
 }
 ```
+
+### Uh Oh... Async Error Handling
+* Adding async to app.all function breaks our App
+```js
+app.all('*', async () => {
+  throw new NotFoundError()
+})
+```
+* Go to Postman and check send a POST request
+```json
+// Quick test to POST ticketing.dev/api/users/signup/adsfkdasf
+
+// Response
+It hangs 
+Sending request...
+```
+* async returns a Promise
+* Go back to Express error handling documentation
+  * Rely on next function
+```js
+app.all('*', async (req, res, next) => {
+  next(new NotFoundError());
+})
+```
+* The above works
+* But we don't want to have next as it is very particular to express
+* Go to npmjs.com and search for express-async-errors
+```sh
+cd auth
+npm i express-async-errors
+```
+* Then in index.ts file import it
+* Now, no need of next
+* Check with Postman 
+* You can add async in signup post handler as well
+* Check with Postman again to 
+```json
+ticketing.dev/api/users/signup/ POST
+{
+    "email": "test.com",
+    "password": "2343242332432"
+}
+//Response
+{
+    "errors": [
+        {
+            "message": "Email must be valid",
+            "field": "email"
+        }
+    ]
+}
+```
