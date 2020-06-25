@@ -379,4 +379,34 @@ throw new Error('something went wrong')
 * Now we can delete two if statements to just one if statement(Smart Refactor)
 * Make a quick test in Postman
 
+### How to Define New Custom Errors
+* Eg for route that does not exist
+* Go to errors dir and create not-found-error.ts
+* Just extend CustomError and **hover over the errors to implement it(This approach is brilliant)**
+* Import this in index.ts and before app.use(errorHandler), add app.get
+* Do a quick test in Postman
+```json
+// Quick test to GET ticketing.dev/api/users/signup/adsfkdasf
 
+// Response 
+{
+  "errors": [
+    {
+        "message": "Not Found"
+    }
+  ]
+}
+```
+* Also can change to app.all to handle all requests
+```json
+// Quick test to POST ticketing.dev/api/users/signup/adsfkdasf
+
+// Response
+{
+    "errors": [
+        {
+            "message": "Not Found"
+        }
+    ]
+}
+```
