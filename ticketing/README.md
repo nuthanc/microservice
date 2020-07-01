@@ -478,3 +478,21 @@ npm i mongoose
   * ports name is just for logging purposes
     * If we print out our service at our terminal, it's gonna a name for the port
   * Default port for mongo on 27017
+
+### Connecting to MongoDB
+* D 2-sto: Loss of data
+* Mongoose and mongo related code in index.ts
+* Hover over mongoose error
+```sh
+cd auth
+npm install @types/mongoose
+```
+* Connect to mongo using async-await syntax
+* Usually if we want to connect to mongo instance available at localhost
+```js
+mongoose.connect('mongodb://localhost:27017')
+```
+* But now we need to connect to the auth-mongo-srv
+* After the port is the *name* of the db, in this case(auth)
+* If we failed to connect, it will throw an error
+* We are wrapping async await within start, because only the latest version of node can have await at the top-level(outside a function)
