@@ -462,3 +462,19 @@ ticketing.dev/api/users/signup/ POST
     ]
 }
 ```
+
+### Creating Databases in Kubernetes
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F01.drawio
+* D 11-design: 
+  * 1 Database per service
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F04.drawio
+* D 1-auth:
+```sh
+cd auth
+npm i mongoose
+```
+* Create auth-mongo-depl.yaml in infra k8s dir
+  * image of mongo is coming from Dockerhub
+  * ports name is just for logging purposes
+    * If we print out our service at our terminal, it's gonna a name for the port
+  * Default port for mongo on 27017
