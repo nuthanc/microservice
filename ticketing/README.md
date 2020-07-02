@@ -543,3 +543,15 @@ export { User, buildUser };
 * We are creating this function for Typescript to get involved
 * But we need to import 2 different things(User and buildUser)
 
+### Adding Static properties to a Model
+* Add a new method to the User model
+```ts
+userSchema.statics.build = (attrs: UserAttrs) => {
+  return new User(attrs);
+};
+// this is how we add a custom function built into a model
+//But when we try to use User.build() we still get this error
+Property 'build' does not exist on type 'Model<Document>'
+```
+* TypeScript still doesn't understand it
+* To fix it we create UserModel interface
