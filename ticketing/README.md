@@ -505,3 +505,21 @@ mongoose.connect('mongodb://localhost:27017')
 * D 5-m: Issue#1
 * D 6-ts:
 * D 7-ts: Issue#2
+
+### Creating the User Model
+* Create models dir in auth src dir
+* Create user.ts in models
+* Typescript interface has lower case string
+```ts
+interface asdf {
+  bg: string;
+}
+```
+* In userSchema the type is String constructor(which is JS builtin)
+```ts
+new User({
+  email: 'test@test.com',
+  pwd: 3232432,
+});
+```
+* Typescript doesn't care even if we gave the above
