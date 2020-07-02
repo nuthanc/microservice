@@ -499,3 +499,9 @@ mongoose.connect('mongodb://localhost:27017')
 
 ### Understanding the Signup Flow
 * D 3-auth:
+
+### Getting Typescript and Mongoose to Cooperate
+* D 4-mongo:
+* D 5-m: Issue#1
+* D 6-ts:
+* D 7-ts: Issue#2
