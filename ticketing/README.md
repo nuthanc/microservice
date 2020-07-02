@@ -496,3 +496,6 @@ mongoose.connect('mongodb://localhost:27017')
 * After the port is the *name* of the db, in this case(auth)
 * If we failed to connect, it will throw an error
 * We are wrapping async await within start, because only the latest version of node can have await at the top-level(outside a function)
+
+### Understanding the Signup Flow
+* D 3-auth:
