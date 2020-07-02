@@ -523,3 +523,23 @@ new User({
 });
 ```
 * Typescript doesn't care even if we gave the above
+
+### Type Checking User Properties
+* A **little trick** while creating new User
+* Any time we want to create a new User, we will call buildUser
+```ts
+const buildUser = (attrs: UserAttrs) => {
+  return new User(attrs);
+};
+
+buildUser({
+  email: 'test@test.com',
+  password: '33'
+})
+
+export { User, buildUser };
+
+```
+* We are creating this function for Typescript to get involved
+* But we need to import 2 different things(User and buildUser)
+
