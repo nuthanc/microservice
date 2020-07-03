@@ -575,3 +575,30 @@ const user = User.build({
 * They are **types** being provided to the function
 * Command click on model to understand better
 * UserModel is the return type of model
+
+### User Creation
+* D 3-auth:
+* In signup.ts, import UserModel
+* Status of 201, record was created
+* Open up Postman and test
+```json
+ticketing.dev/api/users/signup
+Headers: Application/json
+Body: Raw and json selected
+{
+  "email": "aalkdsfjlad",
+  "password": "1"
+}
+
+// Response
+{
+    "_id": "5efeff84d8ef4e00248d0c3f",
+    "email": "test@test.com",
+    "password": "2343242332432",
+    "__v": 0
+}
+
+// Send the same request once again
+// Now the response is
+{}
+```
