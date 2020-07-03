@@ -566,3 +566,12 @@ const user = User.build({
   password: 'asdfad'
 })
 ```
+
+### What's that Angle Bracket For?
+* Angular brackets are for generic syntax
+* You can think them as functions or types
+* When we call model with parenthesis
+* UserDoc and UserModel can be seen as arguments to model
+* They are **types** being provided to the function
+* Command click on model to understand better
+* UserModel is the return type of model
