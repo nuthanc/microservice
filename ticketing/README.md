@@ -555,3 +555,14 @@ Property 'build' does not exist on type 'Model<Document>'
 ```
 * TypeScript still doesn't understand it
 * To fix it we create UserModel interface
+
+### Defining Extra Document Properties
+* D 7-ts: Issue#2
+* To address Issue#2, create another interface called UserDoc
+* Test using the below
+```ts
+const user = User.build({
+  email: 'test@test.com',
+  password: 'asdfad'
+})
+```
