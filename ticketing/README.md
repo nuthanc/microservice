@@ -634,3 +634,29 @@ Body: Raw and json selected
 * D 8: Bad approach of Password storing
 * D 9: Password Hashing
 * D 10-signin:
+
+### Adding Password Hashing
+* Place Password Hashing logic in User model file, in other words in models user.ts
+* But we will place majority of the Hashing in a separate class which is in a separte file
+* We are doing this to make our user model file a little bit cleaner
+* Create services dir(Better name can also be given) in src dir
+* Create password.ts inside that
+* Create **static methods** in Password class
+  * Methods that can be accessed without creating an instance of the class
+```js
+Password.toHash('akldsajf')
+// instead of 
+(new Password).toHash('aldskfj')
+```
+* crypto and util are built-in libraries
+* scrypt is the Hashing function we are going to use
+* scrypt is callback based implementation, so we are importing promisify to turn into a Promise based implementation which is compatible for async-await 
+* *Generate salt* which is part of the Hashing process
+  * Salt is random data that is used as an additional input to a one-way function that hashes data
+* When using scrypt, we get a buffer,i.e. an array with raw data
+* If we mouse over buf(which is little bit greyed out), it's type is set as unknown
+```ts
+const buf = await scryptAsync(password, salt, 64)
+// Add as Buffer(interface)
+const buf = (await scryptAsync(password, salt, 64)) as Buffer;
+```
