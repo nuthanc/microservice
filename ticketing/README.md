@@ -602,3 +602,29 @@ Body: Raw and json selected
 // Now the response is
 {}
 ```
+
+### Proper Error Handling
+* Throw proper error for existing user
+* BadRequestError for anything that goes wrong in our Request handler due to the input the User gave us
+* The above is different from RequestValidationError
+* RequestValidationError is for handling output from **express-validator**
+* Create bad-request-error.ts in errors dir
+* General rule of thumb for new errors is:
+  * Import custom-error and typescript will give the details of what to do
+* this.message in super of BadRequestError is not possible becasue typescript jumps in and saves a reference to message on our instance
+* Go to Postman and do a quick test
+```json
+{
+    "email": "test@test.com",
+    "password": "2343242332432"
+}
+// Send the above twice
+// Response after sending twice
+{
+    "errors": [
+        {
+            "message": "Email in use"
+        }
+    ]
+}
+```
