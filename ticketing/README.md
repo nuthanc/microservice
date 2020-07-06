@@ -628,3 +628,9 @@ Body: Raw and json selected
     ]
 }
 ```
+
+### Reminder on Password Hashing
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F04.drawio
+* D 8: Bad approach of Password storing
+* D 9: Password Hashing
+* D 10-signin:
