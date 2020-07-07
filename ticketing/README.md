@@ -663,3 +663,31 @@ const buf = (await scryptAsync(password, salt, 64)) as Buffer;
 
 ### Comparing Hashed Password
 * D 10-signin:
+
+### Mongoose Pre-Save Hooks
+* pre('save') is a middleware function implemented in mongoose
+* Mongoose doesn't have great support out of the box for async await syntax, so it has done argument to deal with asynchronous code
+* After the await call, at the very end we need to call done
+* Also note, we are using **function** and not arrow function
+  * This is because:
+  * Whenever we put together a middleware function, we get access to the document being saved(which is the User we are trying to persist to the Database) as **this** inside of this function
+  * If an arrow function was used, then the value of **this** in the function would be overidden and would be the context of this entire file as opposed to the User document
+* Check for modified password, the reason being
+  * We might be retrieving User out of the db and trying to save them back in the db(Situation: Email change functionality: Fetching the user, changing the email and save them back into the db)
+  * Even we are creating the password for the very first time, it is considered as modified
+* Go to Postman and test
+```json
+{
+    "email": "git@test.com",
+    "password": "dasfdas238283"
+}
+
+// Response of Hashed password
+{
+    "_id": "5f04a9c505927700259e6c6a",
+    "email": "git@test.com",
+    "password": "48b7a2e9429fb44976fe8ca316f5f5dacac60a52445ca939777ff7bf64716980a2937199cb8e901f9087643be21a47d0cb14f154e1038a66ae8c21bd021ca362.af6235e2575526af",
+    "__v": 0
+}
+```
+* D 3-auth:
