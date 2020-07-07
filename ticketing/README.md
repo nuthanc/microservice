@@ -660,3 +660,6 @@ const buf = await scryptAsync(password, salt, 64)
 // Add as Buffer(interface)
 const buf = (await scryptAsync(password, salt, 64)) as Buffer;
 ```
+
+### Comparing Hashed Password
+* D 10-signin:
