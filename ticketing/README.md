@@ -725,3 +725,17 @@ const buf = (await scryptAsync(password, salt, 64)) as Buffer;
 * D 22-s:
 * D 23-c: As quickly as possible solution
   * short lived cache or data store as we do not need to persist for a long time
+
+### Reminder on Cookies vs JWT's
+* D 13-one:
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F05.drawio
+* D 1-jwt: Cookies
+  * Stored by browser and automatically sent to server while making follow-up requests
+* D 2-jwt: JWT
+  * Arbitrary information: Payload
+  * We can extract the original object anytime using a decoding algorithm
+  * D 3-jwt: Where the JWT is placed
+* D 4-jwtcookie: Differences
+  * Cookies any kind of data like Tracking info, visit counter
+  * JWT need to managed manually unless we are storing JWT inside a cookie
+
