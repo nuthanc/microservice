@@ -739,3 +739,23 @@ const buf = (await scryptAsync(password, salt, 64)) as Buffer;
   * Cookies any kind of data like Tracking info, visit counter
   * JWT need to managed manually unless we are storing JWT inside a cookie
 
+### Microservices Auth Requirements
+* D 5-ms: Requirement #1
+  * Store info in auth mechanism to know more about the User,i.e. whether they have billing info, email etc
+* D 8-auth: Requirement #2
+  * Admin User creating free Coupons
+  * Need more info like their role(Auth info)
+* D 6-exp: Requirement #3
+  * Tamper-resistant way to expire or invalidate itself
+* D 7-gr: Requirement #4
+  * Understood by many different languages
+* D 9-summ: **Requirement summary**
+* D 10-sum: Steering to JWT
+  * Cookie expiration handled by browser
+  * But a User can very easily copy the Cookie info and just ignore the expiration date and continue using the cookie
+* D 3-jwt:
+  * Can be sent in Request **Headers Authorization**
+  * Can be sent in Request **Body token**
+  * Can be sent in Request **Headers Cookie**
+
+
