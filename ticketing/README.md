@@ -778,3 +778,9 @@ const buf = (await scryptAsync(password, salt, 64)) as Buffer;
   * And in that point of time, Google can start to reach around and try to find the tokens stored on your device
 * D 13-jwt: Only this is possible during Server side rendering
   * Corner case is **Service workers**
+
+### Cookies and Encryption
+* Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F06.drawio
+* D 1-signup: **Signup flow**
+* Go to npmjs.com and search for cookie-session
+* D 2-sess:
