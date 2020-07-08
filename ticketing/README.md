@@ -717,3 +717,11 @@ const buf = (await scryptAsync(password, salt, 64)) as Buffer;
 ### So Which Option?
 * D 19-fo:
 * D 20-dir:
+
+### Solving Issues with Option #2
+* Not implemented but only explanation
+* Because it requires extra work
+* D 21-m: Timer for cookie, JWT
+* D 22-s:
+* D 23-c: As quickly as possible solution
+  * short lived cache or data store as we do not need to persist for a long time
