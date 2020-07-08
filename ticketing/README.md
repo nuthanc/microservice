@@ -757,5 +757,24 @@ const buf = (await scryptAsync(password, salt, 64)) as Buffer;
   * Can be sent in Request **Headers Authorization**
   * Can be sent in Request **Body token**
   * Can be sent in Request **Headers Cookie**
+  * ![normal](pics/jwt.png)
 
-
+### Issues with JWT's and Server Side Rendering
+* **Normal flow**: Loading process for Normal React application
+* ![normal](pics/normal_flow.png)
+* D 12-auth: Where we care about authentication
+* D 13-ssr: Server side rendered application
+  * Initial request to some backend server(client)
+  * The backend server is gonna build the HTML for our entire app and send it back
+  * So no follow-up requests required
+* Server side rendering
+  * For SEO: Search engine optimization
+  * Page load speed if a user has an older device or a mobile device
+* D 14-auth:
+  * Very first request, JWT needs to be communicated
+* D 15-first: **But this really presents a big issue**
+  * When you type google.com into your address bar in the Browser, Google has no ability to run js code on your computer(browser) before sending you an HTML file
+  * When you enter after typing google.com, first thing you get back is the HTML file and inside that we can have some js code or a reference to a script tag to load up some code 
+  * And in that point of time, Google can start to reach around and try to find the tokens stored on your device
+* D 13-jwt: Only this is possible during Server side rendering
+  * Corner case is **Service workers**
