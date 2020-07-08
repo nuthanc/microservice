@@ -704,4 +704,13 @@ const buf = (await scryptAsync(password, salt, 64)) as Buffer;
   * Downside same as in above option, i.e. when auth service goes down
 * D 13-one: Fundamental Option#2
 
-
+### Huge Issues with Authentication Strategies
+* D 15-t: Step 1
+* D 13-one: Step 2
+* D 16-admin: Let's imagine Userabc is not the nicest person(Malicious user who got fired)
+* D 17-result:
+  * UserABC still has the jwt, cookie or whatever
+  * We can't reach into their computer and say you need to delete this right away
+  * Order service says you are authenticated and good to go
+  * Decoupled from auth service
+  
