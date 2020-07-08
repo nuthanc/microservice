@@ -713,4 +713,7 @@ const buf = (await scryptAsync(password, salt, 64)) as Buffer;
   * We can't reach into their computer and say you need to delete this right away
   * Order service says you are authenticated and good to go
   * Decoupled from auth service
-  
+
+### So Which Option?
+* D 19-fo:
+* D 20-dir:
