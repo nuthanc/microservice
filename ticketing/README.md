@@ -691,3 +691,17 @@ const buf = (await scryptAsync(password, salt, 64)) as Buffer;
 }
 ```
 * D 3-auth:
+
+### Fundamental Authentication Strategies
+* D 3-auth:
+* Handling User authentication is a challenging problem
+* D 11-auth:
+* D 12-pay: Along with ticket, json web token, cookie or something else to show that they are authenticated
+* D 14-two: Fundamental Option#1
+  * Sync request: Direct request from one service to another, one that doesn't use an Event bus
+  * If auth service goes down, we are gonna be in a world of hurt
+* D 15-1.5: Fundamental Option#1.1
+  * Downside same as in above option, i.e. when auth service goes down
+* D 13-one: Fundamental Option#2
+
+
