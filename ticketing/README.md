@@ -784,3 +784,14 @@ const buf = (await scryptAsync(password, salt, 64)) as Buffer;
 * D 1-signup: **Signup flow**
 * Go to npmjs.com and search for cookie-session
 * D 2-sess:
+
+### Adding Session Support
+```sh
+cd auth
+npm i cookie-session @types/cookie-session
+```
+* Inside auth src index.ts, import cookie-session and wire it up
+* Disable encryption with signed as false
+* Cookies will only be used if User visits our application over HTTPS
+* Traffic proxied to our Application through ingress nginx, so need to set trust proxy as true
+  * To make sure that express is behind a proxy of ingress-nginx
