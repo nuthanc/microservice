@@ -856,3 +856,18 @@ Session
 true
 true
 ```
+* So after this, anytime we make a follow-up request to anything at ticketing.dev, this cookie will be included and we are going to get our JWT
+
+### JWT Signing keys
+* Take the cookie value generated during last time
+* Go to base64decode.org
+```json
+{"jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMDczY2M1ZmQyMWRjMDAxYTZlNWY3MiIsImVtYWlsIjoidHVyaW5nQHRlc3QuY29tIiwiaWF0IjoxNTk0MzA5ODI5fQ.D5dAmJAJu1SN4ysmcJ36tuW8P89PQgS-acEuMbibz7U"}
+```
+* Take that jwt and go to jwt.io
+* Place the jwt in encoded and place the signin key in Verify signature
+* You see that the Signature is verified
+* If you make any changes to the jwt, we see Invalid Signature
+* We can see the payload even without the Signin key
+* D 3-key:
+* D 4-key:
