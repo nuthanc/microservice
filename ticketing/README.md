@@ -878,3 +878,21 @@ true
 * D 6-sec:
   * Key-value pair
   * Load to containers of different pods as env variables
+
+### Creating and Accessing Secrets
+* D 7-secret: 
+* Different kinds of secrets
+  * One of them might be info related to accessing a repository of docker images
+  * Generic: all purpose kind of secret info
+* After generic is the name of the secret
+* This is an example of imperative command where we run a command to create objects(directly creating objects)
+* In other cases, we used declarative approach where we wrote the config file and applied the config file
+* The reason we are doing imperative is we don't want a config file listing out the value of the secret
+  * Workaround to this can also be done where we write a config file and pass it from our local env variables
+* The one **downside** to it is every time we create or spin up a new cluster, need to remember all the different secrets over time
+* For now, what the author does is store it in very secure location
+* Google "where to store kubernetes secrets"
+* Secret in gist.github
+* kubectl get secrets
+* Later in auth-depl.yaml, place env section
+* You get CreateContainerConfigError if the secret is not found
