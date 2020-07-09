@@ -802,3 +802,57 @@ npm i cookie-session @types/cookie-session
 npm uninstall @types/cookie-session
 npm install --save-exact @types/cookie-session@2.0.39
 ```
+
+### Generating a JWT
+* D 1-signup:
+* Check the examples in the documentation of cookie-session
+```js
+req.session.views = (req.session.views || 0) + 1
+```
+* We do a req.session
+* req.session is an object created by cookie-session middleware
+* Any information we store inside will be serialized and stored inside the cookie
+* npmjs.com and search for jsonwebtoken
+* payload is the info we want to store inside the jwt
+* verify method to check if user messed our jwt
+```sh
+cd auth
+npm i jsonwebtoken @types/jsonwebtoken
+```
+* IN signup.ts, import jwt
+* Right after we save the User to the database, there we want to generate the jwt
+* First argument to sign is the payload
+* Second argument is a private key, for now 'asdf', but later we are gonna change it
+```ts
+req.session.jwt = userJwt;
+
+// but typescript shows an error. To get around this
+req.session = {
+  jwt: userJwt
+}
+// This is because the type definition file that has been handed off to Typescript doesn't want us to assume that there is an object on req.session
+```
+* The cookie-session then will serialize it and sends it back to the User's browser
+* Let's do a quick test in Postman
+```json
+// change the email address to unique
+{
+    "email": "alan@test.com",
+    "password": "dasfdas238283"
+}
+// After sending it, go to Cookies tab
+Nothing
+// It is because we didn't specify the HTTPS protocol
+Make request to
+https://ticketing.dev/api/users/signup/
+// Ingress-nginx serves an invalid temporary certificate
+// Disable SSL certificate verification
+// Now check in cookies tab
+express:sess
+eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJalZtTURjelkyTTFabVF5TVdSak1EQXhZVFpsTldZM01pSXNJbVZ0WVdsc0lqb2lkSFZ5YVc1blFIUmxjM1F1WTI5dElpd2lhV0YwSWpveE5UazBNekE1T0RJNWZRLkQ1ZEFtSkFKdTFTTjR5c21jSjM2dHVXOFA4OVBRZ1MtYWNFdU1iaWJ6N1UifQ%3D%3D
+ticketing.dev
+/
+Session
+true
+true
+```
