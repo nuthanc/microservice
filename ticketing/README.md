@@ -795,3 +795,10 @@ npm i cookie-session @types/cookie-session
 * Cookies will only be used if User visits our application over HTTPS
 * Traffic proxied to our Application through ingress nginx, so need to set trust proxy as true
   * To make sure that express is behind a proxy of ingress-nginx
+
+### Note on Cookie-Session
+* Bug in cookie-session
+```sh
+npm uninstall @types/cookie-session
+npm install --save-exact @types/cookie-session@2.0.39
+```
