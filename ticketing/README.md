@@ -868,6 +868,13 @@ true
 * Place the jwt in encoded and place the signin key in Verify signature
 * You see that the Signature is verified
 * If you make any changes to the jwt, we see Invalid Signature
-* We can see the payload even without the Signin key
+* We can see the payload even without the Signing key
 * D 3-key:
 * D 4-key:
+
+### Securely Storing Secrets with Kubernetes
+* D 4-key: We need to securely share the Signing key 
+* D 5-sec:
+* D 6-sec:
+  * Key-value pair
+  * Load to containers of different pods as env variables
