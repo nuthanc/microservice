@@ -1000,3 +1000,9 @@ https://ticketing.dev/api/users/signin/
     ]
 }
 ```
+
+### Common Request Validation Middleware
+* Since there is duplicate code between signin.ts and signup.ts, we write a common validation middleware
+* Create validate-request.ts in middlewares folder
+* Import this in signup and signin.ts
+* Make a test on Postman again after making an invalid request
