@@ -918,3 +918,9 @@ true
     "__v": 0
 }
 ```
+
+### Common Response Properties
+* We see additional non-required Response properties(like password and __v(tied to mongoose))
+* D 8-db:
+  * _id in mongo, id in mysql and postgres
+
