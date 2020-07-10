@@ -924,3 +924,42 @@ true
 * D 8-db:
   * _id in mongo, id in mysql and postgres
 
+### Formatting JSON Properties
+```js
+const person = { name: 'alex' }
+JSON.stringify(person)
+// "{"name":"alex"}"
+const person2 = { name: 'alex', toJSON() { return 1;} } 
+JSON.stringify(person2)
+// "1"
+```
+* In user.ts of models, add second parameter to userSchema
+* toJSON in mongoose, it is implemented as object
+* Can option click on toJSON to see other attributes
+* Remove password property using delete
+* Now check back by sending in Postman with unique email
+```json
+{
+    "email": "tune@test.com",
+    "password": "dasfdas238283"
+}
+// Response
+{
+    "_id": "5f088064cf19fe010a857250",
+    "email": "tune@test.com",
+    "__v": 0
+}
+```
+* That __v is a version_key which can be seen in Option clicking toJSON
+* Also remap id property
+```json
+{
+    "email": "temp@test.com",
+    "password": "dasfdas238283"
+}
+// Response
+{
+    "email": "temp@test.com",
+    "id": "5f088146ebe774017b32ce1b"
+}
+```
