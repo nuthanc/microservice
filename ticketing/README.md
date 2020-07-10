@@ -896,3 +896,25 @@ true
 * kubectl get secrets
 * Later in auth-depl.yaml, place env section
 * You get CreateContainerConfigError if the secret is not found
+
+### Accessing Env Variables in a Pod
+* In auth singup.ts, add process.env.JWT_KEY
+* You see a red wiggly line
+* That's because Typescript is complaining
+* Add check in start function of index.ts
+* But Typescript is still complaining since it wants it defined right before using it
+* So add an *!* right after JWT_KEY
+* Go to Postman and sign up with unique email address
+```json
+{
+    "email": "turingalan@test.com",
+    "password": "dasfdas238283"
+}
+// Response seen along with cookie
+{
+    "_id": "5f087aeb81a10b009daafc84",
+    "email": "turingalan@test.com",
+    "password": "e2f09eacd262639e74164a1117d791f750da3b291713b22f72d34c7a6547d2e6fdfb6b1f64fa0e701d8de1c7e8548bdc7d8e07e7c51adc5506219657299b58af.55e7ea2ba8ee1f8c",
+    "__v": 0
+}
+```
