@@ -1006,3 +1006,10 @@ https://ticketing.dev/api/users/signin/
 * Create validate-request.ts in middlewares folder
 * Import this in signup and signin.ts
 * Make a test on Postman again after making an invalid request
+
+### Sign In Logic
+* D 10-signin:
+* Provide as little information as possible if invalid credentials during signin(Due to malicious user)
+* Comparing the passwords is asynchronous
+* Copy paste Generate JWT from signup.ts
+* Sending back 200 status as we are not reading a new Record
