@@ -963,3 +963,40 @@ JSON.stringify(person2)
     "id": "5f088146ebe774017b32ce1b"
 }
 ```
+
+### The Signin Flow
+* D 10-signin:
+* In signin.ts, add validation to incoming request
+* Array to organize different validation functions
+```json
+POST request to
+https://ticketing.dev/api/users/signin/
+
+{
+    "email": "dsafdas",
+    "password": "dasfdas238283"
+}
+// Response
+{
+    "errors": [
+        {
+            "message": "Email must be valid",
+            "field": "email"
+        }
+    ]
+}
+
+{
+    "email": "dsafdas@gmail.com",
+    "password": ""
+}
+// Response
+{
+    "errors": [
+        {
+            "message": "You must supply a password",
+            "field": "password"
+        }
+    ]
+}
+```
