@@ -1130,3 +1130,8 @@ Make POST request to https://ticketing.dev/api/users/signout with Content-Type t
 ### Creating a Current User Middleware
 * D 12-mw:
 * Create current-user.ts in middleware
+
+### Augmenting Type Definitions
+* Making changes to existing Type definition
+* Go to Postman and make a quick test
+* Signin and check for currentUser
