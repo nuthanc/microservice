@@ -1126,3 +1126,7 @@ Make POST request to https://ticketing.dev/api/users/signout with Content-Type t
 {}
 // Make GET https://ticketing.dev/api/users/currentuser
 ```
+
+### Creating a Current User Middleware
+* D 12-mw:
+* Create current-user.ts in middleware
