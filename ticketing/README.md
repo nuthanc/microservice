@@ -1013,3 +1013,33 @@ https://ticketing.dev/api/users/signin/
 * Comparing the passwords is asynchronous
 * Copy paste Generate JWT from signup.ts
 * Sending back 200 status as we are not reading a new Record
+
+### Quick Sign In Test
+* Test in Postman
+```json
+POST request to
+https://ticketing.dev/api/users/signup/
+{
+    "email": "test@test.com",
+    "password": "password"
+}
+// Response
+{
+    "email": "test@test.com",
+    "id": "5f0ac63a4093700033bda1aa"
+}
+
+POST request to 
+https://ticketing.dev/api/users/signin/
+{
+    "email": "test@test.com",
+    "password": "password"
+}
+// Response as well as Cookie
+{
+    "email": "test@test.com",
+    "id": "5f0ac63a4093700033bda1aa"
+}
+// Test invalid cases as well like Empty passwords and Invalid password and an Email that doesn't exist
+```
+
