@@ -1043,3 +1043,13 @@ https://ticketing.dev/api/users/signin/
 // Test invalid cases as well like Empty passwords and Invalid password and an Email that doesn't exist
 ```
 
+### Current User Handler
+* Now fill up current-user.ts
+* D 11:
+  * If user is logged in, there will be a cookie present
+* React application needs to know if user is signed in
+* React cannot directly look into the cookie if there is a valid JWT(We have set up our cookies like that, so that they cannot be accessed by JS running inside our browser)
+* So React needs to make a request to something in our App to know whether the User is currently logged in
+* That's the Goal of our current-user Route handler
+* 
+
