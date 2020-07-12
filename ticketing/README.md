@@ -1051,5 +1051,58 @@ https://ticketing.dev/api/users/signin/
 * React cannot directly look into the cookie if there is a valid JWT(We have set up our cookies like that, so that they cannot be accessed by JS running inside our browser)
 * So React needs to make a request to something in our App to know whether the User is currently logged in
 * That's the Goal of our current-user Route handler
-* 
 
+### Returning the Current User
+* Red wiggly line aroudn req.session
+  * CookieSessionInterfaces.CookieSessionObject | null | undefined
+  ```js
+  if (!req.session.jwt){
+  ```
+* The only time req.session will be null or undefined will be when we enter this Router handler(/api/users/currentuser) without first executing cookie session middleware given below
+```js
+app.use(
+  cookieSession({
+    signed: false,
+    secure: true
+  })
+)
+```
+* So need to add additional check
+```ts
+if (!req.session || !req.session.jwt)
+// can be replaced by
+i (!req.session?.jwt)
+```
+* verify will throw an Error if jwt is messed around
+* Go to Postman and make a quick test
+```json
+POST to https://ticketing.dev/api/users/signin/
+{
+    "email": "test@test.com",
+    "password": "password"
+}
+// Response with cookie set
+{
+    "email": "test@test.com",
+    "id": "5f0ac63a4093700033bda1aa"
+}
+// Then in new tab
+GET to https://ticketing.dev/api/users/currentuser
+With headers:
+  Content-Type: application/json
+Postman automatically sends Cookie when making request to the same domain
+See Cookies on the right side: Of ticketing.dev
+// Response
+{
+    "currentUser": {
+        "id": "5f0ac63a4093700033bda1aa",
+        "email": "test@test.com",
+        "iat": 1594543655
+    }
+}
+// After deleting the cookie and sending again
+// Response
+{
+    "currentUser": null
+}
+```
