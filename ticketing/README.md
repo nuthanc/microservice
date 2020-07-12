@@ -1135,3 +1135,21 @@ Make POST request to https://ticketing.dev/api/users/signout with Content-Type t
 * Making changes to existing Type definition
 * Go to Postman and make a quick test
 * Signin and check for currentUser
+
+### Requiring Auth for Route Access
+* D 12-mw: 2nd middleware
+* Create require-auth.ts in middleware
+* 401 status for forbidden
+* Create not-authorized-error.ts Custom Error in errors
+* Go to Postman and test it out to GET currentuser
+* Signout and test again to currentuser routes
+```json
+// Response
+{
+    "errors": [
+        {
+            "message": "Not Authorized"
+        }
+    ]
+}
+```
