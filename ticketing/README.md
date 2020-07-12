@@ -1106,3 +1106,23 @@ See Cookies on the right side: Of ticketing.dev
     "currentUser": null
 }
 ```
+
+### Signing Out
+* Content in signout.ts
+* Signing out process involves sending back a Header which tells the Browser to empty out the Cookie, which will remove the jwt
+* To empty and destroy the cookie, we'll set req.session to null
+* Go back to Postman and make a quick test
+```json
+First make sign in request
+POST request to https://ticketing.dev/api/users/signin/
+{
+    "email": "test@test.com",
+    "password": "password"
+}
+// Make GET request to https://ticketing.dev/api/users/currentuser to confirm
+// Make another tab and make POST request to 
+Make POST request to https://ticketing.dev/api/users/signout with Content-Type to application/json
+// Response
+{}
+// Make GET https://ticketing.dev/api/users/currentuser
+```
