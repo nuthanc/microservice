@@ -1159,3 +1159,12 @@ Make POST request to https://ticketing.dev/api/users/signout with Content-Type t
 * D 8-scope:
   * Unit Test: Test a single piece of code in isolation
 * D 4-bound:
+
+### Testing Goals
+* D 5-strat: Testing each service individually
+  * Basic Request Handling(E.g for auth, but can be applied to other services as well)
+  * If we make a request to Auth service to signup, we should get a Response with Cookie that has a JWT in it or assert some data to Mongodb
+* D 6-t: Tests around Models
+  * Unit Test Approach
+* D 7-three: Event emitting + receiving
+* D 8-note:
