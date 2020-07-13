@@ -1153,3 +1153,9 @@ Make POST request to https://ticketing.dev/api/users/signout with Content-Type t
     ]
 }
 ```
+
+### Scope of Testing
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F07.drawio
+* D 8-scope:
+  * Unit Test: Test a single piece of code in isolation
+* D 4-bound:
