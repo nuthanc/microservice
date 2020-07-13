@@ -1167,4 +1167,18 @@ Make POST request to https://ticketing.dev/api/users/signout with Content-Type t
 * D 6-t: Tests around Models
   * Unit Test Approach
 * D 7-three: Event emitting + receiving
-* D 8-note:
+* D 8-note: **Not running tests in container but directly on the machine(Local environment)**
+
+### Testing Architecture
+* D 5-strat: Goal #1
+* D 9-process:
+  * Testrunner: Jest
+  * In memory copy of Mongo(Running in memory)
+    * Do not have to install Mongo directly on the machine
+* Go to npmjs.com and Search for supertest
+* D 11-process:
+* D 12-test: Require index.ts to test file to get access to the App variable(app is requiring express)
+  * Difficult now as we have some hard-coded startup logic inside index.ts
+  * If multiple services listen on the same port, we are gonna have some problem
+  * But supertest assigns ephemeral port 
+* D 13-split: Refactor for the above problem
