@@ -1187,3 +1187,16 @@ Make POST request to https://ticketing.dev/api/users/signout with Content-Type t
 * Create app.ts inside auth src dir
 * Cut everything above start function(except mongoose,cause you see a red wiggly line in index.ts when you cut everthing till start) and paste it to app.ts
 * Export app(Named export, cannot export app by itself) from app.ts and import it in index.ts
+
+### A Few Dependencies
+```sh
+cd auth
+npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongodb-memory-server
+```
+* In memory mongo because we can test multiple databases at the same time
+* Tests for different services concurrently on the same machine
+* This will run much quickly
+* We don't want this big mongodb-memory-server to be downloaded every time we build our Docker image
+* That's why we install them as development dependencies(--save-dev)
+* We are not gonna run tests in the image at any point in time
+* Update this info in the Dockerfile(--only-prod)
