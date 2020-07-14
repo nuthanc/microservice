@@ -1200,3 +1200,24 @@ npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongo
 * That's why we install them as development dependencies(--save-dev)
 * We are not gonna run tests in the image at any point in time
 * Update this info in the Dockerfile(--only-prod)
+
+### Test Environment Setup
+* Add test scripts in package.json of auth
+  * watchAll: Run all different tests inside our project whenever any file changes
+  * no-cache: Attempt to use Typescript with Jest
+    * Without this, jest doesn't always recognize changes with Typescript files
+* Add another configuration for jest itself
+  * ts-set for Typescript support
+  * setupFilesAfterEnv: Tell jest to run setup files inside our project after it initially starts everything up
+    * Try to run the file in the current working directory
+* Create test folder and in there setup.ts
+* New instance of MongoMemoryServer
+  * Startup a copy of mongodb in memory
+  * Allows up to run multiple different test suites at the same time across different projects without trying to reach out to the same copy of mongo
+  * Also gives Direct access
+* beforeAll is a hook function
+  * Runs before all of the tests get executed
+* beforeEach is another hook function
+  * Runs before each of the tests get executed
+  * Delete mongo collections Before each test starts
+* afterAll hook function after all tests are run
