@@ -1182,3 +1182,8 @@ Make POST request to https://ticketing.dev/api/users/signout with Content-Type t
   * If multiple services listen on the same port, we are gonna have some problem
   * But supertest assigns ephemeral port 
 * D 13-split: Refactor for the above problem
+
+### Index to App Refactor
+* Create app.ts inside auth src dir
+* Cut everything above start function(except mongoose,cause you see a red wiggly line in index.ts when you cut everthing till start) and paste it to app.ts
+* Export app(Named export, cannot export app by itself) from app.ts and import it in index.ts
