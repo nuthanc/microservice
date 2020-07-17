@@ -1239,3 +1239,7 @@ npm run test
 * Need to define env variable in test environment
 * We will do it in a simple, direct way(not the best) by doing it in beforeAll of setup.ts
 * Now check whether it passes
+
+### An Important Note
+* Sometimes jest or ts-test doesn't detect changes made to the file
+* Rerun npm run test
