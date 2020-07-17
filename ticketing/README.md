@@ -1243,3 +1243,12 @@ npm run test
 ### An Important Note
 * Sometimes jest or ts-test doesn't detect changes made to the file
 * Rerun npm run test
+
+### Testing Invalid Input
+* Try to sign up with invalid email or password
+* We could write assertions with appropriate error message, but we will just keep it really quick and simple based on status code of 400
+* Changes in signup.test.ts
+* npm run test takes a lot of time initially because we are setting up in-memory mongodb
+* But after that, tests run quickly
+* Press Enter to rerun
+* Instead of return we could use await
