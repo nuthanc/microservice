@@ -1221,3 +1221,21 @@ npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongo
   * Runs before each of the tests get executed
   * Delete mongo collections Before each test starts
 * afterAll hook function after all tests are run
+
+### Our First Test
+* Test around signup Route handler
+* So, create a folder inside routes dir called __test__ and in that create signup.test.ts
+* The above is the convention
+* supertest allows to fake a request to express app
+* *it* for test statement
+* We see async without await, because we will add it sometime in the future(Eventually when we make multiple requests in a single test)
+```sh
+cd auth
+npm run test
+```
+* We are getting an Error while trying to create JWT due to JWT_KEY environment
+* Previously, there was a check in index.ts but now it is split to index.ts and app.ts
+* Environment variable in deployment config file
+* Need to define env variable in test environment
+* We will do it in a simple, direct way(not the best) by doing it in beforeAll of setup.ts
+* Now check whether it passes
