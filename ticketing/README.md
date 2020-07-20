@@ -1271,3 +1271,22 @@ npm run test
 * Create signin.test.ts
 * Can copy paste some of the tests from signup.test.ts
   * But some small changes like password not required of some particular length
+
+### Testing Sign Out
+* Create signout.test.ts
+* Need to console log response to see what happens to the Set-Cookie Header
+```sh
+console.log
+      [
+        'express:sess=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; httponly'
+      ]
+```
+* Can do 2 approaches here
+  * 1 toEqual of the above string
+  ```ts
+  expect(response.get('Set-Cookie')[0]).toEqual(
+    'express:sess=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; httponly'
+  );
+  ```
+  * 2 just toBeDefined
+
