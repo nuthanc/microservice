@@ -1266,3 +1266,8 @@ npm run test
   * We could make secure to be false in test env
   * process.env.NODE_ENV != 'test'
 * Now we are gonna see that the test passes
+
+### Tests Around Sign In Functionality
+* Create signin.test.ts
+* Can copy paste some of the tests from signup.test.ts
+  * But some small changes like password not required of some particular length
