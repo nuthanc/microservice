@@ -1255,3 +1255,14 @@ npm run test
 
 ### Requiring Unique Emails
 * Send same request again but with 400 status code
+
+### Changing Node Env During Tests
+* Session object(req.session which contains jwt) is turned into a string by cookie-session
+* Cookie-session will send it back to User's browser inside the Response
+* Cookie-session middleware will set a Header on the Response
+  * Header name: Set-Cookie
+* sets a cookie after successful signup test case fails
+  * supertest not making https connection as secure is made true in app.ts cookie-session
+  * We could make secure to be false in test env
+  * process.env.NODE_ENV != 'test'
+* Now we are gonna see that the test passes
