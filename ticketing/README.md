@@ -1252,3 +1252,6 @@ npm run test
 * But after that, tests run quickly
 * Press Enter to rerun
 * Instead of return we could use await
+
+### Requiring Unique Emails
+* Send same request again but with 400 status code
