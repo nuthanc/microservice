@@ -1300,3 +1300,17 @@ console.log
 * Postman and Browser have functionality to automatically send up cookies
 * supertest by default doesn't manage cookies for us automatically
   * Cookie doesn't get included in the followup request
+
+### Easy Auth Solution
+* Capture the response of signup in authResponse
+* Then set the Headers using set method
+* Now the log is
+```js
+{
+  currentUser: {
+    id: '5f172c490e3d0e6e1287ec08',
+    email: 'test@test.com',
+    iat: 1595354185
+  }
+}
+```
