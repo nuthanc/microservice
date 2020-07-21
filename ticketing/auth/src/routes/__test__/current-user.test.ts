@@ -1,7 +1,7 @@
 import request from 'supertest';
 import { app } from '../../app';
 
-it('clears the cookie after signing out', async () => {
+it('responds with details about the current user', async () => {
   await request(app)
     .post('/api/users/signup')
     .send({
@@ -11,10 +11,9 @@ it('clears the cookie after signing out', async () => {
     .expect(201);
 
   const response = await request(app)
-    .post('/api/users/signout')
-    .send({})
+    .get('/api/users/currentuser')
+    .send()
     .expect(200);
-  
-  // console.log(response.get('Set-Cookie'))
-  expect(response.get('Set-Cookie')).toBeDefined();
+
+  console.log(response.body);
 });

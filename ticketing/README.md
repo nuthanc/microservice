@@ -1290,3 +1290,13 @@ console.log
   ```
   * 2 just toBeDefined
 
+### Issues with Cookies During Testing
+* Test for current-user
+* After signing up and get of currentuser
+* When console.log(response.body)
+```js
+{ currentUser: null }
+```
+* Postman and Browser have functionality to automatically send up cookies
+* supertest by default doesn't manage cookies for us automatically
+  * Cookie doesn't get included in the followup request
