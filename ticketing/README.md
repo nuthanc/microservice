@@ -1322,3 +1322,6 @@ console.log
 ```ts
 Promise<string[]>;
 ```
+
+### Testing Non-Authed Requests
+* Tests around User model and events written later
