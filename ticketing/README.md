@@ -1314,3 +1314,11 @@ console.log
   }
 }
 ```
+
+### Auth Helper Function
+* Write a global function in setup.ts of test dir
+* Also need to declare for this
+* Promise is gonna resolve itself with a value of type array of strings
+```ts
+Promise<string[]>;
+```
