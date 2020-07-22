@@ -1325,3 +1325,8 @@ Promise<string[]>;
 
 ### Testing Non-Authed Requests
 * Tests around User model and events written later
+
+### Starting the React App
+* Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F08.drawio
+* D 1-note:
+* D 1-client:
