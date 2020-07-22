@@ -1337,3 +1337,19 @@ Promise<string[]>;
   * Atleast 2 or 3 requests to show some content to the User
 * D 2-ssr: Server side rendering
   * NextJS sends out the fully rendered HTML all in one single request
+
+### Basics of Next JS
+* Create client dir inside ticketing
+```sh
+mkdir client
+cd client
+npm init -y
+npm install react react-dom next
+mkdir pages
+```
+* Pages dir with particular file names used for Routing instead of react-router 
+* index.js in pages is the root route of our application
+* If we go to localhost:3000/banana, we will see contents of banana.js
+* **File names map up to Route names**
+* Add dev script in package.json
+* npm run dev in client dir
