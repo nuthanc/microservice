@@ -1353,3 +1353,12 @@ mkdir pages
 * **File names map up to Route names**
 * Add dev script in package.json
 * npm run dev in client dir
+
+### Building a Next Image
+* D 5-ts:
+* Create Dockerfile and .dockerignore
+* Try building it locally once
+```sh
+cd client
+docker build -t nuthanc/client .
+```
