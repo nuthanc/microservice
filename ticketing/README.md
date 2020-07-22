@@ -1329,4 +1329,11 @@ Promise<string[]>;
 ### Starting the React App
 * Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F08.drawio
 * D 1-note:
-* D 1-client:
+* D 1-client: Overview
+
+### Reminder on Server Side Rendering
+* D 4-trad:
+  * In development setting
+  * Atleast 2 or 3 requests to show some content to the User
+* D 2-ssr: Server side rendering
+  * NextJS sends out the fully rendered HTML all in one single request
