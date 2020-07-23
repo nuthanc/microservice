@@ -1360,5 +1360,17 @@ mkdir pages
 * Try building it locally once
 ```sh
 cd client
+minikube start
+eval $(minikube docker-env)
 docker build -t nuthanc/client .
 ```
+
+### Running Next in Kubernetes
+```sh
+docker push nuthanc/client 
+```
+* Create client-depl.yaml in infra k8s
+* Also file syncing in skaffold.yaml
+* Also new entry in ingress-srv.yaml
+* path of client-srv is a catchall, so it should be at the very bottom, since paths parses in order
+* Test this in browser by visiting ticketing.dev and /banana
