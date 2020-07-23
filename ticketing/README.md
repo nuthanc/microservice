@@ -1374,3 +1374,13 @@ docker push nuthanc/client
 * Also new entry in ingress-srv.yaml
 * path of client-srv is a catchall, so it should be at the very bottom, since paths parses in order
 * Test this in browser by visiting ticketing.dev and /banana
+
+### Note on File Change Detection
+* NextJS is a little bit finicky with File change detection
+* A little fix
+  * Create next.config.js in client
+  * Automatically loaded by nextJS
+* Next doesn't automatically restart itself whenever we add some change in next.config.js unlike React files
+* k get pods
+* Manually kill the client pod
+* k delete pod client-depl-5c754bbb8d-d52hm
