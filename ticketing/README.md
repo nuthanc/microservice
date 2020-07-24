@@ -1384,3 +1384,23 @@ docker push nuthanc/client
 * k get pods
 * Manually kill the client pod
 * k delete pod client-depl-5c754bbb8d-d52hm
+
+### Adding Global CSS
+* Bootstrap is a Global CSS file
+* Global CSS files have to wired up to NextJS in a very particular fashion
+* Create _app.js in pages
+* Return Component and spread over pageProps
+* Navigation in Next:
+  * Whenever we try to navigate, Next is gonna import Components in the files mentioned in pages dir
+  * Next is gonna wrap that up in its own custom default Component and that is referred to app
+  * When we define _app, we define our own custom app component
+  * Whenever we try to visit banana route inside the Browser, NextJS is gonna import that Component and is gonna pass it to _app.js as Component prop 
+  * pageProps are gonna be the set of Components intending to pass to either Banana or Index(in this e.g)
+* Why do we want to define _app.js
+  * If we want to include global css into our project
+  * This is the only place it can be imported
+* More on Global css: Google search next.js css-global.md
+```sh
+cd client
+npm install bootstrap
+```
