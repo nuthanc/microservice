@@ -1404,3 +1404,8 @@ docker push nuthanc/client
 cd client
 npm install bootstrap
 ```
+
+### Adding a Sign Up Form
+* Create auth folder in pages dir and create signup.js
+  * By doing that, it will define the route for /auth/signup.js
+* Test this in browser
