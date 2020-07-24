@@ -1411,4 +1411,17 @@ npm install bootstrap
 * Test this in browser
 
 ### Handling Email and Password Inputs
+* In signup.js eventHandlers
+
+### Successful Account Signup
+* D 7-signup: Route to /api/users/signup
+  * Many things in between:
+    * Ingress-nginx
+    * Service
+    * Finally the pod where the app is running
+```sh
+cd client
+npm i axios
+```
+* Also you can Cookies in Network XHR request signup and Cookies or Header set-cookie
 * 
