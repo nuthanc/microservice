@@ -1453,3 +1453,19 @@ try {
 )}
 ```
 
+### The useRequest Hook
+* D 8-hook: Custom Hook of useRequest
+* Create hooks dir inside client directory
+* Create useRequest.js
+* Can return usual way of Hooks
+```js
+return [doRequest, errors] 
+```
+* But it makes sense to return as an object
+* axios dynamic method
+```js
+axios[method](url, body)
+// instead of 
+axios.get or axios.post
+```
+* Import useRequest in signup.js
