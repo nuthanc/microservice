@@ -1424,4 +1424,32 @@ cd client
 npm i axios
 ```
 * Also you can Cookies in Network XHR request signup and Cookies or Header set-cookie
-* 
+
+### Handling Validation Errors
+* To deal with invalid email and password, since Exception is sent, we need try catch block
+```js
+try {
+  const response = await axios.post('/api/users/signup', {
+    email,
+    password,
+  });
+  console.log(response.data);
+} catch (err) {
+  console.log(err.response.data);
+}
+```
+* Try checking this on UI
+* **Conditionally display logic**
+```js
+{errors.length > 0 && (
+  <div className="alert alert-danger">
+    <h4>Ooops....</h4>
+    <ul className="my=0">
+      {errors.map((err) => (
+        <li key={err.message}>{err.message}</li>
+      ))}
+    </ul>
+  </div>
+)}
+```
+
