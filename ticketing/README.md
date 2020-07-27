@@ -1469,3 +1469,9 @@ axios[method](url, body)
 axios.get or axios.post
 ```
 * Import useRequest in signup.js
+
+### Using the useRequest Hook
+* No need of error length checking in signup as it is null by default 
+* Test it on Chrome
+* There is a bug where the error message is still seen even after successful request
+* We can clear this easily in useRequest by setErrors(null)
