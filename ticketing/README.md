@@ -1475,3 +1475,29 @@ axios.get or axios.post
 * Test it on Chrome
 * There is a bug where the error message is still seen even after successful request
 * We can clear this easily in useRequest by setErrors(null)
+
+### An onSuccess Callback
+* Import Router from next for Programmatic Routing in NextJS
+```js
+// Routing regardless of anything
+const onSubmit = async (event) => {
+    event.preventDefault();
+    Router.push('/');
+    doRequest();
+  };
+```
+* Need to Route if there is no Error
+* One way of doing this is rethrowing the error in catch statement of useRequest and doing the below
+```js
+await doRequest();
+Router.push('/');
+// Can wrap the above in try catch
+```
+* But a better way of doing this is using onSuccess callback in useRequest
+```js
+if (onSuccess) {
+  onSuccess(response.data);
+}
+// Argument of response.data not strictly required
+// But added for any future use
+```
