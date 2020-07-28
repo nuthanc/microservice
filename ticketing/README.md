@@ -1501,3 +1501,15 @@ if (onSuccess) {
 // Argument of response.data not strictly required
 // But added for any future use
 ```
+
+### Overview on Server Side Rendering
+* D 3-ssr: Signed in or not
+  * Request to /api/users/currentuser
+* D 10-ssr:
+* getInitialProps implementation in index.js of pages
+* This will get called automatically while it is trying to render our App on the server
+* getInitialProps is specific to NextJS and is our opportunity to fetch some data the Component needs during the Server side rendering process
+* We cannot do any Data loading inside of Components themselves
+* All our Components are executed or rendered one single time
+* Test the index code in the Browser
+* Go to Landing page and refresh the Page
