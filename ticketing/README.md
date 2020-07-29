@@ -1513,3 +1513,37 @@ if (onSuccess) {
 * All our Components are executed or rendered one single time
 * Test the index code in the Browser
 * Go to Landing page and refresh the Page
+
+### Fetching Data During SSR
+* Fetch data in index.js of pages
+* Why are we not making use of useRequest hook
+* Because it is a hook and are used inside React components, whereas getInitialProps is not a Component but a plain function
+```js
+const LandingPage = ({ currentUser }) => {
+  console.log(currentUser);
+  return <h1>Landing Page</h1>;
+};
+
+LandingPage.getInitialProps = async () => {
+  const response = await axios.get('/api/users/currentuser');
+
+  return response.data;
+};
+```
+* The above code is correct but we get the below error
+```txt
+Server Error
+Error: connect ECONNREFUSED 127.0.0.1:80
+
+This error happened while generating the page. Any console logs will be displayed in the terminal window.
+```
+* But if we do only this and check the Response on Chrome Network tab, everything works properly
+```js
+const LandingPage = ({ currentUser }) => {
+  console.log(currentUser);
+  axios.get('/api/users/currentuser');
+  return <h1>Landing Page</h1>;
+};
+// Response in Chrome Network
+currentUser: {id: "5f20130c0b30a60023490932", email: "adsf@sdalfj.com", iat: 1595937548}
+```
