@@ -1547,3 +1547,17 @@ const LandingPage = ({ currentUser }) => {
 // Response in Chrome Network
 currentUser: {id: "5f20130c0b30a60023490932", email: "adsf@sdalfj.com", iat: 1595937548}
 ```
+
+### Why the Error?
+* Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F08.drawio
+* In the previous code snippet of LandingPage, it is executed on the Browser (also executed on the Server)
+* D 11-ssr:
+  * When axios request is in LandingPage and getInitialProps is commented
+  * First request, ingress-nginx sends to NextJS
+  * Browser automatically adds the domain along with the Route
+* D 12-ssr: When it fails
+  * Node networking on the client side
+  * Node networking similar to browser and adds the domain
+  * Since NextJS is inside a container, the request went there inside the container on port 80
+  * But there is nothing running on port 80 inside the container
+* 
