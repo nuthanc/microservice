@@ -1560,4 +1560,11 @@ currentUser: {id: "5f20130c0b30a60023490932", email: "adsf@sdalfj.com", iat: 159
   * Node networking similar to browser and adds the domain
   * Since NextJS is inside a container, the request went there inside the container on port 80
   * But there is nothing running on port 80 inside the container
-* 
+
+### Two Possible Solutions
+* D 13-domain:
+* D 15-opt:
+  * Option no 2: Not good as NextJS will need to know the exact service name for every thing it needs to reach out to
+  * Also which route for which service
+  * Option no 1: Which domain is the challenge
+* D 15-cookie: Including Cookie is a challenge
