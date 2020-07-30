@@ -1594,3 +1594,6 @@ currentUser: {id: "5f20130c0b30a60023490932", email: "adsf@sdalfj.com", iat: 159
   * Not a full reload of the Page
   * ticketing.dev/auth/signup
   * Log seen in client(Browser)
+
+### On the Server or the Browser
+* window is an object that exists only inside the Browser
