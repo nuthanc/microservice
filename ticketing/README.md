@@ -1576,3 +1576,21 @@ currentUser: {id: "5f20130c0b30a60023490932", email: "adsf@sdalfj.com", iat: 159
   * So it can be accessed directly
 * D 17-cross:
 * D 18-ext:
+
+### When is GetInitialProps Called?
+* D 13-domain:
+* D 19-ref:
+* Although we can technically can make requests inside the Component, we don't get the opportunity for the request to get resolved during the Server Side Rendering Process
+  * Don't get the opportunity to update state, make use of any lifecycle methods
+* getInitialProps will also be executed on the Browser under very particular circumstances given below
+* D 20-inc:
+* To test this out, changes in index.js of pages
+* Hard refresh on Landing Page
+  * Log seen in server
+* Select Address bar and hit Enter
+  * Log seen in server
+* Navigating from one page to another while in the app
+  * Scenario: Signup
+  * Not a full reload of the Page
+  * ticketing.dev/auth/signup
+  * Log seen in client(Browser)
