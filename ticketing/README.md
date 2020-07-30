@@ -1568,3 +1568,11 @@ currentUser: {id: "5f20130c0b30a60023490932", email: "adsf@sdalfj.com", iat: 159
   * Also which route for which service
   * Option no 1: Which domain is the challenge
 * D 15-cookie: Including Cookie is a challenge
+
+### Cross Namespace Service Communication
+* D 15-opt: What should be the domain
+* D 16-ns:
+  * But in my environment ingress-service is in Default namespace
+  * So it can be accessed directly
+* D 17-cross:
+* D 18-ext:
