@@ -1572,7 +1572,8 @@ currentUser: {id: "5f20130c0b30a60023490932", email: "adsf@sdalfj.com", iat: 159
 ### Cross Namespace Service Communication
 * D 15-opt: What should be the domain
 * D 16-ns:
-  * But in my environment ingress-service is in Default namespace
+  * But in my environment ingress-service is in Default namespace(That is ingress)
+  * Ingress service is now in kube-system namespace
   * So it can be accessed directly
 * D 17-cross:
 * D 18-ext:
@@ -1597,3 +1598,24 @@ currentUser: {id: "5f20130c0b30a60023490932", email: "adsf@sdalfj.com", iat: 159
 
 ### On the Server or the Browser
 * window is an object that exists only inside the Browser
+
+### Specifying the Host
+```js
+const response = await axios.get('/api/users/currentuser');
+return response.data;
+// to
+const { data } = await axios.get('/api/users/currentuser');
+```
+* In order to execute getInitialProps on the Browser, we have to navigate to this page(Signup process)
+* We see the data on the Browser console
+* If we are on the server, we need to make request to
+  * http://SERVICE.NAMESPACE.svc.cluster.local
+  * But, in my case, ingress-service(k get svc -n kube-system) is in Kube-system namespace
+* **Solution from Comments**
+  * kubectl expose deployment ingress-nginx-controller --target-port=80 --type=ClusterIP -n kube-system
+  * Then access in http://ingress-nginx-controller.kube-system.svc.cluster.local/api/users/currentuser
+* Need to add Host of ticketing.dev when we are on the Server
+* D 15-cookie:
+  * Browser makes request to Client's NEXT JS
+  * Next then makes it own request to Ingress-nginx, but cookie is not included
+* We see an output of null on the server side console
