@@ -6,15 +6,13 @@ const LandingPage = ({ currentUser }) => {
   return <h1>Landing Page</h1>;
 };
 
-LandingPage.getInitialProps = async () => {
+LandingPage.getInitialProps = async ({ req }) => {
   if (typeof window === 'undefined') {
     // we are on the server
     // Requests should be made to http://ingress-nginx....
     const { data } = await axios.get(
       'http://ingress-nginx-controller.kube-system.svc.cluster.local/api/users/currentuser', {
-        headers: {
-          Host: 'ticketing.dev'
-        }
+        headers: req.headers
       }
     );
     return data;

@@ -1619,3 +1619,7 @@ const { data } = await axios.get('/api/users/currentuser');
   * Browser makes request to Client's NEXT JS
   * Next then makes it own request to Ingress-nginx, but cookie is not included
 * We see an output of null on the server side console
+
+### Passing Through The Cookies
+* Whenever getInitialProps gets called on the server, the 1st argument is an object that has a couple of properties inside it
+* console log req.headers to check all the headers
