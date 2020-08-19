@@ -1623,3 +1623,11 @@ const { data } = await axios.get('/api/users/currentuser');
 ### Passing Through The Cookies
 * Whenever getInitialProps gets called on the server, the 1st argument is an object that has a couple of properties inside it
 * console log req.headers to check all the headers
+
+### A Reusable API client
+* D 21-api:
+* Create api folder and build-client.js within it in client
+* Axios create the baseURL so that this file can be imported in index.js
+* Do a quick test on the Browser by refresh and check the console logs
+* Next do a soft signup by first moving to auth/signup and check the logs
+* To improve readability, we can define client ahead of time
