@@ -1631,3 +1631,6 @@ const { data } = await axios.get('/api/users/currentuser');
 * Do a quick test on the Browser by refresh and check the console logs
 * Next do a soft signup by first moving to auth/signup and check the logs
 * To improve readability, we can define client ahead of time
+
+### Content on the Landing Page
+* 
