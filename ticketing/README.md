@@ -1513,3 +1513,8 @@ if (onSuccess) {
 * All our Components are executed or rendered one single time
 * Test the index code in the Browser
 * Go to Landing page and refresh the Page
+
+##### minikube start and skaffold dev to see the Server side error
+* async request in getInitialprops not working
+* Check the reason for getting Server Error
+  * Due to domain not being added properly since in containers
