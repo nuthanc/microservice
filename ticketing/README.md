@@ -1518,3 +1518,8 @@ if (onSuccess) {
 * async request in getInitialprops not working
 * Check the reason for getting Server Error
   * Due to domain not being added properly since in containers
+  * So added ticketing.dev manually, but ticketing.dev doesn't resolve to ip since /etc/hosts is not configured in the NextJS container
+* So to get the proper request, need to forward it to ingress-nginx service
+  * Check the ingress-nginx dns
+  * But how will the ingress-nginx know the domain to route
+  * Should I add **another route path with no host?**

@@ -15,8 +15,8 @@ const LandingPage = ({ color }) => {
 
 LandingPage.getInitialProps = async () => {
   console.log('I am on the server!');
-  const response = await axios.get('/api/users/currentuser');
-  console.log(`Response in getInitial: ${response}`)
+  // const response = await axios.get('http://192.168.64.3/api/users/currentuser');
+  // console.log(`Response in getInitial: ${response}`)
   return { color: 'red' };
 };
 
