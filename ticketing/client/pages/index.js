@@ -15,8 +15,10 @@ const LandingPage = ({ color }) => {
 
 LandingPage.getInitialProps = async () => {
   console.log('I am on the server!');
-  // const response = await axios.get('http://192.168.64.3/api/users/currentuser');
-  // console.log(`Response in getInitial: ${response}`)
+  const response = await axios.get(
+    'http://ingress-nginx-controller.kube-system.svc.cluster.local/api/users/currentuser'
+  );
+  console.log(`Response in getInitial: ${response.data.currentUser}`)
   return { color: 'red' };
 };
 

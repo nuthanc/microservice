@@ -1523,3 +1523,14 @@ if (onSuccess) {
   * Check the ingress-nginx dns
   * But how will the ingress-nginx know the domain to route
   * Should I add **another route path with no host?**
+  * Found out that host is optional
+* Google search for DNS for Services and Pods
+  * This is for getting the dns of ingress and forwarding this route /api/users/currentuser
+  * Also check this: https://stackoverflow.com/questions/54801667/fully-qualified-domain-name-fqdn-for-services-in-kubernetes-not-working-dns-1
+  * From analysis of manaul exec of client pod,
+    * ingress-nginx-controller.kube-system.svc.cluster.local is the required service
+    * This service is exposed by 
+    ```sh
+    kubectl expose deployment ingress-nginx-controller --target-port=80 --type=ClusterIP -n kube-system
+    ```
+    * http://ingress-nginx-controller.kube-system.svc.cluster.local/api/users/currentuser is the request
