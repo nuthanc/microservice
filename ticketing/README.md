@@ -1534,3 +1534,4 @@ if (onSuccess) {
     kubectl expose deployment ingress-nginx-controller --target-port=80 --type=ClusterIP -n kube-system
     ```
     * http://ingress-nginx-controller.kube-system.svc.cluster.local/api/users/currentuser is the request
+* Check if it works even without **additional rule** in ingress-srv
