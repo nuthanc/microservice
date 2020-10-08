@@ -1535,3 +1535,7 @@ if (onSuccess) {
     ```
     * http://ingress-nginx-controller.kube-system.svc.cluster.local/api/users/currentuser is the request
 * Check if it works even without **additional rule** in ingress-srv
+  * It doesn't work because host is not added
+  * So while creating axios object, add headers from request headers which is *obtained in getInitialProps as an argument*
+* Test the italized text
+* Host is specified as context.req.headers
