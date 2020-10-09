@@ -1539,3 +1539,7 @@ if (onSuccess) {
   * So while creating axios object, add headers from request headers which is *obtained in getInitialProps as an argument*
 * Test the italized text
 * Host is specified as context.req.headers
+
+##### Scenarios where getInitialProps is called
+* Hard reset and Reload: Server
+* Redirect from another page: Client
