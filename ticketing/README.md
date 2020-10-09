@@ -1584,6 +1584,9 @@ currentUser: {id: "5f20130c0b30a60023490932", email: "adsf@sdalfj.com", iat: 159
 * Although we can technically can make requests inside the Component, we don't get the opportunity for the request to get resolved during the Server Side Rendering Process
   * Don't get the opportunity to update state, make use of any lifecycle methods
 * getInitialProps will also be executed on the Browser under very particular circumstances given below
+* Scenarios where getInitialProps is called
+  * Hard reset and Reload: Server
+  * Redirect from another page: Client
 * D 20-inc:
 * To test this out, changes in index.js of pages
 * Hard refresh on Landing Page
