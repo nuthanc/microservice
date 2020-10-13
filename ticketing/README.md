@@ -1636,4 +1636,5 @@ const { data } = await axios.get('/api/users/currentuser');
 * To improve readability, we can define client ahead of time
 
 ### Content on the Landing Page
-* 
+* Ternary expression in Landing Page to test sign in
+* To test sign out, Clear cookies in Application tab in Chrome
