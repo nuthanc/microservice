@@ -1648,3 +1648,17 @@ const { data } = await axios.get('/api/users/currentuser');
 * To test this, go to /auth/signup, signup with an account
 * Clear the Cookie in the Application tab
 * Go to /auth/signin and test it
+
+### A Reusable Header
+* If we want something for every single page, we can use _app.js and wrap Component with another Component or html 
+  * Component is the page we are trying to show
+```js
+return (
+  <h1>Header</h1>
+  <Component {...pageProps} />
+  );
+```
+* D 6-app:
+* Header is React in nature, since it changes based on whether User is signed in or not
+* D 8-fetch: getInitialProps need to moved from index.js to _app.js since Header also needs to find out currentUser
+* D 9-reminder: getInitialProps in the future required in more than 1 place, it is slightly difficult in Nextjs
