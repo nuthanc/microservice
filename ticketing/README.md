@@ -1638,3 +1638,13 @@ const { data } = await axios.get('/api/users/currentuser');
 ### Content on the Landing Page
 * Ternary expression in Landing Page to test sign in
 * To test sign out, Clear cookies in Application tab in Chrome
+
+### The Sign In Form
+* Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F08.drawio
+* D 1-client:
+* The signup form can be reused to show sigin, but since this is not a course on React, we will be copying sigup to signin
+* Change Sign Up to Sign In
+* Make sure to not have any cookies in the Chrome Console Application tab
+* To test this, go to /auth/signup, signup with an account
+* Clear the Cookie in the Application tab
+* Go to /auth/signin and test it
