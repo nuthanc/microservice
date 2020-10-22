@@ -1662,3 +1662,6 @@ return (
 * Header is React in nature, since it changes based on whether User is signed in or not
 * D 8-fetch: getInitialProps need to moved from index.js to _app.js since Header also needs to find out currentUser
 * D 9-reminder: getInitialProps in the future required in more than 1 place, it is slightly difficult in Nextjs
+
+### Moving GetInitialProps
+* Use AppCompenent instead of App
