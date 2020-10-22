@@ -1665,3 +1665,17 @@ return (
 
 ### Moving GetInitialProps
 * Use AppCompenent instead of App
+
+### Issues with Custom App GetInitialProps
+* D 10-ctx: Arguments to Page vs Custom App
+* Console log appContext keys to check all the properties there
+```js
+// Output of appContext
+console.log(Object.keys(appContext));
+[ 'AppTree', 'Component', 'router', 'ctx' ]
+```
+* After fetching data in _app, console log it
+* Another thing to try is add console log in Landing Page's getInitialProps
+* We do not see a console log of LandingPage
+* When we tie getInitialProps to App Component, getInitialProps in pages do not get automatically invoked anymore
+
