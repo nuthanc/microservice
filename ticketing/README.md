@@ -1679,3 +1679,12 @@ console.log(Object.keys(appContext));
 * We do not see a console log of LandingPage
 * When we tie getInitialProps to App Component, getInitialProps in pages do not get automatically invoked anymore
 
+### Handling Multiple GetInitialProps
+* console log appContext in getInitialProps
+* You see a property called Component
+```js
+Component: [Function: LandingPage] {
+[client-depl-7c5595c875-kqkdq client]     getInitialProps: [AsyncFunction (anonymous)]
+[client-depl-7c5595c875-kqkdq client]   }
+```
+* getInitialProps of other pages is invoked from _app based on condition
