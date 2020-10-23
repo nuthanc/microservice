@@ -1697,3 +1697,9 @@ currentUser: data.currentUser
 // 
 ...data
 ```
+
+### Building the Header
+* Create components directory in client
+* Create header.js in that
+* D 9-r:
+* Use Link tag in place of anchor tag in Nextjs
