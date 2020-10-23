@@ -1688,3 +1688,12 @@ Component: [Function: LandingPage] {
 [client-depl-7c5595c875-kqkdq client]   }
 ```
 * getInitialProps of other pages is invoked from _app based on condition
+
+### Passing Props Through
+* pageProps obtained from getInitialProps needs to be passed down to the page Component which we want to display
+* return the pageProps and the currentUser
+```js
+currentUser: data.currentUser
+// 
+...data
+```
