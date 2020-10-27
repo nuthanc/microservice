@@ -1703,3 +1703,6 @@ currentUser: data.currentUser
 * Create header.js in that
 * D 9-r:
 * Use Link tag in place of anchor tag in Nextjs
+
+### Conditionally Showing Links
+* Use currentUser as filtering criteria and filter and map
