@@ -1706,3 +1706,9 @@ currentUser: data.currentUser
 
 ### Conditionally Showing Links
 * Use currentUser as filtering criteria and filter and map
+
+### Signing Out
+* We need to make sure that the request to signout always comes from the Browser and not from the server
+  * So we need to make the request from a Component and not from getInitialProps
+* useEffect to call doRequest, as soon as the component is rendered
+  * Empty array for only one time
