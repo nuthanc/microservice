@@ -1712,3 +1712,12 @@ currentUser: data.currentUser
   * So we need to make the request from a Component and not from getInitialProps
 * useEffect to call doRequest, as soon as the component is rendered
   * Empty array for only one time
+
+### Shared Logic: Between Services
+* Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F09.drawio
+* D 1-auth: What about event-related stuff for auth service?
+* D 2-service: Next service
+  * Tickets service
+* D 3-auth, 4-auth:
+* D 5-err:
+* D 6-shared:
