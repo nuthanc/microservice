@@ -1721,3 +1721,11 @@ currentUser: data.currentUser
 * D 3-auth, 4-auth:
 * D 5-err:
 * D 6-shared:
+
+### Options for Code Sharing
+* D 7-shared: Option #1-Direct copy paste
+  * Down side: Very hard to document those changes
+* D 8-gs: Option #2-Git submodule
+  * Valid option but little bit of pain associated with git submodule commands
+* D 9-npm: Option #3-NPM package
+  * Little bit of pain
