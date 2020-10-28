@@ -1729,3 +1729,11 @@ currentUser: data.currentUser
   * Valid option but little bit of pain associated with git submodule commands
 * D 9-npm: Option #3-NPM package
   * Little bit of pain
+
+### NPM Organizations
+* D 9-npm:
+* D 10-reg: Publishing a package with npm Options
+  * We will do Public Organization as Private we need to pay
+* Go to npmjs.com and Sign Up
+* Click on Add Organization
+* https://www.npmjs.com/settings/rztickets/members
