@@ -1755,3 +1755,26 @@ npm publish --access public
 # Error, because we are not logged in
 npm login
 ```
+
+### Project Setup
+* D 10-npm: 
+```sh
+npm install typescript -g
+cd common
+tsc --init
+npm install typescript del-cli --save-dev
+mkdir src
+code src/index.ts
+```
+* We want to convert ts to js file
+* To do this, in package.json build in scripts section
+* Then in tsconfig.json, make the required changes
+  * Uncomment declaration to have a type definition file
+  * Uncomment outDir to have the converted code in ./build
+```sh
+npm run build
+```
+* After build we get index.js as well as type definition file
+* Any time we make a change, we need to delete the build directory and build it again
+* So we add clean in scripts of package.json
+* Run npm run build to check
