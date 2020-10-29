@@ -1737,3 +1737,21 @@ currentUser: data.currentUser
 * Go to npmjs.com and Sign Up
 * Click on Add Organization
 * https://www.npmjs.com/settings/rztickets/members
+
+### Publishing NPM Modules
+```sh
+mkdir common
+cd common
+npm init -y
+```
+* name in the package.json should be @Organization/package-name
+```sh
+# Inside common
+git init
+git add .
+git commit -m "initial commit"
+npm publish --access public
+# --access public is necessary, else it will think it is private inside our organization
+# Error, because we are not logged in
+npm login
+```
