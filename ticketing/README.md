@@ -1778,3 +1778,13 @@ npm run build
 * Any time we make a change, we need to delete the build directory and build it again
 * So we add clean in scripts of package.json
 * Run npm run build to check
+
+### An Easy Publish Command
+* The **main** key in package.json indicates what file we import when we import the overall package
+* We need to make sure that we import the index.js inside the build dir
+* Also **types** key for the types file 
+* And **files** key for what files to be included in the published versoin of our package
+* Make some change in the index.ts(like exporting color)
+```sh
+git add .
+git commit -m "additional config"
