@@ -1788,3 +1788,11 @@ npm run build
 ```sh
 git add .
 git commit -m "additional config"
+# The below command to automatically update the version in the package.json file
+npm version patch
+npm run build
+npm publish
+```
+* Read **Semantic Versioning** for how to version your packages
+* To make our lives easier, instead of running what is in that sh snippet every time, we'll write a little script for that in package.json under pub key
+* Make another change in index.ts and test npm run pub
