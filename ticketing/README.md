@@ -1831,3 +1831,15 @@ cd auth
 npm i @rztickets/common
 ```
 * Start skaffold back up to see if it's working
+
+### Updating the Common Module
+* Make the changes in index.ts of common or any other folder
+* npm run pub in common
+* Inside auth, npm update @rztickets/common
+* How to check if the container is running the correct version
+```sh
+kubectl get pods
+kubectl exec -it auth-depl-789b7f647b-2ttbk sh
+cd node_modules/@rztickets/common
+cat package.json
+```
