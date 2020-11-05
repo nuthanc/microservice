@@ -1823,3 +1823,11 @@ npm i express express-validator cookie-session jsonwebtoken @types/express @type
 ```
 * tsc again
 * npm run pub
+
+### Updating Import Statements
+* Correct Import statements in auth
+```sh
+cd auth
+npm i @rztickets/common
+```
+* Start skaffold back up to see if it's working
