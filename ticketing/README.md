@@ -1796,3 +1796,30 @@ npm publish
 * Read **Semantic Versioning** for how to version your packages
 * To make our lives easier, instead of running what is in that sh snippet every time, we'll write a little script for that in package.json under pub key
 * Make another change in index.ts and test npm run pub
+
+### Relocating Shared Code
+* errors and middlewares of auth are the reusable folders required
+* Drap them to src of common from auth
+* For example, if auth wanted to use BadRequestError
+```js
+import { BadRequestError } from '@rzticketing/common/errors/bad-request-error'
+
+// But we would want it like the below
+import { BadRequestError } from '@rzticketing/common'
+```
+* Option #1 would work without changing anything
+  * But the downside is they need to know the directory structure of the class or function to be used
+* But for Option #2, we need to set this up in index.ts
+```js
+export * from './errors/bad-request-error';
+// Import everything and immediately re-export it
+```
+* We will get errors if we try to build
+* Anyway, try buildigin it with tsc in common
+* This is because we don't have the modules installed in auth package.json
+* So we need to install via npm
+```sh
+npm i express express-validator cookie-session jsonwebtoken @types/express @types/cookie-session @types/jsonwebtoken
+```
+* tsc again
+* npm run pub
