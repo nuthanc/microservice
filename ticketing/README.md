@@ -1843,3 +1843,7 @@ kubectl exec -it auth-depl-789b7f647b-2ttbk sh
 cd node_modules/@rztickets/common
 cat package.json
 ```
+
+### Ticketing Service Overview
+* Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F10.drawio
+* D 1-tik, 2-tik, 3-steps, 4-steps:
