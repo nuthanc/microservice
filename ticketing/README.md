@@ -1847,3 +1847,13 @@ cat package.json
 ### Ticketing Service Overview
 * Diagram Link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F10.drawio
 * D 1-tik, 2-tik, 3-steps, 4-steps:
+
+### Project Setup
+* Create tickets folder
+* Copy files from auth
+* npm install in tickets
+```sh
+cd tickets
+npm install
+docker build -t nuthanc/tickets .
+docker push nuthanc/tickets 
