@@ -1857,3 +1857,10 @@ cd tickets
 npm install
 docker build -t nuthanc/tickets .
 docker push nuthanc/tickets 
+```
+
+### Running the Ticket Service
+* Create tickets-depl.yaml in infra k8s
+* Update skaffold.yaml for file syncing
+* Copy and change auth-mongo-depl to tickets-mongo=depl
+* Skaffold dev and check whether everything is fine
