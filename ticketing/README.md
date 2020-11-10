@@ -1864,3 +1864,8 @@ docker push nuthanc/tickets
 * Update skaffold.yaml for file syncing
 * Copy and change auth-mongo-depl to tickets-mongo=depl
 * Skaffold dev and check whether everything is fine
+
+### Mongo Connection URI
+* We are connected to wrong instance of mongo in tickets index.ts
+* To prevent such errors in the future, it's better to have a environment variable in depl file
+* Weirdness around Environment variable issue when env is commented in the tickets-depl.yaml
