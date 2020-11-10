@@ -1869,3 +1869,6 @@ docker push nuthanc/tickets
 * We are connected to wrong instance of mongo in tickets index.ts
 * To prevent such errors in the future, it's better to have a environment variable in depl file
 * Weirdness around Environment variable issue when env is commented in the tickets-depl.yaml
+
+### Quick Auth Update
+* Update MONGO_URI in auth-depl and index.ts of auth
