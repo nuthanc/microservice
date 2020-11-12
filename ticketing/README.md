@@ -1175,6 +1175,7 @@ Make POST request to https://ticketing.dev/api/users/signout with Content-Type t
   * Testrunner: Jest
   * In memory copy of Mongo(Running in memory)
     * Do not have to install Mongo directly on the machine
+* Documentation about it method(https://jasmine.github.io/api/3.6/global.html#it)
 * Go to npmjs.com and Search for supertest
 * D 11-process:
 * D 12-test: Require index.ts to test file to get access to the App variable(app is requiring express)
@@ -1872,3 +1873,12 @@ docker push nuthanc/tickets
 
 ### Quick Auth Update
 * Update MONGO_URI in auth-depl and index.ts of auth
+
+### Test-First Approach
+* D 1-tik: 
+* Reading this article: https://zellwk.com/blog/endpoint-testing/
+* Create new.test.ts
+```sh
+cd tickets
+npm run test
+```
