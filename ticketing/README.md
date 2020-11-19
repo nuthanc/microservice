@@ -1875,6 +1875,11 @@ docker push nuthanc/tickets
 * Update MONGO_URI in auth-depl and index.ts of auth
 
 ### Test-First Approach
+* The approach goes like this:
+  * Write tests first
+  * Make it fail
+  * Implement in code
+  * Make it pass
 * D 1-tik: 
 * Reading this article: https://zellwk.com/blog/endpoint-testing/
 * Create new.test.ts
@@ -1889,3 +1894,6 @@ npm run test
 cd tickets
 npm run test
 ```
+
+### Adding Auth Protection
+* 
