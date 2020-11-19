@@ -1882,3 +1882,10 @@ docker push nuthanc/tickets
 cd tickets
 npm run test
 ```
+
+### Creating the Router
+* Create new.ts containing the post route to tickets
+```sh
+cd tickets
+npm run test
+```
