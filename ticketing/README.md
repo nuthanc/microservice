@@ -1896,4 +1896,19 @@ npm run test
 ```
 
 ### Adding Auth Protection
-* 
+* Done by importing requireAuth in new.ts
+
+### Faking Authentication During Tests
+* All tests should be self-contained(Shouldn't make requests to other services)
+* skaffold dev and Sign Up while having Network tab open
+* We see 2 requests to currentuser(that is a bug)
+* Check out the Header to see the cookie
+* Copy everything after express:sess=
+```txt
+eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJalZtWWpjMU1XUmtOelUyTmpsbE1EQXlNMlJoTUdSbU5TSXNJbVZ0WVdsc0lqb2lkR1Z6ZEVCMFpYTjBMbU52YlNJc0ltbGhkQ0k2TVRZd05UZzBPVFUyTlgwLjlCeGZIWGI4aDNEbWVoQXhOakFxdGJEaUpIdkpnZU0yNVZVcVgxS2ZGNXMifQ==
+```
+* Go to base64decode.org
+```txt
+{"jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYjc1MWRkNzU2NjllMDAyM2RhMGRmNSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlhdCI6MTYwNTg0OTU2NX0.9BxfHXb8h3DmehAxNjAqtbDiJHvJgeM25VUqX1KfF5s"}
+```
+* Code in setup.ts of tickets
