@@ -1912,3 +1912,7 @@ eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJalZtWWpj
 {"jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYjc1MWRkNzU2NjllMDAyM2RhMGRmNSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlhdCI6MTYwNTg0OTU2NX0.9BxfHXb8h3DmehAxNjAqtbDiJHvJgeM25VUqX1KfF5s"}
 ```
 * Code in setup.ts of tickets
+
+### Building a Session
+* ! for typescript to not to sweat
+* After making the changes in setup.ts, run tests after entering tickets folder
