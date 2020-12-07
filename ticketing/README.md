@@ -1918,4 +1918,9 @@ eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJalZtWWpj
 * After making the changes in setup.ts, run tests after entering tickets folder
 
 ### Testing Request Validation
-* 
+* Code in new.test.ts
+* In first test, provide invalid value and later don't provide value at all
+
+### Validating Title and Price
+* Import body from express-validator to validate incoming request body
+
