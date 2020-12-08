@@ -1924,3 +1924,7 @@ eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJalZtWWpj
 ### Validating Title and Price
 * Import body from express-validator to validate incoming request body
 
+### Reminder on Mongoose with TypeScript
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F10.drawio
+* D 6-t: TypeScripts Attribute, Doc and Model
+* TicketDoc in models is for adding any additional properties in the future
