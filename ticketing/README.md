@@ -1931,3 +1931,11 @@ eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJalZtWWpj
 
 ### Defining the Ticket Model
 * Create ticket.ts for the model
+
+### Creation via Route Handler
+* Import Ticket model in new.test.ts
+* After getting all the tickets using find, we expect it to be 0, because before each test, cleanup is done
+* Save data in new.ts when request comes to /api/tickets
+* We get a red wiggly line in currentUser.id
+  * But we are throwing an error if currentUser is not defined in requireAuth middleware
+  * So, add an exclamation
