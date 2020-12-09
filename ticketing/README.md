@@ -569,7 +569,7 @@ const user = User.build({
 
 ### What's that Angle Bracket For?
 * Angular brackets are for generic syntax
-* You can think them as functions or types
+* You can think them as functions of types
 * When we call model with parenthesis
 * UserDoc and UserModel can be seen as arguments to model
 * They are **types** being provided to the function
@@ -1928,3 +1928,6 @@ eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJalZtWWpj
 * Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F10.drawio
 * D 6-t: TypeScripts Attribute, Doc and Model
 * TicketDoc in models is for adding any additional properties in the future
+
+### Defining the Ticket Model
+* Create ticket.ts for the model
