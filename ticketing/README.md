@@ -1939,3 +1939,11 @@ eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJalZtWWpj
 * We get a red wiggly line in currentUser.id
   * But we are throwing an error if currentUser is not defined in requireAuth middleware
   * So, add an exclamation
+
+### Testing Show Routes
+* D 1-tik:
+* Create show.test.ts
+* For returns the ticket if the ticket is found test, 2 methods
+  * Access ticket model directly using Ticket.build and save
+  * Make request to build the ticket on the fly
+* Option #2 is liked by the author because it simultaes us using the API directly
