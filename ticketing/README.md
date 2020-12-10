@@ -1947,3 +1947,7 @@ eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJalZtWWpj
   * Access ticket model directly using Ticket.build and save
   * Make request to build the ticket on the fly
 * Option #2 is liked by the author because it simultaes us using the API directly
+
+### Unexpected Failure
+* Create show.ts
+* Whenever we leave off the statusCode, the default is 200
