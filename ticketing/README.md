@@ -1968,3 +1968,14 @@ CastError: Cast to ObjectId failed for value "asdflkjafds" at path "_id" for mod
 
 Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
 ```
+
+### Better Error Logging
+* In common->src->middlewares->error-handler.ts, add console.error(err)
+```sh
+cd common
+npm run pub
+cd tickets
+npm update @rztickets/common
+```
+* Now run npm run test to check the error message
+* To generate a valid id, get it from mongoose
