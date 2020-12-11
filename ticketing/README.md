@@ -1951,3 +1951,20 @@ eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJalZtWWpj
 ### Unexpected Failure
 * Create show.ts
 * Whenever we leave off the statusCode, the default is 200
+
+### What's that Error?
+* error-handler.ts is handling all our Errors
+* There you see status of 400 if it is not an instance of CustomError
+* So, in show.test.ts, console.log the response to check
+  * Remember to remove the expect, else you won't see the console log
+```js
+{ errors: [ { message: 'Something went wrong' } ] }
+```
+* If we add a console log in common module's error-handler.ts, we have to rebuild the common module again, set a new version, publish to npm and install the updated version of the common module in the tickets service
+* So hack for this is to go to tickets node_modules @rztickets/common/build/middlewares/error-handler.js
+  * After checking the console log, don't forget to remove that
+```js
+CastError: Cast to ObjectId failed for value "asdflkjafds" at path "_id" for model "Ticket"
+
+Argument passed in must be a single String of 12 bytes or a string of 24 hex characters
+```
