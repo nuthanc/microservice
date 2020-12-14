@@ -24,7 +24,6 @@ it('returns a 401 if the user is not authenticated', async () => {
     })
     .expect(401);
 });
-});
 
 it('returns a 401 if the user does not own the ticket', async () => {});
 

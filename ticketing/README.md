@@ -1987,3 +1987,6 @@ npm update @rztickets/common
 
 ### Ticket Updating
 * Create update.test.ts
+
+### Handling Updates
+* Create update.ts
