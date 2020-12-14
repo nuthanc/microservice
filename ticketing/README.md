@@ -1979,3 +1979,8 @@ npm update @rztickets/common
 ```
 * Now run npm run test to check the error message
 * To generate a valid id, get it from mongoose
+
+### Complete Index Route Implementation
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F10.drawio
+* D 1-tik: /api/tickets to Retrieve all tickets
+* Create index.ts
