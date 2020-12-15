@@ -1994,3 +1994,6 @@ npm update @rztickets/common
 ### Permission Checking
 * For different user, need to update setup.ts of tickets
   * Use new mongoose.Types.ObjectId().toHexString()
+
+### Final Update Changes
+* The updated version is already in ticket after save
