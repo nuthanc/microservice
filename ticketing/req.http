@@ -1,1 +1,37 @@
-https://ticketing.dev/api/users/currentuser 
+# https://ticketing.dev/api/users/currentuser 
+
+# POST https://ticketing.dev/api/users/signup
+# content-type: application/json
+
+# {
+#   "email": "test@test.com",
+#   "password": "password"
+# }
+
+# POST https://ticketing.dev/api/users/signin
+# content-type: application/json
+
+# {
+#   "email": "test@test.com",
+#   "password": "password"
+# }
+
+# POST https://ticketing.dev/api/tickets
+# content-type: application/json
+
+# {
+#   "title": "concert",
+#   "price": 10
+# }
+
+# https://ticketing.dev/api/tickets/5fd8442eaa73f90019dc8832
+
+https://ticketing.dev/api/tickets/
+
+# PUT https://ticketing.dev/api/tickets/5fd8442eaa73f90019dc8832
+# content-type: application/json
+
+# {
+#   "title": "new_title",
+#   "price": 500
+# }

@@ -1997,3 +1997,49 @@ npm update @rztickets/common
 
 ### Final Update Changes
 * The updated version is already in ticket after save
+
+### Manual Testing
+* Update ingress-srv
+  * Very important to put tickets route before client because that is a catch all
+* Use Postman or req.http in VS code and do some tests
+```sh
+minikube start
+eval $(minikube docker-env)
+skaffold dev
+```
+```json
+POST to https://ticketing.dev/api/users/signup
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+POST to https://ticketing.dev/api/users/signin
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+To check we are authenticated
+GET to https://ticketing.dev/api/users/currentuser
+
+POST https://ticketing.dev/api/tickets
+content-type: application/json
+
+{
+  "title": "concert",
+  "price": 10
+}
+
+GET https://ticketing.dev/api/tickets/5fd8442eaa73f90019dc8832
+
+GET https://ticketing.dev/api/tickets/
+
+PUT https://ticketing.dev/api/tickets/5fd8442eaa73f90019dc8832
+content-type: application/json
+
+{
+  "title": "new_title",
+  "price": 500
+}
+```
