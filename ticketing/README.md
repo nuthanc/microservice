@@ -1990,3 +1990,7 @@ npm update @rztickets/common
 
 ### Handling Updates
 * Create update.ts
+
+### Permission Checking
+* For different user, need to update setup.ts of tickets
+  * Use new mongoose.Types.ObjectId().toHexString()
