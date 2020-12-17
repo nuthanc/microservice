@@ -2060,4 +2060,9 @@ content-type: application/json
   * Search for nats
   * Go to nats-streaming
   * Check the Commandline Options
-  
+
+### Creating a NATS Streaming Deployment
+* Create nats-depl.yaml in infra k8s
+* Command line options given in args array of Deployment yaml file
+* Check Commandline Options in https://hub.docker.com/_/nats-streaming?tab=description&page=1&ordering=last_updated
+* See nats pod in kubectl get pods
