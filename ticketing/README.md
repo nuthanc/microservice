@@ -2043,3 +2043,9 @@ content-type: application/json
   "price": 500
 }
 ```
+
+### What Now?
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F11.drawio
+* D 15-path: What next to do
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F01.drawio
+* D 11-design: NATS Streaming server
