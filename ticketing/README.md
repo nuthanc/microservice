@@ -2049,3 +2049,15 @@ content-type: application/json
 * D 15-path: What next to do
 * Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F01.drawio
 * D 11-design: NATS Streaming server
+
+### Three Important Items
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F11.drawio
+* D 3-env:
+  * Docs at docs.nats.io
+  * NATS Streaming Server is built on top of NATS
+  * Take a look at NATS STREAMING CONCEPTS
+* Take a look at NATS Docker image in hub.docker.com
+  * Search for nats
+  * Go to nats-streaming
+  * Check the Commandline Options
+  
