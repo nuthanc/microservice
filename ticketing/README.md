@@ -2066,3 +2066,22 @@ content-type: application/json
 * Command line options given in args array of Deployment yaml file
 * Check Commandline Options in https://hub.docker.com/_/nats-streaming?tab=description&page=1&ordering=last_updated
 * See nats pod in kubectl get pods
+
+### Big Notes On NATS Streaming
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F11.drawio
+* D 6-http:
+* Our Custom Event bus:
+  * Our Tickets service sends an update Ticket Updated Event via Axios requests to Custom Event Bus
+  * Custom Event Bus sends via Axios requests to Orders Service
+  * Orders Service listens for incoming events
+* D 7-http:
+  * We don't use Express or Axios to share events
+  * Navigate to npmjs.com
+  * https://www.npmjs.com/package/node-nats-streaming
+* D 4-chan:
+* D 5-chan:
+  * Channels and subscription
+* D 5-store:
+  * Storage in memory in Event Bus so that services which were down can get the events or for a new service added along the way
+* D 6-file, 7-db:
+
