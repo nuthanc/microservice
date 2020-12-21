@@ -2085,3 +2085,14 @@ content-type: application/json
   * Storage in memory in Event Bus so that services which were down can get the events or for a new service added along the way
 * D 6-file, 7-db:
 
+### Building a NATS Test Project
+* D 11-goal:
+```sh
+mkdir nats-test
+cd nats-test
+npm init -y
+npm i node-nats-streaming ts-node-dev typescript @types/node
+tsc --init
+```
+* Create listener.ts and publisher.ts
+* In publisher.ts, we create a client called stan to connect to nats streaming server
