@@ -2127,3 +2127,12 @@ kubectl port-forward nats-depl-78687484bd-gkcjz 4222:4222
 cd nats-test
 npm run publish
 ```
+
+### Publishing Events
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F11.drawio
+* D 20-listen: 
+  * **Subject** is the name of the channel that we want to publish information to
+  * **Channel** is something that we listen to
+  * **Subscription** is listening to the channel and receiving data
+* We can share only Strings over NATS
+* So we need to convert our object to json
