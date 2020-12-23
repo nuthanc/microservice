@@ -2136,3 +2136,12 @@ npm run publish
   * **Subscription** is listening to the channel and receiving data
 * We can share only Strings over NATS
 * So we need to convert our object to json
+
+### Listening For Data
+* Implement listener.ts
+```sh
+cd nats-test
+npm run listen
+```
+* console.clear() to remove unwanted logs
+* Type rs in the console to restart publish and listen
