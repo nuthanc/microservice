@@ -2096,3 +2096,34 @@ tsc --init
 ```
 * Create listener.ts and publisher.ts
 * In publisher.ts, we create a client called stan to connect to nats streaming server
+
+### Port-Forwarding with Kubectl
+* If we run npm run publish, we get the below error
+```sh
+NatsError: Could not connect to server: Error: connect ECONNREFUSED 127.0.0.1:4222
+```
+* This is because nats-streaming server is running within a pod
+* To access, we have couple different options
+* D 17-proxy: Option #1 to Connect
+* D 18-two: Option #2 to Connect
+* D 19-thr: Option #3 to Connect
+  * Easiest among the three
+  * No need for config file
+```sh
+kubectl get pods
+NAME                                  READY   STATUS    RESTARTS   AGE
+auth-depl-5c9b45f788-wzdfj            1/1     Running   0          3m41s
+auth-mongo-depl-74846d7f98-wdtfw      1/1     Running   0          3m40s
+client-depl-767c5875c-9xw9w           1/1     Running   0          3m40s
+nats-depl-78687484bd-gkcjz            1/1     Running   0          3m40s
+tickets-depl-66c46c75bd-m9cq2         1/1     Running   0          3m40s
+tickets-mongo-depl-6678475dc4-dvwm8   1/1     Running   0          3m40s
+```
+```sh
+kubectl port-forward nats-depl-78687484bd-gkcjz 4222:4222
+```
+* And in another terminal window
+```sh
+cd nats-test
+npm run publish
+```
