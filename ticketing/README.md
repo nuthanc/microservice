@@ -2145,3 +2145,14 @@ npm run listen
 ```
 * console.clear() to remove unwanted logs
 * Type rs in the console to restart publish and listen
+
+### Accessing Event Data
+* NatsError: Could not connect to server: Error: connect ECONNREFUSED 127.0.0.1:4222
+  * Don't forget to port-forward
+* Type Annotate msg 
+* Now you can inspect the properties by option clicking Message
+  * getSequence
+  * getData
+```txt
+Received event #7, with data: {"id":"123","title":"concert","price":20}
+```
