@@ -2156,3 +2156,21 @@ npm run listen
 ```txt
 Received event #7, with data: {"id":"123","title":"concert","price":20}
 ```
+
+### Client ID generation
+* D 21:
+* D 22-scale:
+* Run second listener by running npm run listen
+* But we get an Error message
+```sh
+[ERROR] 11:44:26 Error: Unhandled error. ('stan: clientID already registered')
+```
+* D 23-lclient:
+```ts
+const stan = nats.connect('ticketing', '123', {
+  url: 'http://localhost:4222'
+});
+```
+* In nats.connect, the 2nd argument is the client id
+* Error message due to same client id
+* Now if we run npm run listen in 2 terminals, there is no error
