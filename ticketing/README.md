@@ -2185,3 +2185,15 @@ const stan = nats.connect('ticketing', '123', {
   * Send it to only one of the members of the Queue Group
 * This can be done easily in subsribe's 2nd parameter
   * Now we see the event only in one of the 2 listeners
+
+### Manual Ack Mode
+* Other options to subscribe in listener.ts
+* It is the 3rd argument to subscribe
+* D 25:
+  * Default behavior of **event being lost** when there is some error
+  * To change this, we provide setManualAckMode(true)
+    * This changes the behavior of node-nats-streaming library
+    * node-nats-streaming library doesn't automatically acknowledge the event to the nats-streaming library
+    * If no ack is received by the nats-streaming library after a certain amount of time(30s), it is going to send the event to the same service or another member of the Queue group
+    * So until ack is received nats-streaming library will keep sending the events
+  * To ack, we have to add msg.ack()
