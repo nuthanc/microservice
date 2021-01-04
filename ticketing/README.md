@@ -2174,3 +2174,14 @@ const stan = nats.connect('ticketing', '123', {
 * In nats.connect, the 2nd argument is the client id
 * Error message due to same client id
 * Now if we run npm run listen in 2 terminals, there is no error
+
+### Queue Groups
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F11.drawio
+* If there are 2 copies of a service, then assume posting a comment
+  * It will be added to db 2 times because of the 2 copies
+* D 23-q:
+* If we want to send it to one of the copies, it can be done via Queue Groups
+  * A Queue Group is associated with a Channel
+  * Send it to only one of the members of the Queue Group
+* This can be done easily in subsribe's 2nd parameter
+  * Now we see the event only in one of the 2 listeners
