@@ -2197,3 +2197,26 @@ const stan = nats.connect('ticketing', '123', {
     * If no ack is received by the nats-streaming library after a certain amount of time(30s), it is going to send the event to the same service or another member of the Queue group
     * So until ack is received nats-streaming library will keep sending the events
   * To ack, we have to add msg.ack()
+
+### Client Health Checks
+* In nats-depl, we exposed 2 ports, 4222 and 8222, one for client and the other for monitoring
+* Just like previous 4222 port-forwarding, we need to do that to 8222 as well
+```sh
+kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
+```
+* Then in browser, navigate to localhost:8222/streaming
+  * Click on channels
+  * Then enter http://localhost:8222/streaming/channelsz?subs=1
+  * Now restart one of the listeners and refresh the page
+  * Now, we see 3 subscriptions in that page
+  * After waiting a certain amount of time, the 
+  nats streaming servers removes the old subscription
+  * The NATS streaming server is holding on to the event thinking that the old listener will come back
+  * That's why it appears that we are losing some messages
+  * This is not desirable
+* hb stands for heartbeat in the nats-depl file
+  * heartbeat is a kind of a request that nats streaming server sends to clients every so many seconds
+  * This is a Health check
+  * hbi is how often nats streaming server is going to make a heartbeat request to each of its clients
+  * hbt is how long each client has to respond
+  * hbf is number of times the client can fail before nats streaming server is going to assume that the client is dead
