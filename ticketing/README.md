@@ -2220,3 +2220,8 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
   * hbi is how often nats streaming server is going to make a heartbeat request to each of its clients
   * hbt is how long each client has to respond
   * hbf is number of times the client can fail before nats streaming server is going to assume that the client is dead
+
+### Graceful Client Shutdown
+* Add close event listener in listener.ts
+* Look for interrupt and terminate signals(Ctrl C or restart)
+* stan.close is for reaching out to Node Nats streaming server and telling it to not send any more messages
