@@ -2225,3 +2225,39 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 * Add close event listener in listener.ts
 * Look for interrupt and terminate signals(Ctrl C or restart)
 * stan.close is for reaching out to Node Nats streaming server and telling it to not send any more messages
+
+### Core Concurrency Issues(Very Important)
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F11.drawio
+* D 26: Banking application
+* Also we have a condition that amount should not be less than 0
+* Publisher has events
+  * account: deposit $70
+  * account: deposit $70
+  * account: withdraw $100
+* IN ideal case scenario,
+  * Publisher publishes events one by one
+  * Since both the Account Srv are members of QueueGroup, only 1 of them receives the Event and update the Total amount of money for a customer in Hard drive file
+* D 27: Listener can fail to process the event
+* What can go wrong?
+  * The file might be already locked(Some other program might have this file open)
+  * Faulty logic like a weekly deposit limit, so in that scenario we might reject that event
+  * So, when it fails to be processed, with our current setup, we don't acknowledge the event
+  * So nats-streaming-server waits for 30s and sends it off to another listener
+  * But while we are waiting for those 30s, another event gets published and it gets processed in the listener(Consider deposit 40 successful) and a couple of seconds later even withdraw event of 100 get published. But now if we try to withdraw 100$ out of 40$, we get a business error
+  * So if any event fails to be processed, we will end up in a catastrophic situation
+* D 28: One listener might run more quickly than the other
+  * If one service has a backlog of events, because this container might be overloaded or who knows what
+  * As we are waiting for the events to be processed(deposit of 100 and 40 in one listener), account: withdraw event might be published and might get sent to the other listener which is very fast
+  * Again we end up in the negatives
+* D 29: NATS might think a client is still alive when it is dead
+  * NATS waits 30s for the ack, but the service is dead
+  * So, within that timespan withdraw event might be sent, and we end up with Business error
+* D 30: We might receive the same event twice
+  * 1st deposit of 70 on tuesday
+  * 2nd deposit of 40 on wednesday
+  * withdrawal of 100 on thursday
+  * But consider the hard drive is very laggy
+  * Consider it takes 29.99 seconds to open the file
+  * NATS takes the same event and sends it to other service
+  * But by this time, processing is done(110-100=10) and is written to the file
+  * But since the same event is processed by another listener, we end up with Business error
