@@ -2227,6 +2227,8 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 * stan.close is for reaching out to Node Nats streaming server and telling it to not send any more messages
 
 ### Core Concurrency Issues(Very Important)
+* Concurrency
+  * Events getting handled out of order
 * Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F11.drawio
 * D 26: Banking application
 * Also we have a condition that amount should not be less than 0
@@ -2261,3 +2263,16 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
   * NATS takes the same event and sends it to other service
   * But by this time, processing is done(110-100=10) and is written to the file
   * But since the same event is processed by another listener, we end up with Business error
+
+### Common Questions
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F12.drawio
+* D 1-sync: Concurrency occurs in Synchronous communication as well as in Monolith architecture
+* D 2-sync:
+  * Monolith instance A and B are busy, while C processes quickly due to low traffic
+  * Once again, we end up with Business error
+  * But in microservices based architecture, the concurrency issue is more prominent because of latency of NATS-streaming server, retries etc
+* D 3-solution: This won't work
+  * One copy of Accounts Srv instead of 2
+  * Same issue as before when 70$ event fails to get processed
+  * But now we have processing **bottleneck**
+* D 4-solution: This won't work either
