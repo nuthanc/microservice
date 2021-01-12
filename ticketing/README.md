@@ -2298,5 +2298,17 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
   * When the Account service is processing, it will look at the db, whether the Last ID processed and Last Sequence No in the event are equal. If it's that, then it will process and update the db
   * But the problem is we can't reach out to NATS Streaming Server and get the Sequence number of the event
 
-
-  
+### Solving Concurrency Issues
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F12.drawio
+* D 12-conc: Redesign
+* D 14-query: Earlier Blog App design
+* D 15-simp: Simplified the above
+* D 9-refra: Generic terms from the above
+* D 11-ref: 
+* D 10-terms: Terms for D 11-ref
+* D 10-ref:
+* D 11-emit: 
+* D 12-conc:
+  * If number: 1 transaction gets delayed for some reason and if number: 2 is getting processed, then we check whether number - 1 is there as Last Txn number in the db
+  * Here 2-1 is 1, which is not there in db
+  * So, we will not process that event until 1 is processed
