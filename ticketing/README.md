@@ -2276,3 +2276,27 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
   * Same issue as before when 70$ event fails to get processed
   * But now we have processing **bottleneck**
 * D 4-solution: This won't work either
+
+### More Possible Concurrency Solutions
+* D 6-state: Share state between services of last event processed
+  * Account Srv B processes event no. 2 only if event 1's sequence is recorded in the Shared Processed Sequence
+  * But this has a significant impact on the performance
+  * Consider if there are 2 Users A and B and 1st event if for A and the 2nd event is for B
+  * Now if the processing of event A is delayed due to some issue, B still needs to wait, even though it is unrelated to A
+* D 7-state: Taking the learnings from the previous process
+  * We consider sequence numbers w.r.t users(Added by NATS Streaming server, not known by Publisher)
+  * In this way, one User doesn't affect another user
+  * But with NATS-streaming server, we need to come up with a separate channel for each resource(in this case, Users)
+    * Also a lot of processing overhead
+* D 8-state: 
+  * Store the list of events at the publisher
+    * Publisher has some kind of db
+  * NATS Streaming server sends(Hopefully) a sequence number to the Publisher for the event just dispatched by the Publisher
+  * Then the event will go on to our services and be processed
+  * The Last ID processed is updated by the Account service in the db
+  * The next time Publisher sends an event for a particular user, it will attach the Last Seq. No
+  * When the Account service is processing, it will look at the db, whether the Last ID processed and Last Sequence No in the event are equal. If it's that, then it will process and update the db
+  * But the problem is we can't reach out to NATS Streaming Server and get the Sequence number of the event
+
+
+  
