@@ -13,12 +13,16 @@ stan.on('connect', () => {
   stan.on('close', () => {
     console.log('NATS connection closed!');
     process.exit();
-  })
+  });
 
-  const options = stan.subscriptionOptions().setManualAckMode(true);
+  const options = stan
+    .subscriptionOptions()
+    .setManualAckMode(true)
+    .setDeliverAllAvailable()
+    .setDurableName('accounts-srv');
   const subscription = stan.subscribe(
     'ticket:created',
-    'orders-service-queue-group',
+    'queue-group-name',
     options
   );
 

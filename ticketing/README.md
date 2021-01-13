@@ -2312,3 +2312,36 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
   * If number: 1 transaction gets delayed for some reason and if number: 2 is getting processed, then we check whether number - 1 is there as Last Txn number in the db
   * Here 2-1 is 1, which is not there in db
   * So, we will not process that event until 1 is processed
+
+### Concurrency Control with the Tickets App
+* D 13-req:
+* D 9-refr:
+* Orders Service will be having some logic to process the event only if the version in the Event is 1 less than that in the db
+
+### Event Delivery
+* Stop one of the listeners
+* D 20-re:
+  * Events saved in NATS Streaming when it is emitted by Publisher
+* We can get events delivered in the past
+  * But this is somewhat different in queue-groups, so we will disable that for now
+* Another option to the list of options to redeliver
+* Command click on SubscriptionOptions to see the interface 
+* Use setDeliverAllAvailable
+  * But this is not super feasible as if there are millions of events and every time a new listener is added
+  * We get all the events from the start
+
+### Durable Subscriptions
+* D 21:
+  * Identifier to a subscription
+  * setDurableName()
+* So with Durable Subscription, we have events processed against the Durable Subscription in NATS
+* setDeliverAllAvailable is a necessity as it gonna be called for the very first time only when used with Durable Subscription
+* So, when we restart the Listener or bring another Subscription online, then setDeliverAllAvailable will be ignored on restart
+* But when we test this on our listener, we get all the events redelivered
+  * So there is a little bit of gotcha
+  * When we restart we are closing conection to NATS and reconnecting, NATS thinks that the client disconnected and won't be connecting in the future
+  * So it will clear the Durable sub history
+  * To solve this, we need to add queue-group
+* So, setDeliverAllAvailable, setDurableName and queue-group are very tightly coupled options
+* Now start the 2nd listener
+  * It shouldn't see the events
