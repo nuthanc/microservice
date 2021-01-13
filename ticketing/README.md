@@ -2345,3 +2345,10 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 * So, setDeliverAllAvailable, setDurableName and queue-group are very tightly coupled options
 * Now start the 2nd listener
   * It shouldn't see the events
+
+### Reusable NATS listeners
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F13.drawio
+* D 1-setup: Use publisher.ts and listener.ts as boilerplates
+* D 2-listener: Listener class as Abstract 
+  * abstract class are not meant to be used directly
+* D 3-listener: Subclass
