@@ -2352,3 +2352,8 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 * D 2-listener: Listener class as Abstract 
   * abstract class are not meant to be used directly
 * D 3-listener: Subclass
+
+### The Listener Abstract Class
+* D 2-Listener:
+* In listener class,
+  * protected property: access also from the subclass
