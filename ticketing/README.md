@@ -2361,3 +2361,7 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 ### Extending the Listener
 * D 2-Listener:
 * Create TicketCreatedListener class
+
+### Quick Refactor
+* D 4-list:
+* Create events folder and in there base-listener.ts and ticket-created-listener.ts
