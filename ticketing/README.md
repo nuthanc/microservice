@@ -2365,3 +2365,13 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 ### Quick Refactor
 * D 4-list:
 * Create events folder and in there base-listener.ts and ticket-created-listener.ts
+
+### Leveraging Typescript for Listener Validation
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F01.drawio
+* D 3-solutions:
+* D 5-sub:
+* D 6-share:
+* D 7-mis:
+* What we want to achieve is to somehow get the properties of data in listener.ts
+* Also, it would be good if the data is tied to the subject(i.e, if ticket:created is the subject, then data should have so and so properties of type so and so)
+* In order to achieve this in TypeScript, we need to write some complicate code
