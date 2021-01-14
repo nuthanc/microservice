@@ -2380,3 +2380,9 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 * Create a separate file to export an enum of Subjects
 * An enum is used to define named constants
 * This way we don't have to hard-code in listeners
+
+### Custom Event Interface
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F13.drawio
+* D 6-share:
+* Create ticket-created-event.ts which contains the interface containing the coupling details of the subject and the data
+* Just like this, we create separate interfaces for other events
