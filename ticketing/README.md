@@ -2399,4 +2399,8 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 * Enforcing using the TicketCreatedEvent['data']
 
 ### Where Does this Get Used?
-* D 10-common: 
+* D 10-common: Subjects, Base Listener and interface describing the data for the subject in common module
+
+### Custom Publisher
+* Goal is TypeScript to check our code
+* Create base-publisher.ts and ticket-created-publisher.ts
