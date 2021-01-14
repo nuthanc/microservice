@@ -2357,3 +2357,7 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 * D 2-Listener:
 * In listener class,
   * protected property: access also from the subclass
+
+### Extending the Listener
+* D 2-Listener:
+* Create TicketCreatedListener class
