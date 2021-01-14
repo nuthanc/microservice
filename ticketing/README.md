@@ -2407,3 +2407,7 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 
 ### Using the Custom Publisher
 * Using it in publisher.ts
+
+### Awaiting Event Publication
+* publish is an async operation
+* To do this, we need to return a Promise from base-publisher.ts
