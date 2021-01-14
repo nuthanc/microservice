@@ -2375,3 +2375,8 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 * What we want to achieve is to somehow get the properties of data in listener.ts
 * Also, it would be good if the data is tied to the subject(i.e, if ticket:created is the subject, then data should have so and so properties of type so and so)
 * In order to achieve this in TypeScript, we need to write some complicate code
+
+### Subjects Enum
+* Create a separate file to export an enum of Subjects
+* An enum is used to define named constants
+* This way we don't have to hard-code in listeners
