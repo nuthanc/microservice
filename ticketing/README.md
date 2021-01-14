@@ -2404,3 +2404,6 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 ### Custom Publisher
 * Goal is TypeScript to check our code
 * Create base-publisher.ts and ticket-created-publisher.ts
+
+### Using the Custom Publisher
+* Using it in publisher.ts
