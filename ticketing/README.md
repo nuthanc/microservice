@@ -2436,3 +2436,6 @@ npm update @rztickets/common
 ```sh
 kubectl delete pod nats-depl-58c5f75f5c-pngb2
 ```
+
+### Publishing Ticket Creation
+* Create events folder
