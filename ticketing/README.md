@@ -2444,3 +2444,22 @@ kubectl delete pod nats-depl-58c5f75f5c-pngb2
 * Right after ticket save call, publish the event
 * Pulling title and price from title should be done because it might be different values due to pre and post save hook operations done while saving to db
 * Do we need to await before sending the status?
+
+### NATS Client Singleton
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F14.drawio
+* D 1-client: NATS client in index.ts?
+* Little bit of issue
+* Connection for nats is very different from mongoose
+* For mongoose, 
+  * When we connect with mongoose, it internally keeps a record of all the connections that exist
+  * We can now open any file inside our project and import mongoose
+  * mongoose then provides tada, here is an instance of mongoose already connected to some server
+  * i.e, no need to assign mongoose.connect to anything
+* Take a look at publisher.ts of nats-test
+  * There is no internal connection(internal tracking)
+  * nats immediately returns a client
+* D 1-client: createTicketRouter(Route Handler) is being imported in app.ts which in turn is getting imported in index.ts 
+  * Cyclical dependency, we can do this but we need to avoid this
+* D 2-client: We will make it like mongoose
+
+
