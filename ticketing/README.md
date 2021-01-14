@@ -2417,3 +2417,16 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 * D 11-common:
 * D 12-ts: Downside all servers are written with Typescript
 * D 13-ts: Alternatives to TS
+
+### Updating the Common Module
+* Create events in common folder
+* Add userId to ticket created and updated events as there is userId in tickets model file
+* Don't forget to export in index.ts so that it can be easily imported in other files
+```sh
+cd common
+npm i node-nats-streaming
+npm run pub
+
+cd tickets
+npm update @rztickets/common
+```
