@@ -2439,3 +2439,8 @@ kubectl delete pod nats-depl-58c5f75f5c-pngb2
 
 ### Publishing Ticket Creation
 * Create events folder
+
+### More on Publishing
+* Right after ticket save call, publish the event
+* Pulling title and price from title should be done because it might be different values due to pre and post save hook operations done while saving to db
+* Do we need to await before sending the status?
