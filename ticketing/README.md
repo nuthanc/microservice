@@ -2469,3 +2469,11 @@ kubectl delete pod nats-depl-58c5f75f5c-pngb2
 * D 3-single: Export the instance instead of the entire Class
   * Then we will be able to use the same instance
 * Create nats-wrapper.ts
+
+### Singleton Implementation
+* _client not within constructor because it is too early to create a NATS client and assign to it
+  * Till we call connect, we don't want to assign anything to it, so ?
+* clusterId, clientId and url. Check nats-test for this
+* While importing in index.ts natsWrapper is in lowercase because that is an instance
+* clusterId is coming from nats-depl file args, cid which is clusterId
+* Check whether you get "Connected to NATS in the terminal"
