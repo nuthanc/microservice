@@ -2430,3 +2430,9 @@ npm run pub
 cd tickets
 npm update @rztickets/common
 ```
+
+### Restarting NATS
+* Flush out non-valid events
+```sh
+kubectl delete pod nats-depl-58c5f75f5c-pngb2
+```
