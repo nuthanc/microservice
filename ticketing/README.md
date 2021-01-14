@@ -2397,3 +2397,6 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 
 ### Enforcing Data Types
 * Enforcing using the TicketCreatedEvent['data']
+
+### Where Does this Get Used?
+* D 10-common: 
