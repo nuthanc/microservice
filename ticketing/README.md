@@ -2411,3 +2411,9 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 ### Awaiting Event Publication
 * publish is an async operation
 * To do this, we need to return a Promise from base-publisher.ts
+
+### Common Events Definitions Summary
+* D 14-test:
+* D 11-common:
+* D 12-ts: Downside all servers are written with Typescript
+* D 13-ts: Alternatives to TS
