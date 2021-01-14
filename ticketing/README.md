@@ -2361,6 +2361,7 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 ### Extending the Listener
 * D 2-Listener:
 * Create TicketCreatedListener class
+* Check Notes in Udemy henceforth
 
 ### Quick Refactor
 * D 4-list:
@@ -2386,3 +2387,6 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 * D 6-share:
 * Create ticket-created-event.ts which contains the interface containing the coupling details of the subject and the data
 * Just like this, we create separate interfaces for other events
+
+### Enforcing Listener Subjects
+* Make Listener a Generic Type class to tie subject and data 
