@@ -2390,3 +2390,7 @@ kubectl port-forward nats-depl-86567c57df-89mtg 8222:8222
 
 ### Enforcing Listener Subjects
 * Make Listener a Generic Type class to tie subject and data 
+
+### Quick Note
+* Tyepescript does have a keyword of readonly
+* It prevents a property of a class from being changed
