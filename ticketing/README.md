@@ -2462,4 +2462,10 @@ kubectl delete pod nats-depl-58c5f75f5c-pngb2
   * Cyclical dependency, we can do this but we need to avoid this
 * D 2-client: We will make it like mongoose
 
-
+### Remember Mongoose?
+* Take a look at mongoose.connect in index.ts
+* D 4-mongoose: Behind the scenes, mongoose
+  * same object shared between index.ts and route handler
+* D 3-single: Export the instance instead of the entire Class
+  * Then we will be able to use the same instance
+* Create nats-wrapper.ts
