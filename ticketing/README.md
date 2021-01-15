@@ -2637,3 +2637,6 @@ docker push nuthanc/orders
 * D 4-routes:
 * Update every route handler
 * In the end, need to see Connected to NATS, MongoDb and listening on port 3000 in orders
+
+### Subtle Service Coupling
+* custom check for mongo id is subtle service coupling
