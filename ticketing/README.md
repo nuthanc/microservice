@@ -2614,3 +2614,12 @@ npm run test
 * D 1-order: Order creation/editing
 * D 3-replicate:
 * D 4-concurrency:
+
+### Scaffolding the Orders Service
+* D 5-orders: Steps
+```sh
+cd orders
+npm install
+eval $(minikube docker-env)
+docker build -t nuthanc/orders .
+```
