@@ -2653,3 +2653,8 @@ docker push nuthanc/orders
 ### Order Model Setup
 * 3 interface so that TypeScript validates
 * 1 interface for the document, the other one for what the saved document should have and the final one for the build
+
+### The Need for an Enum
+* D 11-enum, 12-paym, 13-status:
+* D 14-status:
+* D 15-status:
