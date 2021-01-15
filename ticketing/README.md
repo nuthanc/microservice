@@ -2695,4 +2695,11 @@ npm update @rztickets/common
     * mess around value of 'this' inside the function
 
 ### Order Expiration Times
-* 
+* new Date and setSeconds by getSeconds + Exp
+* Then save the order to the db
+
+### Test Suite Setup
+```sh
+cd orders
+npm run test
+```
