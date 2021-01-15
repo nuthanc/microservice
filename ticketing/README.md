@@ -2715,3 +2715,7 @@ npm run test
 ### Testing the Success Case
 * Writing tests is mandatory in case of Orders cause we can't send requests through Postman
 * This is because it is dependant upon ticket creation
+
+### Fetching a User's Orders
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F06%2F01.drawio
+* D 4-routes:
