@@ -2512,3 +2512,21 @@ Event data! {
 }
 ```
 * Yay, we are able to publish and listen successfully
+
+### Ticket Update Publishing
+* Similar to TicketCreatedPublisher
+* Now to test this, use req.http PUT request with the last video's ticet id
+```sh
+{
+  "title": "NEW CONCERT",
+  "price": 10,
+  "userId": "5fd843a29fc5e30023bd790b",
+  "__v": 0,
+  "id": "600124976f8a3c0018f67d6e"
+}
+```
+* Update was successful
+* Need to see the below in skaffold output
+```sh
+Event published to subject ticket:updated
+```

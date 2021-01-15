@@ -16,22 +16,22 @@
 #   "password": "password"
 # }
 
-POST https://ticketing.dev/api/tickets
-content-type: application/json
+# POST https://ticketing.dev/api/tickets
+# content-type: application/json
 
-{
-  "title": "NEW CONCERT",
-  "price": 500
-}
+# {
+#   "title": "NEW CONCERT",
+#   "price": 500
+# }
 
 # https://ticketing.dev/api/tickets/5fd8442eaa73f90019dc8832
 
 # https://ticketing.dev/api/tickets/
 
-# PUT https://ticketing.dev/api/tickets/5fd8442eaa73f90019dc8832
-# content-type: application/json
+PUT https://ticketing.dev/api/tickets/600124976f8a3c0018f67d6e
+content-type: application/json
 
-# {
-#   "title": "new_title",
-#   "price": 500
-# }
+{
+  "title": "NEW CONCERT",
+  "price": 10
+}
