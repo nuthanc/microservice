@@ -2731,3 +2731,6 @@ npm run test
 
 ### Does Fetching Work?
 * show.test.ts
+
+### Cancelling an Order
+* It's not actually Delete request but put or patch
