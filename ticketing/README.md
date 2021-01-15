@@ -2591,3 +2591,8 @@ npm run test
 * D 20-pub: 
   * We want to make sure our callback function gets executed right away so that our Promise will get resolved
 * Now we see that all of our new test is passing
+
+### Test-Suite Wide Mocks
+* Copy jest.mock to all the other test files which need nats client
+* Instead of doing the above, we can use only in setup.ts
+* All of my tests pass
