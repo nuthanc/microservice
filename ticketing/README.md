@@ -2656,5 +2656,15 @@ docker push nuthanc/orders
 
 ### The Need for an Enum
 * D 11-enum, 12-paym, 13-status:
-* D 14-status:
+* D 14-status: We can come up with any status
+* D 15-status: To avoid that, use common enum across libraries
+
+### Creating an Order Status Enum
 * D 15-status:
+```sh
+cd common
+npm run pub
+
+cd orders
+npm update @rztickets/common
+```
