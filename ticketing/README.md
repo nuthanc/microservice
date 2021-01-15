@@ -2605,3 +2605,12 @@ npm run test
 ### NATS Env Variables
 * Add env in ticket depl
 * After all these changes, check whether ticket srv is getting connected to NATS in skaffold logs
+
+### The Orders Service
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F01.drawio
+* D 5-browser:
+  * Keeping track of who is gonna purchase the ticket and lock the ticket
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F06%2F01.drawio
+* D 1-order: Order creation/editing
+* D 3-replicate:
+* D 4-concurrency:
