@@ -2708,3 +2708,6 @@ npm run test
 * Not focusing on auth and request body in orders service 
   * Refer to tickets if you want to have them
 * Just to check move BadRequestError above NotFoundError and check the test result
+
+### Asserting Reserved Tickets
+* Implement returns an error if the ticket is already reserved
