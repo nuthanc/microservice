@@ -2622,4 +2622,10 @@ cd orders
 npm install
 eval $(minikube docker-env)
 docker build -t nuthanc/orders .
+docker push nuthanc/orders 
 ```
+
+### A Touch More Setup
+* Create orders-depl.yaml and orders-mongo-depl.yaml
+* Update skaffold.yaml
+* Restart skaffold
