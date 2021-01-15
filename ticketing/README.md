@@ -2561,3 +2561,11 @@ Event published to subject ticket:updated
   * So we wrap up both transaction and event in a DB Transaction
 * Not goint to implement in this Application
 
+### Fixing a Few Tests
+```sh
+cd tickets
+npm run test
+```
+* D 14-tests: Normal env while running our app
+* D 15-client: Test env
+* D 16-mock: Jest redirect to Fake initialized NATS Client
