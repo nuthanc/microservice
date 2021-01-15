@@ -14,6 +14,7 @@ const router = express.Router();
 
 router.put(
   '/api/tickets/:id',
+  // @ts-ignore
   requireAuth,
   [
     body('title').not().isEmpty().withMessage('Title is required'),

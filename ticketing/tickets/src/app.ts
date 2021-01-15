@@ -18,6 +18,7 @@ app.use(
     secure: process.env.NODE_ENV !== 'test',
   })
 );
+// @ts-ignore
 app.use(currentUser);
 
 app.use(createTicketRouter);
@@ -29,6 +30,7 @@ app.all('*', async () => {
   throw new NotFoundError();
 });
 
+// @ts-ignore
 app.use(errorHandler);
 
 export { app };

@@ -2569,3 +2569,12 @@ npm run test
 * D 14-tests: Normal env while running our app
 * D 15-client: Test env
 * D 16-mock: Jest redirect to Fake initialized NATS Client
+
+### Redirecting Imports
+* D 17-mock: Mocking(Faking) Imports with Jest
+  * Create __mocks__ and in there nats-wrapper.ts
+  * jest.mock of the file which we want to fake
+* Close npm run test and run it again
+  * We made the change only in new.test.ts
+  * So to only run that file, type p and then put in new
+  * Now we get a different error message, which indicates that our fake file is being used
