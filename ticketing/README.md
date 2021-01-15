@@ -2685,3 +2685,12 @@ npm update @rztickets/common
 ### Finding Reserved Tickets
 * Reserved if it is associated with an Order and Order status should not be not cancelled
 * findOne where the ticket is what we just found
+
+### Convenience Document Methods
+* We will be adding this in ticket model
+* statics for Ticket Model
+* methods for Ticket Document
+* methods needs to be **a keyword function**
+  * cannot use arrow function
+    * mess around value of 'this' inside the function
+
