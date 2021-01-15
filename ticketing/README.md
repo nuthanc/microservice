@@ -2703,3 +2703,8 @@ npm update @rztickets/common
 cd orders
 npm run test
 ```
+
+### Asserting Tickets Exist
+* Not focusing on auth and request body in orders service 
+  * Refer to tickets if you want to have them
+* Just to check move BadRequestError above NotFoundError and check the test result
