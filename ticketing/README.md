@@ -2601,3 +2601,7 @@ npm run test
 * Provide a mock function which allows to have expectations around it
 * Here in new.test.ts, even though we import the real nats-wrapper, jest will use the mock
 * Also clearAllMocks since we are using the same mock function in other tests too
+
+### NATS Env Variables
+* Add env in ticket depl
+* After all these changes, check whether ticket srv is getting connected to NATS in skaffold logs
