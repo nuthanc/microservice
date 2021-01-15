@@ -2516,6 +2516,7 @@ Event data! {
 ### Ticket Update Publishing
 * Similar to TicketCreatedPublisher
 * Now to test this, use req.http PUT request with the last video's ticet id
+* Made a mistake, no await on TicketUpdatedPublisher
 ```sh
 {
   "title": "NEW CONCERT",
@@ -2530,3 +2531,17 @@ Event data! {
 ```sh
 Event published to subject ticket:updated
 ```
+
+### Failed Event Publishing
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F05%2F14.drawio
+* D 11-async: Behind the scenes in Ticket Create Handler
+* D 12-err: Error in the above scenario
+* D 13-update: Behind the scenes in Ticket Update Handler
+* User doesn't need to know about the Events
+* Adding await to Publisher adds a tiny bit of latency
+* D 4-note: What would happen if emitting event fails(Impact on the App)
+* D 5-nats: Continued from above
+  * Users account balance never gets updated
+* Question about Data Integrity
+  * Failed event causes Data Integrity issue(Accounts not updated due to the event failing)
+
