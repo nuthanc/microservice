@@ -2481,3 +2481,11 @@ kubectl delete pod nats-depl-58c5f75f5c-pngb2
 ### Accessing the NATS Client
 * getter method for client so that it is not accessed when it is not defined
 * client is not called as natsWrapper.client() as it is a getter, it is defined as a property on the instance
+
+### Graceful Shutdown
+* Rather than having close code in nats-wrapper.ts(Some hidden away class), we will do it in a central location like index.ts
+* How to test this
+* Restart skaffold
+* Simulate nats going down(Delete nats pod)
+* We see tickets pod restarting as the primary process of the container was exited
+  * process.exit() code in index.ts of tickets
