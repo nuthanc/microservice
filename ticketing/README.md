@@ -2725,3 +2725,6 @@ npm run test
   * So we make request through express app
 * Destructuring and renaming
   * const { body: orderOne }
+
+### Fetching Individual Orders
+* Code in show.ts
