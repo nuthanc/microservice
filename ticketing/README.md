@@ -2545,3 +2545,19 @@ Event published to subject ticket:updated
 * Question about Data Integrity
   * Failed event causes Data Integrity issue(Accounts not updated due to the event failing)
 
+### Handling Publish Failures
+* D 5-nats:
+* D 6-tx: Straight approach to the above problem
+  * Save the event to our db
+* D 7-proc: Separate process outside our Route handler
+  * Any issue with db, we don't save that transaction and the event and there is no data integrity issue
+  * If NATS is down or connection to nats is down due to some crazy reason, we can still save the transaction to the db, save the event and then later when NATS comes up, the separate process will pull the event and publish it to NATS
+  * Another scenario, D 7-fail: Fail to save the event
+    * Due to db constraint or something like that
+  * If failing of either transaction or event fails, then we have to undo(like rollback the transaction or vice-versa)
+* D 8-tx:
+  * Database feature called Transaction.
+  * If any of the changes fail, do not make any of the changes
+  * So we wrap up both transaction and event in a DB Transaction
+* Not goint to implement in this Application
+
