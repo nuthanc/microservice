@@ -16,17 +16,17 @@
 #   "password": "password"
 # }
 
-# POST https://ticketing.dev/api/tickets
-# content-type: application/json
+POST https://ticketing.dev/api/tickets
+content-type: application/json
 
-# {
-#   "title": "concert",
-#   "price": 10
-# }
+{
+  "title": "NEW CONCERT",
+  "price": 500
+}
 
 # https://ticketing.dev/api/tickets/5fd8442eaa73f90019dc8832
 
-https://ticketing.dev/api/tickets/
+# https://ticketing.dev/api/tickets/
 
 # PUT https://ticketing.dev/api/tickets/5fd8442eaa73f90019dc8832
 # content-type: application/json

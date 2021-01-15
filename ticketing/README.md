@@ -2489,3 +2489,26 @@ kubectl delete pod nats-depl-58c5f75f5c-pngb2
 * Simulate nats going down(Delete nats pod)
 * We see tickets pod restarting as the primary process of the container was exited
   * process.exit() code in index.ts of tickets
+
+### Successful Listen!
+```sh
+kubectl get pods
+kubectl port-forward nats-depl-59f4775d75-49fzf 4222:4222
+cd nats-test
+npm run listen
+```
+* Create a ticket in Postman or in my case req.http file
+* First we need to make sure we are signed in by GET to https://ticketing.dev/api/users/currentuser
+  * If you are not signed in then make to POST request to https://ticketing.dev/api/users/signin with the email and password in body(valid credentials) or signup
+* Create ticket by POST request to https://ticketing.dev/api/tickets with title and price
+```sh
+Listener connected to NATS
+Message received: ticket:created / payments-service
+Event data! {
+  id: '600124976f8a3c0018f67d6e',
+  title: 'NEW CONCERT',
+  price: 500,
+  userId: '5fd843a29fc5e30023bd790b'
+}
+```
+* Yay, we are able to publish and listen successfully
