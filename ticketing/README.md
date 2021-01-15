@@ -2578,3 +2578,16 @@ npm run test
   * We made the change only in new.test.ts
   * So to only run that file, type p and then put in new
   * Now we get a different error message, which indicates that our fake file is being used
+
+### Providing a Mock Implementation
+* D 17-mock: Mocking(Faking) Imports with Jest
+* D 18-mocks: 
+  * New Ticket Route Handler doesn't care about _client and connect function
+* Take a look at how TicketCreatedPublisher uses nats client and implement same functionality in mocks file
+  * TicketCreatedPublisher doesn't do anything
+  * So need to take a look at base-publisher.ts in common/src/events
+  * Real client calls the callback function to indicate publish is complete
+* D 19-mocks: 
+* D 20-pub: 
+  * We want to make sure our callback function gets executed right away so that our Promise will get resolved
+* Now we see that all of our new test is passing
