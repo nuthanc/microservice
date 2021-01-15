@@ -2734,3 +2734,6 @@ npm run test
 
 ### Cancelling an Order
 * It's not actually Delete request but put or patch
+
+### Can we Cancel?
+* delete.test.ts
