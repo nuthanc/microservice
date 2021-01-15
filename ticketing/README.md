@@ -2672,3 +2672,9 @@ npm update @rztickets/common
 ### More on Mongoose Refs
 * D 10-ref:
 * Scenarios in Udemy Notes 334
+
+### Defining the Ticket Model
+* Create ticket.ts in models
+* You might be thinking of putting ticket's model to common shared library
+* This definitely must not be done
+  * Because we are only getting a subset of properties of ticket that the order needs
