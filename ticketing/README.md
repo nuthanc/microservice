@@ -2477,3 +2477,7 @@ kubectl delete pod nats-depl-58c5f75f5c-pngb2
 * While importing in index.ts natsWrapper is in lowercase because that is an instance
 * clusterId is coming from nats-depl file args, cid which is clusterId
 * Check whether you get "Connected to NATS in the terminal"
+
+### Accessing the NATS Client
+* getter method for client so that it is not accessed when it is not defined
+* client is not called as natsWrapper.client() as it is a getter, it is defined as a property on the instance
