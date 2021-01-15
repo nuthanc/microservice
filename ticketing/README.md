@@ -2640,3 +2640,12 @@ docker push nuthanc/orders
 
 ### Subtle Service Coupling
 * custom check for mongo id is subtle service coupling
+
+### Associating Orders and Tickets
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F06%2F01.drawio
+* D 6-assoc:
+* D 7-assoc: Option #1-Embedding
+  * D 8-query: Downside(Querying all the orders to check it has the same ticketId)
+  * D 9-fix: Ticket service emits events, which will be received by the orders service
+    * But the ticket doesn't get immediately assigned to an order
+* D 10-ref: Option #2-Mongoose Ref/Population feature
