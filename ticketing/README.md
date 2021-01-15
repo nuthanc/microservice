@@ -2711,3 +2711,7 @@ npm run test
 
 ### Asserting Reserved Tickets
 * Implement returns an error if the ticket is already reserved
+
+### Testing the Success Case
+* Writing tests is mandatory in case of Orders cause we can't send requests through Postman
+* This is because it is dependant upon ticket creation
