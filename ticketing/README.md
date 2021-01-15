@@ -2668,3 +2668,7 @@ npm run pub
 cd orders
 npm update @rztickets/common
 ```
+
+### More on Mongoose Refs
+* D 10-ref:
+* Scenarios in Udemy Notes 334
