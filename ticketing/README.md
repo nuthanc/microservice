@@ -2678,3 +2678,6 @@ npm update @rztickets/common
 * You might be thinking of putting ticket's model to common shared library
 * This definitely must not be done
   * Because we are only getting a subset of properties of ticket that the order needs
+
+### Order Creation Logic
+* Steps as comments
