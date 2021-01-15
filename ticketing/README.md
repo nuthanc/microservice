@@ -2596,3 +2596,8 @@ npm run test
 * Copy jest.mock to all the other test files which need nats client
 * Instead of doing the above, we can use only in setup.ts
 * All of my tests pass
+
+### Ensuring Mock Invocations
+* Provide a mock function which allows to have expectations around it
+* Here in new.test.ts, even though we import the real nats-wrapper, jest will use the mock
+* Also clearAllMocks since we are using the same mock function in other tests too
