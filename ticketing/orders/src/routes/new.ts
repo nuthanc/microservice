@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import { NotFoundError, requireAuth, validateRequest } from '@rztickets/common';
+import { BadRequestError, NotFoundError, OrderStatus, requireAuth, validateRequest } from '@rztickets/common';
 import { body } from 'express-validator';
 import mongoose from 'mongoose';
 import { Ticket } from '../models/ticket';
@@ -27,8 +27,24 @@ router.post(
     if (!ticket) {
       throw new NotFoundError();
     }
-    // Ensure that the ticket isn't already reserved
 
+    // Ensure that the ticket isn't already reserved
+    // Run query to look at all orders. Find an order where the ticket
+    // is the ticket we just found *and* the orders status is *not* cancelled.
+    // If we find an order from that means the ticket *is* reserved
+    const existingOrder = await Order.findOne({
+      ticket: ticket,
+      status: {
+        $in: [
+          OrderStatus.Created,
+          OrderStatus.AwaitingPayment,
+          OrderStatus.Complete
+        ]
+      }
+    });
+    if (existingOrder) {
+      throw new BadRequestError('Ticket is already reserved');
+    }
     // Calculate an expiration date for this order
 
     // Build the order and save it to the database

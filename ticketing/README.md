@@ -2681,3 +2681,7 @@ npm update @rztickets/common
 
 ### Order Creation Logic
 * Steps as comments
+
+### Finding Reserved Tickets
+* Reserved if it is associated with an Order and Order status should not be not cancelled
+* findOne where the ticket is what we just found
