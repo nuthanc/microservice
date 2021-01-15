@@ -44,6 +44,7 @@ it('fetches orders for a particular user', async () => {
   const response = await request(app)
     .get('/api/orders')
     .set('Cookie', userTwo)
+    .send()
     .expect(200);
 
   // Make sure we only got orders for User #2

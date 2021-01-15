@@ -2728,3 +2728,6 @@ npm run test
 
 ### Fetching Individual Orders
 * Code in show.ts
+
+### Does Fetching Work?
+* show.test.ts
