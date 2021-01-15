@@ -2649,3 +2649,7 @@ docker push nuthanc/orders
   * D 9-fix: Ticket service emits events, which will be received by the orders service
     * But the ticket doesn't get immediately assigned to an order
 * D 10-ref: Option #2-Mongoose Ref/Population feature
+
+### Order Model Setup
+* 3 interface so that TypeScript validates
+* 1 interface for the document, the other one for what the saved document should have and the final one for the build
