@@ -2629,3 +2629,6 @@ docker push nuthanc/orders
 * Create orders-depl.yaml and orders-mongo-depl.yaml
 * Update skaffold.yaml
 * Restart skaffold
+
+### Ingress Routing Rules
+* 
