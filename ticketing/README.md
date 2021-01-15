@@ -2631,4 +2631,9 @@ docker push nuthanc/orders
 * Restart skaffold
 
 ### Ingress Routing Rules
-* 
+* Change in ingress-srv.yaml right before client
+
+### Scaffolding a Few Route Handlers
+* D 4-routes:
+* Update every route handler
+* In the end, need to see Connected to NATS, MongoDb and listening on port 3000 in orders
