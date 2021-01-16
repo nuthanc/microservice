@@ -3159,3 +3159,6 @@ docker push nuthanc/expiration
 * D 10-queue:
   * Job equivalent to Event
 * For typescript to give out the properties, we define Payload interface
+
+### Queueing a Job On Event Arrival
+* Add orderId to expirationQueue
