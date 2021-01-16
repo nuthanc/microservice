@@ -3010,4 +3010,7 @@ npm i mongoose-update-if-current
 * See Udemy notes
 
 ### Testing Listeners
-* 
+* In listeners __test__
+
+### A Complete Listener Test
+* npm run test in orders
