@@ -3210,3 +3210,17 @@ npm run pub
 cd expiration
 npm update @rztickets/common
 ```
+
+### Publishing an Event on Job Processing
+* D 10-queue:
+* To test this quickly, go to order-created-listener in expiration
+  * Comment delay
+  * Test using req.http Ticket and Order creation
+```sh
+[expiration-depl-5f6d5d6586-qrktq expiration] Message received: order:created / expiration-service
+[orders-depl-5d776b76fd-ljdv7 orders] Event published to subject order:created
+[tickets-depl-9767f78d-89g46 tickets] Event published to subject ticket:updated
+[expiration-depl-5f6d5d6586-qrktq expiration] Waiting this many milliseconds to process the job: 59982
+[orders-depl-5d776b76fd-ljdv7 orders] Message received: ticket:updated / orders-service
+[expiration-depl-5f6d5d6586-qrktq expiration] Event published to subject expiration:complete
+```
