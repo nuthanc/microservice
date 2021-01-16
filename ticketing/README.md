@@ -2930,3 +2930,7 @@ npm update @rztickets/common
 cd tickets
 npm update @rztickets/common
 ```
+
+### Updating Tickets Event Definitions
+* Add version in new.ts and update.ts of tickets
+* Restart tests in tickets
