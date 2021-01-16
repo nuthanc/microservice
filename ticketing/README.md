@@ -2981,3 +2981,6 @@ npm i mongoose-update-if-current
 [tickets-depl-5f67cb9ff7-h72vm tickets] Event published to subject ticket:updated
 [orders-depl-667d8d9856-x9jk8 orders] Message received: ticket:updated / orders-service
 ```
+
+### Did it Work?
+* Check Notes in Udemy video
