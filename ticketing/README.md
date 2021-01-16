@@ -2769,3 +2769,6 @@ npm update @rztickets/common
 
 ### Publishing Order Cancellation
 * Publish in delete.ts
+
+### Testing Event Publishing
+* todos in new.test.ts and delete.test.ts
