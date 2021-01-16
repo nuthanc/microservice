@@ -3154,3 +3154,8 @@ docker push nuthanc/expiration
   * Queue-main abstraction in bull
 * D 10-queue: Our case
   * Worker and Web Server is our Expiration Service
+
+### Creating a Queue
+* D 10-queue:
+  * Job equivalent to Event
+* For typescript to give out the properties, we define Payload interface
