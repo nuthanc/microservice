@@ -2918,3 +2918,15 @@ expect(async () => {
   * Only Comments Service should update the version, not Moderation Service also
   * Because if Moderation Service updates the version, it is updated only in Comments Service and not in Query Service
 
+### Including Versions in Events
+* Add version in events of common module
+```sh
+cd common
+npm run pub
+
+cd orders
+npm update @rztickets/common
+
+cd tickets
+npm update @rztickets/common
+```
