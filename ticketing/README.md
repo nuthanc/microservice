@@ -2863,3 +2863,11 @@ npm update @rztickets/common
 
 ### Reminder on Versioning Records
 * D 6-conc:
+
+### Optimistic Concurrency Control
+* D 7-v: Normal Record Updates of Mongoose and mongoDB
+* D 8-v: Record Updates with Optimistic Concurrency Control
+  * Strategy with other dbs as well
+  * Setting in mongoose
+  * Find the record with **ID and version**
+  * Inserting records, not really concurrency here but in Updating records
