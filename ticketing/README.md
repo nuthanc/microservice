@@ -3112,3 +3112,11 @@ npm update @rztickets/common
 * Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F09%2F01.drawio
 * D 1-expiration:
 * D 2-pub:
+
+### Expiration Options
+* D 3-ev:
+* D 4-timeout: Timer lost when service restarts
+* D 5-delay: Relies on NATS delivery but business logic is mixed with this delay
+* D 6-sched: Not supported by NATS
+* D 7-delay: Bull JS
+* Redis fantastic for jobs(things scheduled for some point in time)
