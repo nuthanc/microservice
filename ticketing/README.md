@@ -2910,3 +2910,11 @@ expect(async () => {
 
 ### One More Test
 * increments the version number on multiple saves
+
+### Who Updates Version?
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F08%2F03.drawio
+* D 8-v:
+* D 10-v: Example of blog post app
+  * Only Comments Service should update the version, not Moderation Service also
+  * Because if Moderation Service updates the version, it is updated only in Comments Service and not in Query Service
+
