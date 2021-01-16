@@ -2737,3 +2737,6 @@ npm run test
 
 ### Can we Cancel?
 * delete.test.ts
+
+### Orders Service Events
+* Note on Udemy
