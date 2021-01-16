@@ -2766,3 +2766,6 @@ npm update @rztickets/common
 ### Publishing the Order Creation
 * If we don't take care of expiresAt date conversion, default behavior is to convert to location specific time and not UTC
   * So we will do it ourselves
+
+### Publishing Order Cancellation
+* Publish in delete.ts
