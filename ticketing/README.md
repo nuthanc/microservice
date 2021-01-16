@@ -3146,3 +3146,11 @@ docker push nuthanc/expiration
 ### Listener Creation
 * Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F09%2F01.drawio
 * D 7-delay:
+
+### What's Bull All About?
+* D 8-bull: What bull is traditionally is used for
+  * Bull -> Job -> Redis -> Worker Server -> Message -> Redis
+* D 9-bull:
+  * Queue-main abstraction in bull
+* D 10-queue: Our case
+  * Worker and Web Server is our Expiration Service
