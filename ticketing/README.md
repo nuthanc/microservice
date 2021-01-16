@@ -3017,3 +3017,6 @@ npm i mongoose-update-if-current
 
 ### Testing the Ack Call
 * acks the message
+
+### Testing the Ticket Updated Listener
+* ticket-updated-listener.test.ts
