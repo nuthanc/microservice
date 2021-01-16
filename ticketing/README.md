@@ -3200,3 +3200,13 @@ docker push nuthanc/expiration
 ### Delaying Job Processing
 * Create new ticket and order
 * See in skaffold output
+
+### Defining the Expiration Completion Event
+* Create expiration-complete-event.ts in common module 
+```sh
+cd common
+npm run pub
+
+cd expiration
+npm update @rztickets/common
+```
