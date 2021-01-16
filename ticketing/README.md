@@ -2759,3 +2759,6 @@ npm run pub
 cd order
 npm update @rztickets/common
 ```
+
+### Implementing the Publishers
+* Create events directory and publishers within it
