@@ -2852,3 +2852,10 @@ npm update @rztickets/common
 [tickets-depl-b759cdf87-t8cxl tickets] Event published to subject ticket:updated
 [orders-depl-7776bf84cc-9fqtd orders] Message received: ticket:updated / orders-service
 ```
+
+### Clear Concurrency Issues
+* **Important** check test script and the video in Udemy 365
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F08%2F03.drawio
+* D 4-conc: What the script does
+  * It is not truely in parallel because of how NodeJS works
+* D 5-conc: 
