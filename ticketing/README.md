@@ -3073,4 +3073,7 @@ npm run test
   * Orders service has ticket with version 0
   * OrderCreated and OrderCancelled made changes only to tickets service version and not to order service ticket
 * We have to emit an event for ticket created with order:created and order:cancelled event listener
- 
+
+### Private vs Protected Properties
+* D 13-updated:
+* D 14-updated:
