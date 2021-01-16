@@ -3139,4 +3139,6 @@ docker push nuthanc/expiration
 * Create expiration-depl.yaml
   * No service required as it won't be contacted by any other service directly
   * It's through nats-streaming-server
-  
+
+### File Sync Setup
+* In skaffold.yaml
