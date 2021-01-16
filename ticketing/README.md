@@ -2781,3 +2781,6 @@ npm update @rztickets/common
 
 ### Reminder on Listeners
 * Check base-listener.ts in common
+
+### Blueprint for Listeners
+* ticket-created-listener implementation in orders
