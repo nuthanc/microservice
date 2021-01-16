@@ -3104,3 +3104,6 @@ npm update @rztickets/common
 
 ### Don't forget to Listen!
 * Listeners in index.ts of tickets
+
+### Rejecting Edits of Reserved Tickets
+* Add BadRequestError in update.ts
