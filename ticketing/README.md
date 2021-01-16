@@ -3094,3 +3094,7 @@ npm update @rztickets/common
 
 ### Mock Function Arguments
 * npm run test in tickets
+
+### Order Cancelled Listener
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F07%2F02.drawio
+* order:cancelled:
