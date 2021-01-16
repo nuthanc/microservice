@@ -3196,3 +3196,7 @@ docker push nuthanc/expiration
 [expiration-depl-675f94cf9-9mwr7 expiration] Message received: order:created / expiration-service
 [expiration-depl-675f94cf9-9mwr7 expiration] I want to publish an expiration:complete event for orderId 6003115eae86e60018be7b1e
 ```
+
+### Delaying Job Processing
+* Create new ticket and order
+* See in skaffold output

@@ -20,8 +20,8 @@
 # content-type: application/json
 
 # {
-#   "title": "Dil Dhadkane",
-#   "price": 30
+#   "title": "Hello",
+#   "price": 40
 # }
 
 # https://ticketing.dev/api/tickets/5fd8442eaa73f90019dc8832
@@ -40,5 +40,5 @@ POST https://ticketing.dev/api/orders
 content-type: application/json
 
 {
-  "ticketId": "600310f88dab780018985931"
+  "ticketId": "60031d68e993880018e4ff73"
 }
