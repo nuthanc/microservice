@@ -2762,3 +2762,7 @@ npm update @rztickets/common
 
 ### Implementing the Publishers
 * Create events directory and publishers within it
+
+### Publishing the Order Creation
+* If we don't take care of expiresAt date conversion, default behavior is to convert to location specific time and not UTC
+  * So we will do it ourselves
