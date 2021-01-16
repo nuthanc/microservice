@@ -2809,3 +2809,46 @@ npm update @rztickets/common
 
 ### Initializing the Listeners
 * In orders index.ts
+
+### A Quick Manual Test
+* Fixed order model issue by pinning mongoose to 5.10.19 in orders package.json
+* Use req.http
+* Ensure you are signed in by making request to /api/users/currentuser
+```json
+{
+  "currentUser": {
+    "id": "5fd843a29fc5e30023bd790b",
+    "email": "test@test.com",
+    "iat": 1608008650
+  }
+}
+```
+* make POST request to api/tickets
+```json
+{
+  "title": "movie",
+  "price": 999,
+  "userId": "5fd843a29fc5e30023bd790b",
+  "__v": 0,
+  "id": "6002744fd98a24001810753e"
+}
+```
+* More importantly in skaffold log
+```sh
+[tickets-depl-b759cdf87-t8cxl tickets] Event published to subject ticket:created
+[orders-depl-7776bf84cc-9fqtd orders] Message received: ticket:created / orders-service
+```
+* Next make a PUT request to api/tickets/:ticketId
+```json
+{
+  "title": "movie",
+  "price": 10,
+  "userId": "5fd843a29fc5e30023bd790b",
+  "__v": 0,
+  "id": "6002744fd98a24001810753e"
+}
+```
+```sh
+[tickets-depl-b759cdf87-t8cxl tickets] Event published to subject ticket:updated
+[orders-depl-7776bf84cc-9fqtd orders] Message received: ticket:updated / orders-service
+```
