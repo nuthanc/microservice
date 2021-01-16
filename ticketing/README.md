@@ -3091,3 +3091,6 @@ cd orders
 npm update @rztickets/common
 ```
 * Add await to TicketUpdatedPublisher so that it never goes to ack if publish fails
+
+### Mock Function Arguments
+* npm run test in tickets
