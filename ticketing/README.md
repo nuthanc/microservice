@@ -2934,3 +2934,50 @@ npm update @rztickets/common
 ### Updating Tickets Event Definitions
 * Add version in new.ts and update.ts of tickets
 * Restart tests in tickets
+
+### Applying a Version Query
+```sh
+cd orders
+npm i mongoose-update-if-current
+```
+* Update ticket model file in orders service
+* In ticket-updated-listener, adjust the Query
+* Use Postman, in my case req.http
+* First check if you are authenticated with request to /api/users/currentuser
+```json
+{
+  "currentUser": {
+    "id": "5fd843a29fc5e30023bd790b",
+    "email": "test@test.com",
+    "iat": 1608008650
+  }
+}
+```
+* Then POST to /api/tickets
+```sh
+{
+  "title": "Zoro",
+  "price": 30,
+  "userId": "5fd843a29fc5e30023bd790b",
+  "version": 0,
+  "id": "60029252cba1360018999688"
+}
+```
+```sh
+[tickets-depl-5f67cb9ff7-h72vm tickets] Event published to subject ticket:created
+[orders-depl-667d8d9856-x9jk8 orders] Message received: ticket:created / orders-service
+```
+* Then PUT to /api/tickets/60029252cba1360018999688
+```json
+{
+  "title": "One Piece",
+  "price": 30,
+  "userId": "5fd843a29fc5e30023bd790b",
+  "version": 1,
+  "id": "60029252cba1360018999688"
+}
+```
+```sh
+[tickets-depl-5f67cb9ff7-h72vm tickets] Event published to subject ticket:updated
+[orders-depl-667d8d9856-x9jk8 orders] Message received: ticket:updated / orders-service
+```

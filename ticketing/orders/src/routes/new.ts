@@ -1,5 +1,11 @@
 import express, { Request, Response } from 'express';
-import { BadRequestError, NotFoundError, OrderStatus, requireAuth, validateRequest } from '@rztickets/common';
+import {
+  BadRequestError,
+  NotFoundError,
+  OrderStatus,
+  requireAuth,
+  validateRequest,
+} from '@rztickets/common';
 import { body } from 'express-validator';
 import mongoose from 'mongoose';
 import { Ticket } from '../models/ticket';
@@ -47,7 +53,7 @@ router.post(
       userId: req.currentUser!.id,
       status: OrderStatus.Created,
       expiresAt: expiration,
-      ticket
+      ticket,
     });
     await order.save();
 
@@ -59,9 +65,10 @@ router.post(
       expiresAt: order.expiresAt.toISOString(),
       ticket: {
         id: ticket.id,
-        price: ticket.price
-      }
-    })
+        price: ticket.price,
+      },
+      version: order.version
+    });
 
     res.status(201).send(order);
   }

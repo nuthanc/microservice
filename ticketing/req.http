@@ -20,18 +20,18 @@
 # content-type: application/json
 
 # {
-#   "title": "movie",
-#   "price": 999
+#   "title": "Zoro",
+#   "price": 30
 # }
 
 # https://ticketing.dev/api/tickets/5fd8442eaa73f90019dc8832
 
 # https://ticketing.dev/api/tickets/
 
-PUT https://ticketing.dev/api/tickets/6002744fd98a24001810753e
+PUT https://ticketing.dev/api/tickets/60029252cba1360018999688
 content-type: application/json
 
 {
-  "title": "movie",
-  "price": 10
+  "title": "One Piece",
+  "price": 30
 }
