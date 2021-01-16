@@ -3162,3 +3162,37 @@ docker push nuthanc/expiration
 
 ### Queueing a Job On Event Arrival
 * Add orderId to expirationQueue
+
+### Testing Job Processing
+* Use Postman or req.http
+* Ensure you are signed in
+* POST to /api/tickets
+```json
+{
+  "title": "Dil Dhadkane",
+  "price": 30,
+  "userId": "5fd843a29fc5e30023bd790b",
+  "version": 0,
+  "id": "600310f88dab780018985931"
+}
+```
+* POST to /api/orders
+```json
+{
+  "status": "created",
+  "userId": "5fd843a29fc5e30023bd790b",
+  "expiresAt": "2021-01-16T16:31:30.047Z",
+  "ticket": {
+    "title": "Dil Dhadkane",
+    "price": 30,
+    "version": 0,
+    "id": "600310f88dab780018985931"
+  },
+  "version": 0,
+  "id": "6003115eae86e60018be7b1e"
+}
+```
+```sh
+[expiration-depl-675f94cf9-9mwr7 expiration] Message received: order:created / expiration-service
+[expiration-depl-675f94cf9-9mwr7 expiration] I want to publish an expiration:complete event for orderId 6003115eae86e60018be7b1e
+```

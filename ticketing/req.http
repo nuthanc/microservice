@@ -20,7 +20,7 @@
 # content-type: application/json
 
 # {
-#   "title": "Zoro",
+#   "title": "Dil Dhadkane",
 #   "price": 30
 # }
 
@@ -28,10 +28,17 @@
 
 # https://ticketing.dev/api/tickets/
 
-PUT https://ticketing.dev/api/tickets/60029252cba1360018999688
+# PUT https://ticketing.dev/api/tickets/60029252cba1360018999688
+# content-type: application/json
+
+# {
+#   "title": "One Piece",
+#   "price": 40
+# }
+
+POST https://ticketing.dev/api/orders
 content-type: application/json
 
 {
-  "title": "One Piece",
-  "price": 40
+  "ticketId": "600310f88dab780018985931"
 }
