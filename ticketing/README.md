@@ -3128,3 +3128,15 @@ cd expiration
 npm install bull @types/bull
 npm install
 ```
+
+### A Touch of Kubernetes Setup
+```sh
+cd expiration
+docker build -t nuthanc/expiration .
+docker push nuthanc/expiration
+```
+* Create expiration-redis-depl.yaml
+* Create expiration-depl.yaml
+  * No service required as it won't be contacted by any other service directly
+  * It's through nats-streaming-server
+  
