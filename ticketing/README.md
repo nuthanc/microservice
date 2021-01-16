@@ -2984,3 +2984,20 @@ npm i mongoose-update-if-current
 
 ### Did it Work?
 * Check Notes in Udemy video
+
+### Abstracted Query Method
+* Moving query from ticket-updated-listener to ticket model of order service
+* Then test it out by updating a ticket using PUT request
+```json
+{
+  "title": "One Piece",
+  "price": 40,
+  "userId": "5fd843a29fc5e30023bd790b",
+  "version": 2,
+  "id": "60029252cba1360018999688"
+}
+```
+```sh
+[tickets-depl-5f67cb9ff7-h72vm tickets] Event published to subject ticket:updated
+[orders-depl-667d8d9856-x9jk8 orders] Message received: ticket:updated / orders-service
+```

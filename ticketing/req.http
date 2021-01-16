@@ -33,5 +33,5 @@ content-type: application/json
 
 {
   "title": "One Piece",
-  "price": 30
+  "price": 40
 }
