@@ -2889,3 +2889,21 @@ ticketSchema.set('versionKey', 'version');
 ticketSchema.plugin(updateIfCurrentPlugin);
 ```
 * Also, add in TicketDoc interface
+
+### Testing OCC
+* In ticket.test.ts of ticket model
+```sh
+cd tickets
+npm run test
+```
+```sh
+VersionError: No matching document found for id "600280ac08e1f65731d3faf3" version 0 modifiedPaths "price"
+
+await secondInstance!.save();
+```
+* This should work, but due to jest typescript issues not working as expected
+```ts
+expect(async () => {
+    await secondInstance!.save();
+  }).toThrow();
+```
