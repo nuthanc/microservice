@@ -2740,3 +2740,22 @@ npm run test
 
 ### Orders Service Events
 * Note on Udemy
+
+### Creating the Events
+* Update in subjects.ts
+* Create order-created-event.ts and order-cancelled-event.ts
+* The data in OrderCreatedEvent needs to be whatever **other services require from it(not all by default)**
+  * status is the only property that other services don't require
+  * But we will include it anyway since we don't know whether a new service in the future might require it
+* expiresAt will be gonna be a string instead of Date because we want to convert it to JSON
+* Sharing the minimum amount of information when an Event happens
+  * But this is not future-proof
+  * In the future, add the property and republish the library
+* Export the above files in index.ts
+```sh
+cd common
+npm run pub
+
+cd order
+npm update @rztickets/common
+```
