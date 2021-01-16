@@ -2859,3 +2859,7 @@ npm update @rztickets/common
 * D 4-conc: What the script does
   * It is not truely in parallel because of how NodeJS works
 * D 5-conc: 
+  * 4 copies of Orders as well as Tickets service
+
+### Reminder on Versioning Records
+* D 6-conc:
