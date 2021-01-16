@@ -3107,3 +3107,8 @@ npm update @rztickets/common
 
 ### Rejecting Edits of Reserved Tickets
 * Add BadRequestError in update.ts
+
+### The Expiration Service
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F09%2F01.drawio
+* D 1-expiration:
+* D 2-pub:
