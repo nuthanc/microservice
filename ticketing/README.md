@@ -2789,3 +2789,9 @@ npm update @rztickets/common
 * Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F08%2F03.drawio
 * D 1-listener:
   * One of the members of the Queue Group
+
+### Simple onMessage Implementation
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F07%2F02.drawio
+* D ticket:created:
+  * Pull off some information of the ticket
+* Ack the message when everything is good to go
