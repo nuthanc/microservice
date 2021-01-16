@@ -2871,3 +2871,13 @@ npm update @rztickets/common
   * Setting in mongoose
   * Find the record with **ID and version**
   * Inserting records, not really concurrency here but in Updating records
+
+### Mongoose Update-If-Current
+* D 6-v:
+* Module in npmjs.com: mongoose-update-if-current
+* If you see the earlier JSON response, you see __v: 0
+* __v renamed as version
+```sh
+cd tickets
+npm i mongoose-update-if-current
+```
