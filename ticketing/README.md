@@ -3049,3 +3049,7 @@ npm i mongoose-update-if-current
 * D 5-id:
 * D 6-id:
 * D 7-tix:
+
+### Reserving a Ticket
+* Add orderId to ticket model
+* orderId optional by ?
