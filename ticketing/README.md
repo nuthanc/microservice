@@ -2795,3 +2795,11 @@ npm update @rztickets/common
 * D ticket:created:
   * Pull off some information of the ticket
 * Ack the message when everything is good to go
+
+### ID Adjustment
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F08%2F03.drawio
+* D 3-id:
+  * Mongodb random id
+  * Adjust the ticket model's build(But this is not gonna solve the issue)
+  * Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F08%2F01.drawio
+  * D 4-id:
