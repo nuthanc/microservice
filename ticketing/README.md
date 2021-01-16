@@ -2778,3 +2778,6 @@ npm update @rztickets/common
 * D 8-repl:
 * D ticket:created:
 * D ticket:updated:
+
+### Reminder on Listeners
+* Check base-listener.ts in common
