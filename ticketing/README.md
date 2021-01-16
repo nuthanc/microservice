@@ -2772,3 +2772,9 @@ npm update @rztickets/common
 
 ### Testing Event Publishing
 * todos in new.test.ts and delete.test.ts
+
+### Time for Listeners!
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F07%2F02.drawio
+* D 8-repl:
+* D ticket:created:
+* D ticket:updated:
