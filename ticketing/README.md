@@ -3077,3 +3077,17 @@ npm run test
 ### Private vs Protected Properties
 * D 13-updated:
 * D 14-updated:
+
+### Publishing While Listening
+* Changing private client to protected in base-listener and base-publisher
+```sh
+cd common
+npm run pub
+
+cd tickets
+npm update @rztickets/common
+
+cd orders
+npm update @rztickets/common
+```
+* Add await to TicketUpdatedPublisher so that it never goes to ack if publish fails
