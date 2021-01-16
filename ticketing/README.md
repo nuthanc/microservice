@@ -2806,3 +2806,6 @@ npm update @rztickets/common
 
 ### Ticket Updated Listener Implementation
 * Add ticket-updated-listener.ts
+
+### Initializing the Listeners
+* In orders index.ts
