@@ -3120,3 +3120,11 @@ npm update @rztickets/common
 * D 6-sched: Not supported by NATS
 * D 7-delay: Bull JS
 * Redis fantastic for jobs(things scheduled for some point in time)
+
+### Initial Setup
+* Copy some files from tickets(or orders)
+```sh
+cd expiration
+npm install bull @types/bull
+npm install
+```
