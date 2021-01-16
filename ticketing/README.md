@@ -3063,3 +3063,14 @@ cd tickets
 npm run test
 ```
 * Make it fail by commenting onMessage and uncomment again
+
+### Missing Update Event
+* D 8-confirm:
+* D 9-conf:
+* D 10-update:
+* D 11-event:
+* D 12-event:
+  * Orders service has ticket with version 0
+  * OrderCreated and OrderCancelled made changes only to tickets service version and not to order service ticket
+* We have to emit an event for ticket created with order:created and order:cancelled event listener
+ 
