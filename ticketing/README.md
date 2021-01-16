@@ -2881,3 +2881,11 @@ npm update @rztickets/common
 cd tickets
 npm i mongoose-update-if-current
 ```
+
+### Implementing OCC with Mongoose
+* In ticket.ts models of tickets service, add
+```ts
+ticketSchema.set('versionKey', 'version');
+ticketSchema.plugin(updateIfCurrentPlugin);
+```
+* Also, add in TicketDoc interface
