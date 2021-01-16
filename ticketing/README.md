@@ -3043,3 +3043,9 @@ npm i mongoose-update-if-current
 
 ### Building the Listener
 * order:created:
+
+### Strategies for Locking a Ticket
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F08%2F04.drawio
+* D 5-id:
+* D 6-id:
+* D 7-tix:
