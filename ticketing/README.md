@@ -3492,3 +3492,8 @@ kubectl get secrets
 
 ### Rendering a List of Orders
 * Create new orders page and also update orderId.js
+
+### Development Workflow
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fnuthanc%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F12%2Fdiagrams.drawio
+* D 6-teams:
+* D 6-branch: **Overall**
