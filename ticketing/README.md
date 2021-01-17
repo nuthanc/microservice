@@ -3463,3 +3463,7 @@ kubectl get secrets
 * Router.push: Programmatic Navigation
   * 1st argument is path to file
   * 2nd argument is actual url
+
+### The Expiration Timer
+* Whenever we return a function from useEffect, that function will be invoked when we are gonna navigate away from the Component or rerendered(dependency in the array for rerendered)
+
