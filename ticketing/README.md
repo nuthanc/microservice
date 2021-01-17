@@ -3319,4 +3319,9 @@ npm i mongoose-update-if-current
 ### Starting the Listeners(My implementation till here: Had mongo errors)
 * IN index.ts
 * Create ticket and order to test in skaffold logs
-* **Error** Didn't get payments 
+* Error with mongo
+
+### Payments Flow with Stripe
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F10%2F01.drawio
+* D 5-stripe:
+* D 6-cc:
