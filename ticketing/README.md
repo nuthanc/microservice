@@ -3362,3 +3362,10 @@ kubectl get secrets
 * Create stripe.ts
 * stripe.com/docs/api
   * Charges: Create a charge
+
+### Manual Testing of Payments
+* Test Data in stripe
+* Create a ticket, order and payment in Postman or req.http 
+  * orderId and token from order for payments
+    * Special token is tok_visa
+* Stripe dashboard to verify
