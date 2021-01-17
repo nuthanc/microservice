@@ -3233,3 +3233,6 @@ npm update @rztickets/common
 cd orders
 npm update @rztickets/common
 ```
+
+### Emitting the Order Cancelled Event
+* D order:cancelled:
