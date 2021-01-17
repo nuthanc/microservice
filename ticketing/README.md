@@ -3670,3 +3670,6 @@ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=jkladsfj
 
 ### One Small Fix
 * Check Notes in Udemy
+
+### One More Small Fix
+* Check Notes in Udemy
