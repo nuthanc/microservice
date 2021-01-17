@@ -3489,3 +3489,6 @@ kubectl get secrets
 
 ### Header Links
 * header.js in client
+
+### Rendering a List of Orders
+* Create new orders page and also update orderId.js
