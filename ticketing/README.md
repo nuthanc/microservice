@@ -3243,3 +3243,8 @@ npm update @rztickets/common
 ### A Touch More Testing
 * cd orders
 * npm run test
+
+### Listening for Expiration
+* Add in orders
+* Test in Postman or req.http
+* Create Ticket and Order

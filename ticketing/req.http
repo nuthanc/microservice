@@ -20,7 +20,7 @@
 # content-type: application/json
 
 # {
-#   "title": "Brother",
+#   "title": "Sister",
 #   "price": 40
 # }
 
@@ -40,5 +40,5 @@ POST https://ticketing.dev/api/orders
 content-type: application/json
 
 {
-  "ticketId": "6003219ae993880018e4ff75"
+  "ticketId": "6003aa24b8f51c0018fc6a48"
 }
