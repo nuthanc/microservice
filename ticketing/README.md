@@ -3457,3 +3457,9 @@ kubectl get secrets
 
 ### Creating an Order
 * context contains the id
+
+### Programmatic Navigation to Wildcard Routes
+* D 1-mocks:
+* Router.push: Programmatic Navigation
+  * 1st argument is path to file
+  * 2nd argument is actual url
