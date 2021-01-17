@@ -31,9 +31,10 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.20",
     "mongoose-update-if-current": "^1.4.0",
+    "node-nats-streaming": "^0.2.6",
+    "stripe": "^8.131.1",
     "ts-node-dev": "^1.0.0-pre.44",
-    "typescript": "^3.9.5",
-    "node-nats-streaming": "^0.2.6"
+    "typescript": "^3.9.5"
   },
   "devDependencies": {
     "@types/jest": "^26.0.4",

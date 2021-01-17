@@ -3357,3 +3357,8 @@ kubectl create secret generic stripe-secret --from-literal STRIPE_KEY=<sk from b
 kubectl get secrets
 ```
 * Add this in payments depl
+
+### Creating a Charge with Stripe
+* Create stripe.ts
+* stripe.com/docs/api
+  * Charges: Create a charge
