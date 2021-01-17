@@ -3369,3 +3369,8 @@ kubectl get secrets
   * orderId and token from order for payments
     * Special token is tok_visa
 * Stripe dashboard to verify
+
+### Automated Payment Testing
+* Test running in local machine outside of kubernetes cluster
+  * So no access to that secret
+* So, mock for stripe
