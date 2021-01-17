@@ -3675,4 +3675,5 @@ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=jkladsfj
 * Check Notes in Udemy
 
 ### Next Steps
+* cert-manager.io for https requests
 * Check Udemy Notes
