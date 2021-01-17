@@ -3469,3 +3469,6 @@ kubectl get secrets
 
 ### Displaying the Expiration
 * Condition after useEffect
+
+### Showing a Stripe Payment Form
+* react-stripe-checkout library in npmjs.com
