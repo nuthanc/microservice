@@ -3649,3 +3649,12 @@ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=jkladsfj
 ### A Successful Deploy
 * One small change in all the services
 * Push from dev branch -> Pull -> Merge
+
+### Buying a Domain Name
+* Digital Ocean -> Networking -> Load Balancers
+* Load balancer automatically created by Ingress-nginx inside our cluster
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fnuthanc%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F12%2Fdiagrams.drawio
+* D 15-domain:
+  * Buy domain name and point to Load balancer ip
+* namecheap.com
+  * The longer the name, the cheaper it is(ex: ticketing-app-prod)
