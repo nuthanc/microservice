@@ -3609,3 +3609,6 @@ This branch has no conflicts with the base branch
 * Even merge to master counts as a push to master branch
 * build is job-id(can be anything)
 * Create Secrets in Github and add Username and Password
+
+### Testing the Image Build
+* Check Actions after Merge
