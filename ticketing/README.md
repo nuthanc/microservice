@@ -3419,3 +3419,10 @@ kubectl get secrets
   * Handling id's in NextJS is a little bit difficult
     * Wildcard in []
 
+### Reminder on Data Fetching with Next
+* D 3-arch:
+* D 4-getProps: Entire flow in NextJS
+* Little issue
+  * ticketing.dev
+  * Click on Logo on top left and check Network tab
+  * 2 requests to fetch currentUser
