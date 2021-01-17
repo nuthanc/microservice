@@ -3239,3 +3239,7 @@ npm update @rztickets/common
 
 ### Testing the Expiration Complete Listener
 * In orders listeners
+
+### A Touch More Testing
+* cd orders
+* npm run test
