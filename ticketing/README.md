@@ -3603,3 +3603,9 @@ This branch has no conflicts with the base branch
 
 ### The Deployment Plan
 * D 9-depl: If anything changes in the master branch after the merge, do this
+
+### Building an Image in an Action
+* Code in workflows of github
+* Even merge to master counts as a push to master branch
+* build is job-id(can be anything)
+* Create Secrets in Github and add Username and Password
