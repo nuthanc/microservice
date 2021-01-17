@@ -3396,3 +3396,9 @@ kubectl get secrets
 ### Testing Payment Creation
 * null and undefined are 2 different things
   * Hover over payment to see its return type and write the expectation accordingly
+
+### Publishing a Payment Created Event
+* D 1-payments:
+* PaymentCreated in common module
+* npm run pub in common
+* Then npm update in payments, orders and tickets
