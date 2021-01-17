@@ -3645,3 +3645,7 @@ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=jkladsfj
 
 ### Additional Deploy Files
 * Copy deploy-auth.yml to other services and make the appropriate change
+
+### A Successful Deploy
+* One small change in all the services
+* Push from dev branch -> Pull -> Merge
