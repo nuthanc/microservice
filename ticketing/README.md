@@ -3509,3 +3509,25 @@ node_modules
 ```
 * Add repository for ticketing
   * In my case, I have for all of microservices course(like typescript, blog)
+
+### Creating a Github Action
+* D 7-gh:
+* https://docs.github.com/en/actions/reference/events-that-trigger-workflows
+* Simple workflow or Anything else with content deleted
+* Rename to tests.yml
+```yml
+name: tests
+
+on:
+  pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd auth && npm install && npm run test:ci
+```
+* uses: takes all the code from our project
+* Start commit for the workflow tests.yml
+* https://github.com/nuthanc/microservice/tree/master/.github/workflows
