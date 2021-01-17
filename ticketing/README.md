@@ -3329,3 +3329,6 @@ npm i mongoose-update-if-current
 ### Implementing the Create Charge Handler
 * D 6-cc:
 * D 3-charge:
+
+### Validating Order Payment
+* new.ts payments

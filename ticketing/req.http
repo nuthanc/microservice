@@ -43,7 +43,7 @@
 #   "ticketId": "6003d62296aa6f0018f93100"
 # }
 
-POST https://ticketing.dev/api/payments
-content-type: application/json
+# POST https://ticketing.dev/api/payments
+# content-type: application/json
 
-{}
+# {}
