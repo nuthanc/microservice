@@ -3409,3 +3409,13 @@ kubectl get secrets
 ### Marking an Order as Complete
 * Add listener in Order service
 * Optional publish that the order was updated after it was marked as Completed
+
+### A Few More Pages
+* client index.js Landing Page
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F11%2F01.drawio
+* D 1-mocks: **App Overview**
+* D 2-routes: Routes, Pages required and Goal
+  * First 3 done
+  * Handling id's in NextJS is a little bit difficult
+    * Wildcard in []
+
