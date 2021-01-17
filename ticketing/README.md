@@ -3589,3 +3589,11 @@ This branch has no conflicts with the base branch
 
 ### Creating a Hosted Cluster
 * Create Cluster
+
+### Reminder on Kubernetes Context
+* D 13-kubectl:
+* Install Management tools
+  * doctl
+* API -> Generate New Token
+* doctl auth init
+  * paste the token
