@@ -3269,3 +3269,9 @@ npm update @rztickets/common
 
 ### Don't Cancel Completed Orders!
 * Don't Cancel order that has been paid for
+
+### The Payments Service
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F07%2F02.drawio
+* D order:created:
+* D order:cancelled:
+* D charge:created:
