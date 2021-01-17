@@ -3617,6 +3617,7 @@ This branch has no conflicts with the base branch
 ### Restarting the Deployment
 * D 14-cont:
 * More updates in deploy-auth.yml
+* Changes in skaffold.yaml
 
 ### Applying Kubernetes Manifests
 * Deployment files are called Manifests
