@@ -3581,3 +3581,8 @@ This branch has no conflicts with the base branch
 ### Selective Test Execution
 * Changes in workflow files
 * Make changes in dev only auth and see in Github Pull Requests
+
+### Deployment Options(From here just observation and in Udemy notes)
+* D 11-cc:
+* D 10-do: digitalocean.com
+  * Coupon codes
