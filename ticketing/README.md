@@ -3582,10 +3582,11 @@ This branch has no conflicts with the base branch
 * Changes in workflow files
 * Make changes in dev only auth and see in Github Pull Requests
 
-### Deployment Options(From here just observation and in Udemy notes)
+### Deployment Options
 * D 11-cc:
 * D 10-do: digitalocean.com
   * Coupon codes
+* Check Udemy notes
 
 ### Creating a Hosted Cluster
 * Create Cluster
@@ -3621,3 +3622,7 @@ This branch has no conflicts with the base branch
 * Deployment files are called Manifests
 * Problem in ingress-srv
   * Domain name of ticketing.dev
+
+### Prod vs Dev Manifest Files
+* Create k8s-dev and k8s-prod
+* Update k8s-prod ingress-srv after purchasing domain name
