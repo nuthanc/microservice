@@ -1,20 +1,20 @@
 import mongoose from 'mongoose';
-import { OrderStatus } from '@rztickets/common';
 import { updateIfCurrentPlugin } from 'mongoose-update-if-current';
+import { OrderStatus } from '@rztickets/common';
 
 interface OrderAttrs {
   id: string;
-  userId: string;
-  status: OrderStatus;
   version: number;
+  userId: string;
   price: number;
+  status: OrderStatus;
 }
 
 interface OrderDoc extends mongoose.Document {
-  userId: string;
-  status: OrderStatus;
   version: number;
+  userId: string;
   price: number;
+  status: OrderStatus;
 }
 
 interface OrderModel extends mongoose.Model<OrderDoc> {
@@ -27,12 +27,12 @@ const orderSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    status: {
-      type: String,
-      required: true,
-    },
     price: {
       type: Number,
+      required: true,
+    },
+    status: {
+      type: String,
       required: true,
     },
   },
@@ -55,7 +55,7 @@ orderSchema.statics.build = (attrs: OrderAttrs) => {
     version: attrs.version,
     price: attrs.price,
     userId: attrs.userId,
-    status: attrs.status
+    status: attrs.status,
   });
 };
 
