@@ -3448,3 +3448,9 @@ kubectl get secrets
 ### Listing All Tickets
 * Initial rendering of all tickets in getInitialProps
   * return of tickets from getInitialProps passed as tickets props in LandingPage
+
+### Linking to WildCard Routes
+* D 2-routes:
+* Manually test via ticketing.dev/tickets/asdkfjlajdfs
+* Both href and as
+  * **as** is the real route
