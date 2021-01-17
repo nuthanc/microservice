@@ -3426,3 +3426,9 @@ kubectl get secrets
   * ticketing.dev
   * Click on Logo on top left and check Network tab
   * 2 requests to fetch currentUser
+
+### Two Quick Fixes
+* Remove unwanted in index.js of client
+* Pass currentUser in _app.js
+* Also no need to buildClient again in the components
+  * Pass the already built client to the Components in _app
