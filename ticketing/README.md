@@ -3600,3 +3600,6 @@ This branch has no conflicts with the base branch
 
 ### Reminder on Swapping Contexts
 * D 12-list:
+
+### The Deployment Plan
+* D 9-depl: If anything changes in the master branch after the merge, do this
