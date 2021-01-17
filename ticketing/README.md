@@ -3236,3 +3236,6 @@ npm update @rztickets/common
 
 ### Emitting the Order Cancelled Event
 * D order:cancelled:
+
+### Testing the Expiration Complete Listener
+* In orders listeners
