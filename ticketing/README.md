@@ -3374,3 +3374,6 @@ kubectl get secrets
 * Test running in local machine outside of kubernetes cluster
   * So no access to that secret
 * So, mock for stripe
+
+### Mocked Stripe Client
+* Downside is that are we are not reaching stripe api itself
