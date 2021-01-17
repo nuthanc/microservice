@@ -3386,3 +3386,9 @@ kubectl get secrets
 
 ### Realistic Test Implementation
 * charges.list from Stripe API
+
+### Tying an Order and Charge Together
+* D 8-payment:
+* payment model
+* Don't need a version number because Payment is never gonna change
+  * But it's generally best practise to have version
