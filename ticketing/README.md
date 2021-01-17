@@ -3435,3 +3435,8 @@ kubectl get secrets
 
 ### Scaffolding a Form
 * new.js form
+
+### Sanitizing Price Input
+* state for keeping track of title and price
+* blur: click in and out
+* Backend for validation
