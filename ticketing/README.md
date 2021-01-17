@@ -3275,3 +3275,13 @@ npm update @rztickets/common
 * D order:created:
 * D order:cancelled:
 * D charge:created:
+
+### Initial Setup
+* Duplicate initial things from tickets service
+```sh
+cd payments
+docker build -t nuthanc/payments .
+docker push nuthanc/payments
+```
+* Add in skaffold.yaml
+* Add depl file
