@@ -3467,3 +3467,5 @@ kubectl get secrets
 ### The Expiration Timer
 * Whenever we return a function from useEffect, that function will be invoked when we are gonna navigate away from the Component or rerendered(dependency in the array for rerendered)
 
+### Displaying the Expiration
+* Condition after useEffect
