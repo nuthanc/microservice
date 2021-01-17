@@ -3432,3 +3432,6 @@ kubectl get secrets
 * Pass currentUser in _app.js
 * Also no need to buildClient again in the components
   * Pass the already built client to the Components in _app
+
+### Scaffolding a Form
+* new.js form
