@@ -3531,3 +3531,8 @@ jobs:
 * uses: takes all the code from our project
 * Start commit for the workflow tests.yml
 * https://github.com/nuthanc/microservice/tree/master/.github/workflows
+
+### Adding a CI Test Script
+* npm run test:ci
+  * To make sure test exits
+  * Need to add code in package.json
