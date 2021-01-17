@@ -3612,3 +3612,7 @@ This branch has no conflicts with the base branch
 
 ### Testing the Image Build
 * Check Actions after Merge
+
+### Restarting the Deployment
+* D 14-cont:
+* More updates in deploy-auth.yml
