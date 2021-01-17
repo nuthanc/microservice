@@ -3349,3 +3349,11 @@ npm install stripe
 * stripe.com, Create a new Account
   * Verify your email
   * Get test API keys or Developer API keys
+
+### Creating a Stripe Secret
+* Secret Key is what we need inside our Project
+```sh
+kubectl create secret generic stripe-secret --from-literal STRIPE_KEY=<sk from browser>
+kubectl get secrets
+```
+* Add this in payments depl
