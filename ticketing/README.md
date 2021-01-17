@@ -3635,3 +3635,7 @@ This branch has no conflicts with the base branch
 ```sh
 kubectl create secret generic jwt-secret --from-literal=JWT_KEY=jkladsfj
 ```
+
+### Don't Forget Ingress-Nginx!
+* Google search for ingress-nginx (kubernetes.github.io>ingress-nginx)
+  * Deployment -> Digital Ocean
