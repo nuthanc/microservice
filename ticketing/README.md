@@ -3577,3 +3577,7 @@ This branch has no conflicts with the base branch
 * Make a change in dev branch and push it
 * Need to check in Pull requests
 * If you see the latest commit, you'll see all 4 workflows running in parallel
+
+### Selective Test Execution
+* Changes in workflow files
+* Make changes in dev only auth and see in Github Pull Requests
