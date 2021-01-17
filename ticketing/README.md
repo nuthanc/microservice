@@ -3616,3 +3616,8 @@ This branch has no conflicts with the base branch
 ### Restarting the Deployment
 * D 14-cont:
 * More updates in deploy-auth.yml
+
+### Applying Kubernetes Manifests
+* Deployment files are called Manifests
+* Problem in ingress-srv
+  * Domain name of ticketing.dev
