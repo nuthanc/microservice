@@ -3627,3 +3627,11 @@ This branch has no conflicts with the base branch
 ### Prod vs Dev Manifest Files
 * Create k8s-dev and k8s-prod
 * Update k8s-prod ingress-srv after purchasing domain name
+
+### Manual Secret Creation
+* STRIPE_KEY and JWT_KEY 
+* Switch kubectl context to DO context
+* Create secret for the above 
+```sh
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=jkladsfj
+```
