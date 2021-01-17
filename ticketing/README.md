@@ -3472,3 +3472,6 @@ kubectl get secrets
 
 ### Showing a Stripe Payment Form
 * react-stripe-checkout library in npmjs.com
+
+### Configuring Stripe
+* Need to use stripeKey as env variable in next
