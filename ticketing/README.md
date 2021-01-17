@@ -3544,3 +3544,31 @@ jobs:
 ```sh
 git checkout -b dev
 ```
+* Go to Github and check Pull requests
+* We can do either Compare & pull request or New pull request
+* We will go with New pull request as we don't see Compare & pull request sometimes
+* compare:dev to base:master
+* Create pull request
+* We will see Github Action executed 
+```txt
+Some checks haven't completed yet
+
+Some time later
+All checks have passed
+This branch has no conflicts with the base branch
+```
+* Then we can click on Merge pull request
+
+### Output of Failing Tests
+* Deliberately fail a test in current-user.test.ts
+* Push from dev branch
+* We see tests failing
+* Then update in dev and push again 
+
+### Running Tests in Parallel
+* We can add more runs in our tests.yml
+  * But that will make the tests run in series
+* For each individual service, we can create a different Github Action
+  * This will make them run in parallel
+* Rename tests to tests-auth.yml and make other 3 files
+* Also make changes in the package.json
