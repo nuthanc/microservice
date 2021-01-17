@@ -3302,4 +3302,8 @@ npm i mongoose-update-if-current
 ```
 
 ### Replicating Orders
-* 
+* Add order-created-listener
+
+### Testing Order Creation
+* cd payments
+* npm run test
