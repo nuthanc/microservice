@@ -3440,3 +3440,7 @@ kubectl get secrets
 * state for keeping track of title and price
 * blur: click in and out
 * Backend for validation
+
+### Ticket Creation
+* getInitialProps: to show the component on the screen(Render for the first time)
+* use-request hook
