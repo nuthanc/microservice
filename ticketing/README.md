@@ -3335,3 +3335,7 @@ npm i mongoose-update-if-current
 
 ### Testing Order Validation Before
 * new.test.ts
+
+### Testing Same-User Validation
+* global signin() change and cancelled order change
+* Thought instead of the above id change, could use userOne and userTwo in orders index.test.ts
