@@ -3224,3 +3224,12 @@ npm update @rztickets/common
 [orders-depl-5d776b76fd-ljdv7 orders] Message received: ticket:updated / orders-service
 [expiration-depl-5f6d5d6586-qrktq expiration] Event published to subject expiration:complete
 ```
+
+### Handling an Expiration Event
+* Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F07%2F02.drawio
+* D expiration:
+* D order:
+```sh
+cd orders
+npm update @rztickets/common
+```
