@@ -3475,3 +3475,6 @@ kubectl get secrets
 
 ### Configuring Stripe
 * Need to use stripeKey as env variable in next
+
+### Test Credit Card Numbers
+* stripe.com/docs/testing
