@@ -3483,3 +3483,6 @@ kubectl get secrets
 * For doRequest to merge token along with previous body, change in useRequest.js
 * In ticketId.js, event gets passed automatically as first argument
   * So change it to onClick={() => doRequest()}
+
+### Filtering Reserved Tickets
+* In tickets index.ts routes, find only tickets where orderId is undefined
