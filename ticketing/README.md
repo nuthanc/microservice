@@ -3444,3 +3444,7 @@ kubectl get secrets
 ### Ticket Creation
 * getInitialProps: to show the component on the screen(Render for the first time)
 * use-request hook
+
+### Listing All Tickets
+* Initial rendering of all tickets in getInitialProps
+  * return of tickets from getInitialProps passed as tickets props in LandingPage
