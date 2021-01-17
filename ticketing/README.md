@@ -3405,3 +3405,7 @@ kubectl get secrets
 
 ### More on Publishing
 * Publish in new.ts
+
+### Marking an Order as Complete
+* Add listener in Order service
+* Optional publish that the order was updated after it was marked as Completed
