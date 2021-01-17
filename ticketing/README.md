@@ -3667,3 +3667,6 @@ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=jkladsfj
 * Then add domain name in digital ocean dashboard -> Networking
 * A record
 * Check Udemy notes
+
+### One Small Fix
+* Check Notes in Udemy
