@@ -3597,3 +3597,6 @@ This branch has no conflicts with the base branch
 * API -> Generate New Token
 * doctl auth init
   * paste the token
+
+### Reminder on Swapping Contexts
+* D 12-list:
