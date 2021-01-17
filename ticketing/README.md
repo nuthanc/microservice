@@ -3558,3 +3558,9 @@ All checks have passed
 This branch has no conflicts with the base branch
 ```
 * Then we can click on Merge pull request
+
+### Output of Failing Tests
+* Deliberately fail a test in current-user.test.ts
+* Push from dev branch
+* We see tests failing
+* Then update in dev and push again 
