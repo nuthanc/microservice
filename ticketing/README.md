@@ -3658,3 +3658,12 @@ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=jkladsfj
   * Buy domain name and point to Load balancer ip
 * namecheap.com
   * The longer the name, the cheaper it is(ex: ticketing-app-prod)
+
+### Configuring the Domain Name
+* Nameservers -> Custome DNS
+  * ns1.digitalocean.com
+  * ns2.digitalocean.com
+  * ns3.digitalocean.com
+* Then add domain name in digital ocean dashboard -> Networking
+* A record
+* Check Udemy notes
