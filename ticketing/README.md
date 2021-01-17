@@ -3564,3 +3564,11 @@ This branch has no conflicts with the base branch
 * Push from dev branch
 * We see tests failing
 * Then update in dev and push again 
+
+### Running Tests in Parallel
+* We can add more runs in our tests.yml
+  * But that will make the tests run in series
+* For each individual service, we can create a different Github Action
+  * This will make them run in parallel
+* Rename tests to tests-auth.yml and make other 3 files
+* Also make changes in the package.json
