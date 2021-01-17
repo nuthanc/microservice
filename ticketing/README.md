@@ -3528,6 +3528,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: cd auth && npm install && npm run test:ci
 ```
+* I made cd to ticketing/auth
 * uses: takes all the code from our project
 * Start commit for the workflow tests.yml
 * https://github.com/nuthanc/microservice/tree/master/.github/workflows
@@ -3536,3 +3537,10 @@ jobs:
 * npm run test:ci
   * To make sure test exits
   * Need to add code in package.json
+
+### Running Tests on PR Creation
+* Add simple console.log in auth index.ts
+* Create a new branch
+```sh
+git checkout -b dev
+```
