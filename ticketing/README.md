@@ -3266,3 +3266,6 @@ npm update @rztickets/common
 [orders-depl-78c984bcbb-jc5pz orders] Message received: ticket:updated / orders-service
 [tickets-depl-7fc54fd778-5qjqk tickets] Event published to subject ticket:updated
 ```
+
+### Don't Cancel Completed Orders!
+* Don't Cancel order that has been paid for
