@@ -3248,3 +3248,21 @@ npm update @rztickets/common
 * Add in orders
 * Test in Postman or req.http
 * Create Ticket and Order
+```sh
+[tickets-depl-7fc54fd778-5qjqk tickets] Event published to subject ticket:created
+[orders-depl-78c984bcbb-jc5pz orders] Message received: ticket:created / orders-service
+[orders-depl-78c984bcbb-jc5pz orders] Message received: ticket:created / orders-service
+[tickets-depl-7fc54fd778-5qjqk tickets] Event published to subject ticket:created
+[expiration-depl-79b78bbff4-szk2b expiration] Message received: order:created / expiration-service
+[orders-depl-78c984bcbb-jc5pz orders] Event published to subject order:created
+[tickets-depl-7fc54fd778-5qjqk tickets] Message received: order:created / tickets-service
+[expiration-depl-79b78bbff4-szk2b expiration] Waiting this many milliseconds to process the job: 59967
+[tickets-depl-7fc54fd778-5qjqk tickets] Event published to subject ticket:updated
+[orders-depl-78c984bcbb-jc5pz orders] Message received: ticket:updated / orders-service
+[orders-depl-78c984bcbb-jc5pz orders] Message received: expiration:complete / orders-service
+[expiration-depl-79b78bbff4-szk2b expiration] Event published to subject expiration:complete
+[orders-depl-78c984bcbb-jc5pz orders] Event published to subject order:cancelled
+[tickets-depl-7fc54fd778-5qjqk tickets] Message received: order:cancelled / tickets-service
+[orders-depl-78c984bcbb-jc5pz orders] Message received: ticket:updated / orders-service
+[tickets-depl-7fc54fd778-5qjqk tickets] Event published to subject ticket:updated
+```
