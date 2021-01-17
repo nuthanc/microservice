@@ -3377,3 +3377,9 @@ kubectl get secrets
 
 ### Mocked Stripe Client
 * Downside is that are we are not reaching stripe api itself
+
+### A More Realistic Test Setup
+* Downside is takes a little more time
+* Challenging
+  * Because Need Details about the change in the Test file instead of the Route Handler
+  * Test Itself reach over to Stripe API
