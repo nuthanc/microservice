@@ -3392,3 +3392,7 @@ kubectl get secrets
 * payment model
 * Don't need a version number because Payment is never gonna change
   * But it's generally best practise to have version
+
+### Testing Payment Creation
+* null and undefined are 2 different things
+  * Hover over payment to see its return type and write the expectation accordingly
