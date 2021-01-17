@@ -3586,3 +3586,6 @@ This branch has no conflicts with the base branch
 * D 11-cc:
 * D 10-do: digitalocean.com
   * Coupon codes
+
+### Creating a Hosted Cluster
+* Create Cluster
