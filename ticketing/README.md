@@ -3307,3 +3307,8 @@ npm i mongoose-update-if-current
 ### Testing Order Creation
 * cd payments
 * npm run test
+
+### Marking an Order as Cancelled
+* We don't need version strictly here in order-cancelled-listener, but we will include it anyway
+  * Needed when we need to update an Order in the future
+* We can move this findOne to models if we want
