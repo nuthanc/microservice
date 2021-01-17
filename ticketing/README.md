@@ -3544,3 +3544,17 @@ jobs:
 ```sh
 git checkout -b dev
 ```
+* Go to Github and check Pull requests
+* We can do either Compare & pull request or New pull request
+* We will go with New pull request as we don't see Compare & pull request sometimes
+* compare:dev to base:master
+* Create pull request
+* We will see Github Action executed 
+```txt
+Some checks haven't completed yet
+
+Some time later
+All checks have passed
+This branch has no conflicts with the base branch
+```
+* Then we can click on Merge pull request
