@@ -3402,3 +3402,6 @@ kubectl get secrets
 * PaymentCreated in common module
 * npm run pub in common
 * Then npm update in payments, orders and tickets
+
+### More on Publishing
+* Publish in new.ts
