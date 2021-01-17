@@ -3497,3 +3497,15 @@ kubectl get secrets
 * Diagram link: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fnuthanc%2Fmicroservices-casts%2Fmaster%2Fdiagrams%2F12%2Fdiagrams.drawio
 * D 6-teams:
 * D 6-branch: **Overall**
+
+### Git Repository Approaches
+* D 4-mono: Mono Repo Approach
+  * Single Git Repository
+* D 5-multi: Lot of work
+```sh
+#.gitignore
+node_modules
+.DS_Store
+```
+* Add repository for ticketing
+  * In my case, I have for all of microservices course(like typescript, blog)
