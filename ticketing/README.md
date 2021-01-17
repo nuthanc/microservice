@@ -3339,3 +3339,13 @@ npm i mongoose-update-if-current
 ### Testing Same-User Validation
 * global signin() change and cancelled order change
 * Thought instead of the above id change, could use userOne and userTwo in orders index.test.ts
+
+### Stripe Setup
+* D 7-api:
+```sh
+cd payments
+npm install stripe
+```
+* stripe.com, Create a new Account
+  * Verify your email
+  * Get test API keys or Developer API keys
