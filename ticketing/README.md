@@ -3486,3 +3486,6 @@ kubectl get secrets
 
 ### Filtering Reserved Tickets
 * In tickets index.ts routes, find only tickets where orderId is undefined
+
+### Header Links
+* header.js in client

@@ -4,6 +4,8 @@ export default ({ currentUser }) => {
   const links = [
     !currentUser && { label: 'Sign Up', href: '/auth/signup' },
     !currentUser && { label: 'Sign In', href: '/auth/signin' },
+    currentUser && { label: 'Sell Tickets', href: '/tickets/new' },
+    currentUser && { label: 'My Orders', href: '/orders' },
     currentUser && { label: 'Sign Out', href: '/auth/signout' },
   ]
     .filter((linkConfig) => linkConfig)
@@ -16,10 +18,11 @@ export default ({ currentUser }) => {
         </li>
       );
     });
+
   return (
     <nav className="navbar navbar-light bg-light">
       <Link href="/">
-        <a className="navbar-brand">Gittix</a>
+        <a className="navbar-brand">GitTix</a>
       </Link>
 
       <div className="d-flex justify-content-end">
