@@ -36,9 +36,14 @@
 #   "price": 40
 # }
 
-POST https://ticketing.dev/api/orders
+# POST https://ticketing.dev/api/orders
+# content-type: application/json
+
+# {
+#   "ticketId": "6003d62296aa6f0018f93100"
+# }
+
+POST https://ticketing.dev/api/payments
 content-type: application/json
 
-{
-  "ticketId": "6003d62296aa6f0018f93100"
-}
+{}
