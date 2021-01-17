@@ -3572,3 +3572,8 @@ This branch has no conflicts with the base branch
   * This will make them run in parallel
 * Rename tests to tests-auth.yml and make other 3 files
 * Also make changes in the package.json
+
+### Verifying a Test Run
+* Make a change in dev branch and push it
+* Need to check in Pull requests
+* If you see the latest commit, you'll see all 4 workflows running in parallel
