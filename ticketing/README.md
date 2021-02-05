@@ -481,6 +481,8 @@ npm i mongoose
 
 ### Connecting to MongoDB
 * D 2-sto: Loss of data
+  * To prevent loss of data after pod restart, we need to use Persistent volume claims
+  * https://www.freecodecamp.org/news/the-kubernetes-handbook/#persistent-volumes-and-persistent-volume-claims
 * Mongoose and mongo related code in index.ts
 * Hover over mongoose error
 ```sh
