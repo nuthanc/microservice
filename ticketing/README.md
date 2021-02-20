@@ -778,7 +778,7 @@ const buf = (await scryptAsync(password, salt, 64)) as Buffer;
   * When you type google.com into your address bar in the Browser, Google has no ability to run js code on your computer(browser) before sending you an HTML file
   * When you enter after typing google.com, first thing you get back is the HTML file and inside that we can have some js code or a reference to a script tag to load up some code 
   * And in that point of time, Google can start to reach around and try to find the tokens stored on your device
-* D 13-jwt: Only this is possible during Server side rendering
+* D 03-jwt: Only this is possible during Server side rendering(i.e. Sending info via only cookie and not through Request body or Header's authorization)
   * Corner case is **Service workers**
 
 ### Cookies and Encryption
