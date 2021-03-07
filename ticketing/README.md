@@ -437,6 +437,7 @@ app.all('*', async (req, res, next) => {
 * The above works
 * But we don't want to have next as it is very particular to express
 * Go to npmjs.com and search for express-async-errors
+* Without express-async-errors, you get UnhandledPromiseRejectionWarning Error
 ```sh
 cd auth
 npm i express-async-errors
@@ -936,6 +937,7 @@ JSON.stringify(person2)
 * In user.ts of models, add second parameter to userSchema
 * toJSON in mongoose, it is implemented as object
 * Can option click on toJSON to see other attributes
+* Note that ret is the JSON'ed object, and it's not an instance of the mongoose model
 * Remove password property using delete
 * Now check back by sending in Postman with unique email
 ```json
