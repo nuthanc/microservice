@@ -1212,7 +1212,7 @@ npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongo
   * no-cache: Attempt to use Typescript with Jest
     * Without this, jest doesn't always recognize changes with Typescript files
 * Add another configuration for jest itself
-  * ts-set for Typescript support
+  * ts-jest for Typescript support
   * setupFilesAfterEnv: Tell jest to run setup files inside our project after it initially starts everything up
     * Try to run the file in the current working directory
 * Create test folder and in there setup.ts
